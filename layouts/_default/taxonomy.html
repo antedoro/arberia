@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<div class="container main-content">
+    <div class="row justify-content-center">
+
+        {{/*  Title  */}}
+        <h1 class="text-center" id="page-title">All posts for {{ .Type | singularize }} "{{ .Title }}"
+            <a class="headerlink" href="{{- .RelPermalink -}}" title="Permanent link"></a>
+        </h1>
+
+        {{/*  Subtitle */}}
+        {{ with .Params.subtitle }}
+        <p class="text-center text-muted">{{ . | markdownify }}</p>
+        {{ end }}
+
+        {{- /* Cover Image */ -}}
+        {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+        {{ with $img }}
+        {{ $imageName := $img.Title }}
+        {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+        {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+        {{ end }}
+
+        <div id="listArea" class="col-md-11 col-lg-10 article">
+            {{ $paginator := .Paginate (.Data.Pages ) (.Site.Params.paginate | default 5) }}
+            <div class="container my-3">
+                {{ range $paginator.Pages.ByDate.Reverse }}
+                {{ .Render "summary" }}
+                <hr style="border: 0; border-color: #dee2e6">
+                {{ end }}
+            </div>
+
+            {{/*  Paginator style 2  */}}
+            <div class="text-muted my-0 mt-1" style="display: flex; justify-content: center;">
+                {{ partial "paginator.html" . }}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{ end }}

@@ -1,0 +1,138 @@
+{{/*  Da eliminare  */}}
+{{ define "main" }}
+
+<div class="container main-content">
+
+  <div class="row justify-content-center">
+    <div class="col-12 mb-2 order-1">
+
+      {{ with .Params.video }}
+      <div class="embed-responsive embed-responsive-16by9 mb-4 rounded bg-light" id="videoWrapper">
+        <button id="jsEnterFullscreenButton" class="btn text-muted border-0 btn-outline-secondary rounded-bottom"
+          style="z-index: 1; position: absolute; top: 0; right:0;" title="Enter fullscreen mode"><i
+            class="fa fa-expand"></i></button>
+        <button id="jsExitFullscreenButton"
+          class="btn text-muted border-0 btn-outline-secondary w-100 rounded d-none text-small"
+          style="z-index: 1; position: absolute; top: 0; left: 0; right: 0;" title="Exit fullscreen mode"><i
+            class="fa fa-compress"></i> <span id="jsExitFullscreenExplainer">Exit&nbsp;Fullscreen</span></button>
+        <iframe width="560" height="315" src="{{ .link | relLangURL }}" title="{{ .title | markdownify }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      {{end}}
+
+
+      {{/*  <div id="jsVideoPlaybackSpeedNotice" class="d-none alert alert-dismissible alert-primary mt-n2">
+        <strong>Hint:</strong> You can adjust the default video playback speed in <a class="alert-link"
+          href="/account/">your account settings</a>.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>  */}}
+
+      {{/*  <div id="jsVideoSubtitlesLanguageNotice" class="d-none alert alert-dismissible alert-primary mt-n2">
+        <strong>Hint:</strong> You can set the default subtitles language in <a class="alert-link" href="/account/">your
+          account settings</a>.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>  */}}
+
+      {{/*  <div id="jsVideoErrorNotice" class="d-none alert alert-dismissible alert-danger mt-n3">
+        <strong>Sorry!</strong> Looks like there’s an issue with video playback 🙁 This might be due to a temporary
+        outage or because of a configuration issue with your browser. Please see our <a class="alert-link"
+          target="_blank" href="https://support.realpython.com/search?query=video+issues">video player troubleshooting
+          guide</a> to resolve the issue.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>  */}}
+    </div>
+
+    <div class="col-md-11 col-lg-8 article order-3 order-lg-2">
+      <div>
+        <h1>{{ .Title | markdownify }}</h1>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-2 col-md-1 p-0 align-self-center">
+              {{/*  <a href="/courses/python-basics-first-program/#team">
+                <img
+                  src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/IMG_1250.b2eeb8f803ea.jpeg&amp;w=1770&amp;h=1770&amp;mode=crop&amp;sig=ce02935882c3c09ed67bdf4e7dc7475b792d05a9"
+                  srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/IMG_1250.b2eeb8f803ea.jpeg&amp;w=442&amp;h=442&amp;mode=crop&amp;sig=180ec8ab6c852c98d93730288807684d021103cb 442w, 
+                  https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/IMG_1250.b2eeb8f803ea.jpeg&amp;w=885&amp;h=885&amp;mode=crop&amp;sig=895b3b2fdb680d1ccde0b87482270d5abcfa6f78 885w, 
+                  https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/IMG_1250.b2eeb8f803ea.jpeg&amp;w=1770&amp;h=1770&amp;mode=crop&amp;sig=ce02935882c3c09ed67bdf4e7dc7475b792d05a9 1770w"
+                  sizes="10vw" class="rounded-circle img-fluid w-100" alt="{{ .Params.author }}"></a>  */}}
+
+                  <a href="{{.Params.authorLink | urlize }}">
+                    <img loading="lazy" src="{{ .Params.avatar }}"
+                      class="rounded-circle img-fluid w-100" sizes="10vw"
+                      alt="{{ .Params.author | markdownify }}"></a>
+            </div>
+
+
+            <div class="col pr-0 d-flex align-items-center">
+              <p>
+                <span class="text-muted">
+                  <strong><a class="text-muted"
+                      href="{{ .Permalink }}">{{ .Params.subtitle  | markdownify }}</a></strong>
+                  <br>
+                  <a class="text-muted" href="{{ .Params.authorLink | urlize }}"
+                    target="_blank">{{ .Params.author  | markdownify }}</a>
+                  {{ with .Params.video }}
+                  <span class="ml-2 fa fa-clock-o"></span> {{ .duration  | markdownify }}
+                  {{end}}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active my-3 article-body" id="description" role="tabpanel"
+            aria-labelledby="description-tab" style="min-height: 300px">
+
+            {{ .Content }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/*  sidebar playlist  */}}
+    <aside class="col-md-7 col-lg-4 order-2 order-lg-3">
+      <h3 class="text-center mt-1 mb-4">Course Contents</h3>
+
+      <div class="mb-4">
+        <div class="progress mb-4">
+          <div class="progress-bar small bg-dark" role="progressbar" style="width: 0%;" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100">&nbsp;&nbsp;0%&nbsp;&nbsp;</div>
+        </div>
+
+        <ul class="list-group list-group-flush">
+
+          {{ with .Params.playlist }}
+          {{ range $index, $item :=  .item }}
+          <a href="{{.link}}" class="text-muted">
+            <li class="list-group-item list-group-item-action list-group-item-active rounded bg-light border-0 py-1">
+              <div class="row small">
+                <div class="col-1 ml-0"><i class="{{.icon}} "></i></div>
+                <div class="col ">
+                  {{.title}} <span class="text-muted">{{.duration}}</span>
+                </div>
+              </div>
+            </li>
+          </a>
+          {{end}}
+          {{end}}
+
+      </div>
+  </div>
+  </aside>
+
+</div>
+</div>
+
+{{end}}

@@ -1,0 +1,70 @@
+<!-- Explore Real Python -->
+{{ if site.Data.explore.features.enable }}
+{{ with site.Data.explore.features }}
+
+<div class="col-md-12 mt-2">
+
+<div class="d-flex justify-content-between align-items-center w-100 mt-0 mb-2">
+    <h2 class="my-0"><a href="" class="text-body">{{ .title | markdownify }}</a></h2>
+</div>
+
+
+<div class="card-deck mb-3">
+    {{ range first 4 .card }}
+    <div class="card bg-dark border-0">
+        <div class="card-body text-center highlight-hover-dark rounded">
+            <a class="btn stretched-link" href="{{ .link | absURL }}"
+                style="color: #ffc873; line-height: 110%;"><i class="{{ .icon }}"></i>{{ .title }}
+                <br>
+                <small class="text-secondary">{{ .description }}</small></a>
+        </div>
+    </div>
+    {{end}}
+</div>
+
+
+<div class="card-deck mb-3">
+    {{ range after 4 .card }}
+    <div class="card bg-dark border-0">
+        <div class="card-body text-center highlight-hover-dark rounded">
+            <a class="btn stretched-link" href="{{ .link | absURL }}"
+                style="color: #e5c6ab; line-height: 110%;"><i class="{{ .icon }}"></i>{{ .title }}
+                <br>
+                <small class="text-secondary">{{ .description }}</small></a>
+        </div>
+    </div>
+    {{end}}
+
+    <!-- <div class="card bg-dark border-0">
+        <div class="card-body text-center highlight-hover-dark rounded">
+            <a class="btn stretched-link" href="https://realpython.com/office-hours/"
+                style="color: #e5c6ab; line-height: 110%;"><i class="fa fa-fw mr-1 fa-users"></i>Office Hours<br><small
+                    class="text-secondary">Live Q&amp;A calls with an expert from the Real Python Team</small></a>
+        </div>
+    </div>
+
+    <div class="card bg-dark border-0">
+        <div class="card-body text-center highlight-hover-dark rounded">
+            <a class="btn stretched-link" href="https://realpython.com/podcast"
+                style="color: #b8abe5; line-height: 110%;"><i class="fa fa-fw mr-1 fa-podcast"></i>Podcast<br><small
+                    class="text-secondary">Hear what’s new in the world of
+                    Python programming</small></a>
+        </div>
+    </div>
+
+    <div class="card bg-dark border-0">
+        <div class="card-body text-center highlight-hover-dark rounded">
+            <a class="btn stretched-link" href="https://realpython.com/products/books/"
+                style="color: #abe5b1; line-height: 110%;"><i class="fa fa-fw mr-1 fa-book"></i>Books<br><small
+                    class="text-secondary">Round out your knowledge and learn offline</small></a>
+        </div>
+    </div> -->
+
+</div>
+</div>
+
+
+{{end}}
+{{end}}
+
+<!-- END Explore Real Python -->

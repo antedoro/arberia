@@ -1,0 +1,85 @@
+{{ $title := .Title }}
+{{ $pageurl := .Permalink }}
+
+<div id="share-buttons">
+    <!-- Twitter -->
+    {{ if .Site.Params.social.share.twitter }}
+    <a class="mr-1 badge badge-twitter text-light mb-1" target="_blank" rel="nofollow"
+        href="http://twitter.com/intent/tweet?text={{ $title }}&url={{ $pageurl }}">
+        <i class="mr-1 fa fa-twitter"></i>Tweet</a>
+    {{end}}
+
+    <!-- Facebook -->
+    {{ if .Site.Params.social.share.facebook }}
+    <a target="_blank" rel="nofollow" href="https://www.facebook.com/share.php?u={{ $pageurl }}"
+        class="mr-1 badge badge-facebook text-light mb-1"><i class="mr-1 fa fa-facebook-f text-light"></i>Share</a>
+    {{end}}
+
+    <!-- Linkedin -->
+    <a class="mr-1 badge badge-linkedin text-light mb-1" target="_blank" rel="nofollow"
+        href="https://www.linkedin.com/shareArticle?mini=true&url={{ $pageurl }}&title={{ $title }}');">
+        <i class="mr-1 fa fa-twitter"></i>Linkedin</a>
+
+    <!-- WhatsApp -->
+    {{ if .Site.Params.social.share.whatsapp }}
+    <a target="_blank" class="badge badge-red text-light mb-1" href="whatsapp://send?text={{ $title }}">
+        <i class="mr-1 fa fa-whatsapp text-light"></i>Whatsapp</a>
+    </a>
+    {{ end }}
+
+    <!-- Telegram -->
+    {{ if .Site.Params.social.share.telegram }}
+    <a target="_blank" class="badge badge-linkedin text-light mb-1" href="https://t.me/share/url?url={{ $pageurl }}&text={{ $title }}">
+        <i class="mr-1 fa fa-telegram text-light"></i>Telegram</a>
+    </a>
+    {{ end }}
+
+    <!-- Email -->
+    {{ if .Site.Params.social.share.email }}
+    <a target="_blank" rel="nofollow" href="mailto:?subject={{ $title }}&amp;body={{ $pageurl }}"
+        class="badge badge-purple text-light mb-1"><i class="mr-1 fa fa-envelope text-light"></i>Email</a>
+    {{ end }}
+
+    <!-- Pinterest -->
+    {{ if .Site.Params.social.share.pinterest }}
+    <a target="_blank" rel="nofollow"
+        href="http://pinterest.com/pin/create/button/?url={{ $pageurl }}"
+        class="badge badge-red text-light mb-1"><i class="mr-1 fa fa-pinterest text-light"></i>Pinterest</a>
+    {{ end }}
+
+    <!-- Reddit -->
+    {{ if .Site.Params.social.share.reddit }}
+    <a class="mr-1 badge badge-red text-light mb-1" target="_blank" rel="nofollow"
+        href="https://www.reddit.com/submit?url={{ $pageurl }}">
+        <i class="mr-1 fa fa-reddit"></i>Reddit</a>
+    {{end}}
+
+    <!-- Pocket -->
+    {{ if .Site.Params.social.share.pocket }}
+    <a class="mr-1 badge badge-pocket text-light mb-1" target="_blank" rel="nofollow"
+        href="https://getpocket.com/edit?url={{ $pageurl }}&title={{ $title }}">
+        <i class="mr-1 fa fa-get-pocket"></i>Pocket</a>
+    {{end}}
+
+    <!-- Istapaper -->
+    {{ if .Site.Params.social.share.instapaper }}
+    <a class="mr-1 badge badge-pink text-light mb-1" target="_blank" rel="nofollow"
+        href="https://www.instapaper.com/edit?url={{ $pageurl }}">
+        <i class="mr-1 fa fa-italic"></i>Instapaper</a>
+    {{end}}
+
+    <!-- Evernote -->
+    {{/*  {{ if .Site.Params.social.share.evernote }}
+    <a class="mr-1 badge badge-success text-light mb-1" target="_blank" rel="nofollow"
+        href="https://www.instapaper.com/edit?url={{ $pageurl }}">
+        <i class="mr-1 fa fa-etsy"></i>Evernote</a>
+    {{end}}  */}}
+
+    <!-- Trello -->
+    {{/*  {{ if .Site.Params.social.share.trello }}
+    <a class="mr-1 badge badge-linkedin text-light mb-1" target="_blank" rel="nofollow"
+        href="https://www.instapaper.com/edit?url={{ $pageurl }}">
+        <i class="mr-1 fa fa-trello"></i>Trello</a>
+    {{end}}  */}}
+
+</div>

@@ -1,0 +1,23 @@
+<script src="https://apis.google.com/js/platform.js"></script>
+{{/*  <div class="g-ytsubscribe" data-channelid="UClA8GwWzurVCprEY6OsCvhw" 
+data-layout="full" data-count="default"></div>  */}}
+
+{{- $YTChannelID := .Site.Params.YTChannelID -}}
+{{ with ($YTChannelID) }}
+<div class="ml-3">
+    <div class="g-ytsubscribe" data-channelid="{{ $YTChannelID }}" data-layout="full" data-count="default"></div>
+</div>
+{{ end }}
+
+
+
+
+
+
+
+ 
+
+
+
+
+

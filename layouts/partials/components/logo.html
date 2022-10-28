@@ -1,0 +1,22 @@
+<style>
+    .navbar-brand {
+		color: #fff !important;
+		font-weight: bold !important;
+	}
+</style>
+
+{{/*  Logo + site name  */}}
+{{ with site.Params }}
+{{ if .siteBrand }}
+<a class="navbar-brand mr-0 mr-md-2" href="{{ print `/` | relLangURL }}">
+    <img src="{{ .BrandLogo | relURL }}" 
+    width="{{ .siteBrandWidth }}" 
+    height="{{ .siteBrandHeight }}" 
+    class="d-inline-block align-top"
+    loading="lazy" 
+    alt="">
+    {{ .BrandName }}
+</a>
+
+{{ end }}
+{{ end }}

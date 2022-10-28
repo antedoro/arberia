@@ -1,0 +1,90 @@
+<div class="card mt-3 mb-3" id="author">
+    <p class="card-header h3">About <strong>{{ .Params.author  | markdownify }}</strong></p>
+    
+    <div class="card-body">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-12 col-md-3 align-self-center">
+                    <a href="/about"><img loading="lazy"
+                        src="/img/me.jpg"
+                        srcset="me.jpg 225w, 
+                        /img/me.jpg 450w, 
+                        /img/me.jpg 900w"
+                        sizes="25vw" 
+                        class="d-none d-md-block rounded-circle img-fluid w-100 mb-0"
+                        alt="{{ .Params.author  | markdownify }}" width="900" height="900"></a>
+                </div>
+                <div class="col mt-3">
+                    <p> {{- .Site.Params.author_resume| markdownify -}} .</p>
+                    <a href="/about" class="card-link">» More about {{ .Params.author  | markdownify }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/*  <hr class="my-0">  */}}
+
+    {{/*  <div class="card-body pb-0">
+        <div class="container">
+            <div class="row">
+                <p><em>Each tutorial at Real Python is created by a team of developers so that it meets our
+                        high quality standards. The team members who worked on this tutorial are:</em></p>
+            </div>
+            <div class="row align-items-center w-100 mx-auto">
+                <div class="col-4 col-sm-2 align-self-center">
+                    <a href="/team/asantos/"><img loading="lazy"
+                            src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/asantos-avatar.888c78fffab3.jpg&amp;w=700&amp;h=700&amp;mode=crop&amp;sig=be17609cd7f6a4cd249ff61e186b3ad1aece949c"
+                            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/asantos-avatar.888c78fffab3.jpg&amp;w=175&amp;h=175&amp;mode=crop&amp;sig=30253487c673fd67bb45ea6bef95b3c57e115e46 175w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/asantos-avatar.888c78fffab3.jpg&amp;w=350&amp;h=350&amp;mode=crop&amp;sig=a43bd9ea30a6f61a4fc2451ab9abfc6faec8a2c0 350w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/asantos-avatar.888c78fffab3.jpg&amp;w=700&amp;h=700&amp;mode=crop&amp;sig=be17609cd7f6a4cd249ff61e186b3ad1aece949c 700w"
+                            sizes="10vw" class="rounded-circle img-fluid w-100" alt="Aldren Santos"
+                            width="900" height="900"></a>
+                </div>
+                <div class="col pl-0 d-none d-sm-block">
+                    <a href="/team/asantos/" class="card-link small">
+                        <p>Aldren</p>
+                    </a>
+                </div>
+                <div class="col-4 col-sm-2 align-self-center">
+                    <a href="/team/damos/"><img loading="lazy"
+                            src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/me-small.f5f49f1c48e1.jpg&amp;w=400&amp;h=400&amp;mode=crop&amp;sig=522ebc378492fd2228f8a9980bf89544b51aba2c"
+                            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/me-small.f5f49f1c48e1.jpg&amp;w=100&amp;h=100&amp;mode=crop&amp;sig=4e832705873c990ccc3fe2459dcd2b081613ecb1 100w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/me-small.f5f49f1c48e1.jpg&amp;w=200&amp;h=200&amp;mode=crop&amp;sig=ecc773a7a56114ed2831d281156669f0d7f1ab68 200w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/me-small.f5f49f1c48e1.jpg&amp;w=400&amp;h=400&amp;mode=crop&amp;sig=522ebc378492fd2228f8a9980bf89544b51aba2c 400w"
+                            sizes="10vw" class="rounded-circle img-fluid w-100" alt="David Amos" width="900"
+                            height="900"></a>
+                </div>
+                <div class="col pl-0 d-none d-sm-block">
+                    <a href="/team/damos/" class="card-link small">
+                        <p>David</p>
+                    </a>
+                </div>
+                <div class="col-4 col-sm-2 align-self-center">
+                    <a href="/team/mbreuss/"><img loading="lazy"
+                            src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/martin_breuss_python_square.efb2b07faf9f.jpg&amp;w=456&amp;h=456&amp;mode=crop&amp;sig=f73f6ae668249c7ab9ff74c61ea5ae7c5d360d54"
+                            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/martin_breuss_python_square.efb2b07faf9f.jpg&amp;w=114&amp;h=114&amp;mode=crop&amp;sig=1a2362c5f4fdf6550020fa2edf1cbed47bffdf53 114w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/martin_breuss_python_square.efb2b07faf9f.jpg&amp;w=228&amp;h=228&amp;mode=crop&amp;sig=83e21635985e51035377eed031afa8feae263333 228w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/martin_breuss_python_square.efb2b07faf9f.jpg&amp;w=456&amp;h=456&amp;mode=crop&amp;sig=f73f6ae668249c7ab9ff74c61ea5ae7c5d360d54 456w"
+                            sizes="10vw" class="rounded-circle img-fluid w-100" alt="Martin Breuss"
+                            width="900" height="900"></a>
+                </div>
+                <div class="col pl-0 d-none d-sm-block">
+                    <a href="/team/mbreuss/" class="card-link small">
+                        <p>Martin</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row align-items-center w-100 mx-auto">
+                <div class="col-4 col-sm-2 align-self-center">
+                    <a href="/team/sparker/"><img loading="lazy"
+                            src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/profpic_sp.a008488b6af0.jpeg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=ec9f8b060e53c9b35339584491f286fd52c11452"
+                            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/profpic_sp.a008488b6af0.jpeg&amp;w=200&amp;h=200&amp;mode=crop&amp;sig=ce5407d34a490d4daf29ad57e74fd3870dd28774 200w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/profpic_sp.a008488b6af0.jpeg&amp;w=400&amp;h=400&amp;mode=crop&amp;sig=dfd70d0dde444f036864e5cc145df9b18fbae649 400w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/profpic_sp.a008488b6af0.jpeg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=ec9f8b060e53c9b35339584491f286fd52c11452 800w"
+                            sizes="10vw" class="rounded-circle img-fluid w-100" alt="Sadie Parker"
+                            width="900" height="900"></a>
+                </div>
+                <div class="col pl-0 d-none d-sm-block">
+                    <a href="/team/sparker/" class="card-link small">
+                        <p>Sadie</p>
+                    </a>
+                </div>
+                <div class="col-4 col-sm-2 align-self-center"></div>
+                <div class="col pl-0 d-none d-sm-block"></div>
+                <div class="col-4 col-sm-2 align-self-center"></div>
+                <div class="col pl-0 d-none d-sm-block"></div>
+            </div>
+        </div>
+    </div>  */}}
+</div>

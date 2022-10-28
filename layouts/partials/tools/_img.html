@@ -1,0 +1,32 @@
+{{ with .img }}
+    <picture>
+        {{ $opts := dict
+            "img" $.img
+            "quality" $.quality
+            "webpHint" $.webpHint
+        }}
+
+        {{/* For each breakpoint, convert image to WebP and resize according to `$widths` */}}
+        {{ range $i, $v := $.breakpoints }}
+            {{ $width := index $.widths (add $i 1) | default -1 }}
+            {{ $opts = dict "breakpoint" $v "width" $width | merge $opts }}
+            {{ partialCached "tools/__img" $opts $.img.Key $opts }}
+        {{ end }}
+
+        {{/* Handle the smallest breakpoint */}}
+        {{ $width := index $.widths 0 }}
+        {{ $width = cond (lt $.img.Width $width) -1 $width }}
+        {{ $opts = dict "breakpoint" nil "width" $width | merge $opts }}
+        {{ partialCached "tools/__img" $opts $.img.Key $opts }}
+
+        {{/* Original, unresized image as fallback */}}
+        {{ $attributes := "" }}
+        {{ range $i, $v := slice "class" "alt" "loading" }}
+            {{ with index $ . }}
+                {{ $attributes = printf `%s %s="%s"` $attributes $v . }}
+            {{ end }}
+        {{ end }}
+        <img loading="lazy" class="img-fluid mx-auto d-block rounded mb-4" src="{{.RelPermalink}}" height="{{.Height}}" width="{{.Width}}"
+            type="{{.MediaType}}" {{$attributes|safeHTMLAttr}} />
+    </picture>
+{{ end }}

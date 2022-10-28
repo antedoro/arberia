@@ -1,0 +1,26 @@
+<div id="author" class="card mt-0 mb-4">
+    <p class="card-header h3 text-center bg-light text-uppercase">About Me</p>
+    <div class="card-body" style="margin: -5px -15px -15px -15px">
+        <div class="container">
+
+            <div class="textwidget">
+                <p class="small text-muted" style="text-align: justify;">
+
+                    {{/*  {{ $avatar := (.Resources.GetMatch "/img/me.jpg") }}
+                    {{ if ($avatar)}}
+                        {{ $avatar:= ($avatar.Fit "72x72").RelPermalink}}
+                    {{end}}  */}}
+
+                    <img class="float-left rounded m-1"
+                        title="{{ .Params.author | markdownify }}"
+                        src="/img/me.jpg"
+                        srcset="me.jpg 250w, 
+                        /img/me.jpg 450w, 
+                        /img/me.jpg 900w" sizes="25vw"
+                        alt="{{- .Params.author  | markdownify -}}" width="72" height="72"> 
+                        {{- .Site.Params.author_resume| markdownify -}} </p>
+            </div>
+            <a href="/about/" class="small text-muted mr-1">» More about {{ .Params.author | markdownify }}</a>
+        </div>
+    </div>
+</div>

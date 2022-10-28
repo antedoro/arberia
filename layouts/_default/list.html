@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{/*  <main>  */}}
+<div class="container main-content">
+	{{/*  <div class="col-md-12">  */}}
+		<div class="row justify-content-center">
+			<!-- Sidebar -->
+			{{/*  {{ if .Params.sidebar }}
+			{{- partial "sidebar.html" . -}}
+			{{ end }}  */}}
+
+			{{/*  Title  */}}
+			<h1 class="text-center" id="page-title">{{ .Title | markdownify }}
+				<a class="headerlink" href="{{- .RelPermalink -}}" title="Permanent link"></a>
+			</h1>
+
+			{{/*  Subtitle */}}
+			{{ with .Params.subtitle }}
+			<p class="text-center text-muted">{{ . | markdownify }}</p>
+			{{ end }}
+
+			{{- /* Cover Image */ -}}
+			<div class="row justify-content-center mx-2">
+				{{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+				{{ with $img }}
+				{{ $imageName := $img.Title }}
+				{{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+				{{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+				{{ end }}				
+			</div>
+			{{/*  {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+			{{ with $img }}
+			{{ $imageName := $img.Title }}
+			{{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+			{{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+			{{ end }}  */}}
+
+			<!-- List Post Area -->
+			{{- partial "listview.html" . -}}
+		</div>
+	{{/*  </div>  */}}
+</div>
+{{/*  </main>  */}}
+
+{{ end }}

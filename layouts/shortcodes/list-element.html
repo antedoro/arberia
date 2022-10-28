@@ -1,0 +1,30 @@
+{{/*  Example of use:
+{{< list-element  title="Title of content"  link="link path [optional]" photo="photo path [optional]"summary="Insert summary here.">}} */}}
+
+<div class="container my-4 border rounded">
+    <div class="row my-3">
+        {{/*  <div class="col-xs-12 col-sm-4 col-md-3 align-self-center">
+            <a href="/tutorials/api/"><img loading="lazy"
+                    src="https://files.realpython.com/media/Python-API-Tutorials_Watermarked.2eee58334c19.jpg"
+                    srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Python-API-Tutorials_Watermarked.2eee58334c19.jpg&amp;w=480&amp;sig=0ce712843e8be375cba7cf6da56c39d8c66f281b 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Python-API-Tutorials_Watermarked.2eee58334c19.jpg&amp;w=960&amp;sig=c8d19860c37993f6152de655b18dcc692fe629ed 960w, https://files.realpython.com/media/Python-API-Tutorials_Watermarked.2eee58334c19.jpg 1920w"
+                    class="rounded img-fluid w-100 mb-0" alt="Python API Tutorials Artwork" sizes="25vw"></a>
+        </div>  */}}
+
+        <div class="col-xs-12 col-sm-4 col-md-3 align-self-center">
+            {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+                    <img loading="lazy"
+                    {{ with .Get "photo"}}src="{{.}}"{{ end }}
+                    class="rounded img-fluid w-100 mb-0" alt="{{( .Get "title")}}" sizes="25vw"></a>
+        </div>
+
+        
+        <div class="col">
+            <div class="mt-3 d-md-none"></div>
+            <p class="small text-muted mb-0"><strong>Topic</strong></p>           
+                {{ with .Get "link"}}<a href="{{.}}" class="stretched-link">{{ end }}
+                <h2 class="m-0 h3">{{( .Get "title" )}}</h2>
+            </a>
+            <p class="m-0 text-muted small">{{( .Get "summary" )}}</p>
+        </div>
+    </div>
+</div>

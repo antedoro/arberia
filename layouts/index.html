@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="container main-content">
+	<div class="row justify-content-center">
+		<div class="col-12">
+
+			{{/*  Featured article  */}}
+			{{ partial "featured.html" . }}
+
+			{{/*  {{ partial "components/search.html" . }} */}}
+
+			{{/*  Last Post Widget  */}}
+			{{ partial "last-post-widget.html" . }}
+
+			<!-- dashboard -->
+			{{ partial "explore.html" . }}
+
+			{{/*  Grid Layout 2x2  */}}
+			{{/*  {{ partial "gridview.html" . }}  */}}
+
+			{{/*  Listview Layout */}}
+			{{ partial "listview.html" . }}
+
+			{{/*  {{ partial "recentpost.html" . }} da implemetare */}}
+		</div>
+	</div>
+</div>
+{{ end }}

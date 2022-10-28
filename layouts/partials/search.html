@@ -1,0 +1,14 @@
+{{/*  Search function - It's important to insert this script at the end of head.tml */}}
+{{- if (eq .Layout `search`) -}}
+{{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
+<script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}"
+  integrity="{{ $flexsearch.Data.Integrity }}"></script>
+
+{{ $mark := resources.Get "js/mark.min.js" }}
+{{ $basesearch := resources.Get "js/search.js" }}
+
+{{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
+{{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
+</script>
+{{- end -}}

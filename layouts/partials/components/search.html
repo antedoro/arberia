@@ -1,0 +1,27 @@
+{{/*  <div class="d-flex mt-3 mb-4">
+    <form class="form-inline col pl-0" action="/search" method="GET" id="home-search-form">
+        <a class="js-search-form-submit position-absolute" href="/search" title="Search"><i
+                class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>
+        <input class="form-control form-control-lg w-100" style="padding-left: 2rem;" maxlength="50" type="search"
+            placeholder="Search…" aria-label="Search" name="q">
+
+        <input class="form-control form-control-lg w-100" style="padding-left: 2rem;" data-search-input id="search-by" type="text" placeholder="Search...">
+
+        <input type="hidden" name="_from" value="home">
+    </form>
+    <button class="btn btn-primary col-3 px-2" type="submit" form="home-search-form">Search&nbsp;»</button>
+</div>  */}}
+
+
+<div class="searchBoxContainer">
+    <form action="js/search" method="GET" target="_self" class="form-inline col p-0">
+        {{/*  <a class="js-search-form-submit position-absolute" href="/search" title="Search"><i
+                class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>  */}}
+        <i class="position-absolute fa fa-search fa-fw text-muted pt-0  pl-2" aria-hidden="true"></i>
+        <input id="searchBox" type="text" class="form-control form-control-lg w-100" style="padding-left: 2rem;"
+            placeholder="Search..." name="q">
+        <input type="hidden" name="_from" value="searchbox">
+        <i title="Clear search query" class="fa fa-close text-muted pr-4 search-field-clear-icon"></i>
+        <div id="searchResults" class="searchResults" style="margin-top: 80px"></div>
+    </form>
+</div>

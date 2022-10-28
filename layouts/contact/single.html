@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="container main-content">
+  <div class="row justify-content-center">
+    <div class="col-md-11 col-lg-8 article ">
+      <div class="article-body page-body">
+
+        {{/*  Title  */}}
+        <h1 class="text-center" id="python-learning-paths">{{ .Title | markdownify }}<a class="headerlink"
+            href="{{- .RelPermalink -}}" title="Permanent link"></a></h1>
+
+        {{/*  Sottotitolo */}}
+        {{ with .Params.subtitle }}
+        <p class="text-center text-muted">{{ . | markdownify }}</p>
+        {{ end }}
+
+        {{- /* Post Cover Image */ -}}
+        {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+        {{ with $img }}
+        {{ $imageName := $img.Title }}
+        {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+        {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+        {{ end }}
+
+        <div class="content">{{ .Content }}</div>
+
+        {{ partial "components/contact-form.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

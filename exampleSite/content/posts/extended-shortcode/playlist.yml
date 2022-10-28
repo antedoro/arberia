@@ -1,0 +1,53 @@
+##################### Playlist##########################
+playlist:
+  pl_title : "Tutorial Solidworks"
+  total_duration : "9:38"
+  item:
+    # item1
+    - title : "Solidworks: Modelliamo un supporto"
+      icon : "fa fa-film"
+      link : "post-with-sidebar/"
+      duration : "7:34"
+    # item2
+    - title : "Solidworks: Modelliamo un supporto a guscio"
+      icon : "fa fa-film"
+      link : "python-tutorials/"
+      duration : "2:04"
+    # item3
+    - title : "Solidworks: Come creare una assieme"
+      icon : "fa fa-lock"
+      link : "python-tutorials/"
+      duration : "2:04"
+    # item4
+    - title : "Solidworks: Messa in tavola guscio inferiore"
+      icon : "fa fa-film"
+      link : "post-with-sidebar/"
+      duration : "7:34"
+    # item5
+    - title : "Solidworks: Messa in tavola del supporto superiore"
+      icon : "fa fa-film"
+      link : "python-tutorials/"
+      duration : "2:04"
+    # item6
+    - title : "Solidworks: Modelliamo una Biella"
+      icon : "fa fa-lock"
+      link : "python-tutorials/"
+      duration : "2:04"
+    # item7
+    - title : "SOLIDWORKS BONUS TUTORIAL: Modelliamo il Cappello di Biella"
+      icon : "fa fa-film"
+      link : "post-with-sidebar/"
+      duration : "7:34"
+    # item8
+    - title : "Solidworks: Modelliamo un Pistone"
+      icon : "fa fa-film"
+      link : "python-tutorials/"
+      duration : "2:04"
+    # item9
+    - title : "Solidworks: Progettazione un albero motore in Solidworks"
+      icon : "fa fa-lock"
+      link : "python-tutorials/"
+      duration : "2:04"
+
+
+

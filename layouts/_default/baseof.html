@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+{{ partial "head" . }}
+
+<body>
+	{{ partial "navbar" . }}
+	{{ block "main" . }}{{ end }}
+	{{/*  {{ partial "footer" . }}  */}}
+	{{ partial "footertype2" . }}
+	{{ partial "script" . }}
+	{{ partial "components/backtotop.html" . }}
+</body>
+</html>

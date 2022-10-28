@@ -1,0 +1,102 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<!-- Generator -->
+	<meta name="generator" content="Hugo {{ .Site.Hugo.Version }} with Arberia theme" />
+
+	<!-- Preloader -->
+	{{/*  <link href="https://cdn.realpython.com/" rel="preconnect"> 
+	<link href="https://files.realpython.com/" rel="preconnect">   */}}
+
+	{{/*  {{"<!-- Preload -->"}}
+	<link rel="preload" as="image" href="{{ "img/theme.png" | relURL }}" /> */}}
+
+	<title>{{ .Site.Title }} | {{ .Title | markdownify }}</title>
+	<link rel="canonical" href="{{ .Permalink }}" />
+	<meta name="description"
+		content="{{ if .IsHome }}{{ .Site.Params.description }}{{else}}{{ .Description }}{{ end }}">
+
+	<meta name="author" content="{{ site.Params.author | safeHTML }}" />
+	<meta name="keywords" content="{{ site.Params.keywords | safeHTML }}">
+
+	{{ partial "schema.html" . }}
+
+	{{ "<!-- RSS controllare -->" | safeHTML }}
+	{{ range .AlternativeOutputFormats -}}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	{{ "<!-- Favicon -->" | safeHTML }}
+	<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | relURL }}">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | relURL }}">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | relURL }}">
+	<link rel="apple-touch-icon"
+		href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | relURL }}">
+	<link rel="mask-icon"
+		href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | relURL }}">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="theme-color" content="{{ .Site.Params.assets.theme_color | relURL }}">
+	<meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | relURL }}">
+
+	{{/*  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18354c">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#18354c">  */}}
+
+	<!-- CSS Library only -->
+	<link rel="stylesheet" type="text/css" href={{"lib/bootstrap/css/bootstrap.min.css" | relURL}}>
+	<link rel="stylesheet" type="text/css" href={{"lib/lightbox/css/lightbox.css" | relURL}}>
+	<link rel="stylesheet" type="text/css" href={{"font-awesome-4.7.0/css/font-awesome.min.css" | relURL}}>
+	<link rel="stylesheet" type="text/css" href={{"gfonts/font.css" | relURL}}>
+
+	{{ "<!-- Main CSS -->" | safeHTML }}
+	{{ $style := resources.Get "css/main.css" }}
+	{{ $components := resources.Match "css/" }}
+	{{ range $components }}
+	{{ $style = slice $style . | resources.Concat .Name }}
+	{{ end }}
+	{{ $style = slice $style | resources.Concat "main.css" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+	{{ "<!-- Custom CSS -->" | safeHTML }}
+	{{ range site.Params.plugins.customCSS }}
+	<link rel="stylesheet" href="{{ .link | relURL }} ">
+	{{/*  <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}"> */}}
+	{{ end }}
+
+	{{/*  Search function - It's important to insert this script at the end of head.tml */}}
+	{{/*  {{- partial "schema.html" . -}} */}}
+	{{- if (eq .Layout `search`) -}}
+	{{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
+	<script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}"
+		integrity="{{ $flexsearch.Data.Integrity }}"></script>
+
+	{{ $mark := resources.Get "js/mark.min.js" }}
+	{{ $basesearch := resources.Get "js/search.js" }}
+
+	{{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
+	{{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
+	<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
+	</script>
+	{{- end -}}
+
+	{{ "<!-- OpenGraph + Twitter + Analytics + Disqus -->" | safeHTML }}
+	{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+	{{ with .Params.Image }}
+	<meta property="og:image" content="{{ . | absURL }}" />
+	{{ end }}
+	{{ template "_internal/opengraph.html" . }}
+	{{ template "_internal/twitter_cards.html" . }}
+	{{ template "_internal/schema.html" . }}
+	{{/*  {{ template "_internal/google_news.html" . }}  */}}
+	{{ template "_internal/google_analytics.html" . }}
+	{{ template "_internal/google_analytics_async.html" . }}
+	{{ template "_internal/disqus.html" . }}
+	{{- end -}}
+</head>

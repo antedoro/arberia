@@ -1,0 +1,19 @@
+{{/*  TAG Cloud  */}}
+<div class="sidebar-module sidebar-module-inset border">
+    <p class="h4"><a class="link-unstyled" href="/tags">All Tag
+            Topics</a></p>
+<div id="theme-tagcloud" style="margin-bottom: 10px;">
+    {{ $tags := $.Site.Taxonomies.tags.ByCount }}
+    {{ $v1 := where $tags "Count" ">=" 3 }}
+    {{ $v2 := where $v1 "Term" "not in" (slice "tags" "rss") }}
+    {{ range $v2 }}
+    {{ if .Term }}
+    {{ $tagURL := printf "tags/%s" .Term | relURL }}
+    {{/*  <a href="{{ $tagURL }}" class="badge badge-light text-muted" role="button" style="text-transform: lowercase;
+    font-size: 12px; padding-right: 5px; padding-left: 5px;" >{{ .Term }} <span class="badge">({{ .Count }})</span></a>  */}} 
+    <a href="{{ $tagURL }}" class="badge badge-light text-muted" role="button"
+        style="text-transform: lowercase; padding-right: 5px; padding-left: 5px;">{{ .Term }}</span></a>
+    {{ end }}
+    {{ end }}
+</div>
+</div>

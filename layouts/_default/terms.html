@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<div class="container main-content">
+    <div class="row justify-content-center">
+
+        <div class="col-md-11 col-lg-10 article">
+            <div class="article-body page-body">
+
+                {{/*  Title  */}}
+                <h1 class="text-center mt-5" id="page-title">All {{ .Type | singularize }} "{{ .Title }}"
+                    <a class="headerlink" href="{{- .RelPermalink -}}" title="Permanent link"></a>
+                </h1>
+
+                {{/*  Subtitle */}}
+                {{ with .Params.subtitle }}
+                <p class="text-center text-muted">{{ . | markdownify }}</p>
+                {{ end }}
+
+
+                <div class="container text-center my-3">
+                    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+                    {{ $largestFontSize := 1.4 }}
+                    {{ $smallestFontSize := 1.0 }}
+                    {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+                    {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+                    {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+                    {{ $spread := sub $max $min }}
+                    {{ $fontStep := div $fontSpread $spread }}
+                    {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+                    {{ $tagCount := len $taxonomy.Pages }}
+                    {{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
+                    {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+                    {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+                    <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}"
+                        class="badge badge-light text-muted m-1"
+                        style="font-size: {{ $currentFontSize }}rem;">
+                        {{ $name }}<sup>{{ $tagCount }}</sup>
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end}}

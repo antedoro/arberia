@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+{{ partial "head" . }}
+
+<body>
+    {{ block "main" . }}
+    <div class="container main-content">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 article">
+                <div class="article-body page-body">
+                    {{- /* Content */ -}}
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{/*  {{ partial "footer" . }} */}}
+    {{ partial "footertype2" . }}
+    {{ partial "script" . }}
+</body>
+
+</html>

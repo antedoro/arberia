@@ -1,0 +1,88 @@
+<!-- LIBRARY JS -->
+<script type="text/javascript" src="{{ "lib/jquery/jquery.js" | relURL }}"></script>
+<script type="text/javascript" src={{"lib/popper/popper.js" | relURL }}></script>
+<script type="text/javascript" src="{{ "lib/bootstrap/js/bootstrap.min.js" | relURL }}"></script> 
+<script type="text/javascript" src="{{ "lib/lightbox/js/lightbox.js" | relURL }}"></script>
+
+<!-- CUSTOM JS -->
+{{ range .Site.Params.customJS -}}
+<script type="text/javascript" src="{{ .link | relURL }}"></script>
+<script src="{{ "/js/" | relURL }}{{ . }}"></script> 
+{{ end }} 
+
+
+{{/*  glightbox script  */}}
+<script>
+  var lightbox = GLightbox();
+  lightbox.on('open', (target) => {
+      console.log('lightbox opened');
+  });
+  var lightboxDescription = GLightbox({
+      selector: '.glightbox2'
+  });
+  var lightboxVideo = GLightbox({
+      selector: '.glightbox3'
+  });
+  lightboxVideo.on('slide_changed', ({ prev, current }) => {
+      console.log('Prev slide', prev);
+      console.log('Current slide', current);
+
+      const { slideIndex, slideNode, slideConfig, player } = current;
+
+      if (player) {
+          if (!player.ready) {
+              // If player is not ready
+              player.on('ready', (event) => {
+                  // Do something when video is ready
+              });
+          }
+
+          player.on('play', (event) => {
+              console.log('Started play');
+          });
+
+          player.on('volumechange', (event) => {
+              console.log('Volume change');
+          });
+
+          player.on('ended', (event) => {
+              console.log('Video ended');
+          });
+      }
+  });
+
+  var lightboxInlineIframe = GLightbox({
+      selector: '.glightbox4'
+  });
+
+  /* var exampleApi = GLightbox({ selector: null });
+  exampleApi.insertSlide({
+      href: 'https://picsum.photos/1200/800',
+  });
+  exampleApi.insertSlide({
+      width: '500px',
+      content: '<p>Example</p>'
+  });
+  exampleApi.insertSlide({
+      href: 'https://www.youtube.com/watch?v=WzqrwPhXmew',
+  });
+  exampleApi.insertSlide({
+      width: '200vw',
+      content: document.getElementById('inline-example')
+  });
+  exampleApi.open(); */
+</script>
+
+
+<!-- Plugin: search -->
+{{/*  <script type="text/javascript" src="{{"plugins/lunr.min.js" | relURL}}"></script>
+<script type="text/javascript" src="{{"plugin/auto-complete.js" | relURL}}"></script>
+<link href="{{"plugins/auto-complete.css" | relURL}}" rel="stylesheet">
+<script type="text/javascript">
+  {{ if .Site.IsMultiLingual }}
+      var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+  {{ else }}
+      var baseurl = "{{.Site.BaseURL}}";
+  {{ end }}
+</script>
+<script type="text/javascript" src="{{"plugins/search.js" | relURL}}"></script>  */}}

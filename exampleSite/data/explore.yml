@@ -1,0 +1,45 @@
+##################### Features ##########################
+features:
+  enable : true
+  title : "Explore Arberia Theme"
+  card:
+    # card
+    - title : "All Blog Post"
+      icon : "fa mr-1 fa-rss"
+      link : "posts/"
+      description : "View all site post ordered by time"
+    # card
+    - title : "Video Tutorials"
+      icon : "fa fa-fw mr-1 fa-graduation-cap"
+      link : "portfolio/"
+      description : "In-depth step-by-step video courses"
+    # card
+    - title : "Portfolio"
+      icon : "fa fa-fw mr-1 fa-map-o"
+      link : "portfolio/"
+      description : "Some projects I was involved"
+      # card
+    - title : "Books"
+      icon : "fa fa-fw mr-1 fa-book"
+      link : "libri/"
+      description : "Round out your knowledge and learn offline"
+    # card
+    # - title : "Browse Topics"
+    #   icon : "fa fa-fw mr-1 fa-tags"
+    #   link : "browse-topics/"
+    #   description : "Focus on a specific area or skill level"
+    # # card
+    # - title : "Community Chat"
+    #   icon : "fab mr-1 fa-slack "
+    #   link : "comunity-chat/"
+    #   description : "Learn with other Pythonistas"
+    # # card
+    # - title : "Office Hours"
+    #   icon : "fa fa-fw mr-1 fa-users"
+    #   link : "office-hours/"
+    #   description : "Live Q&A calls with an expert from the Real Python Team"
+    # # card
+    # - title : "Podcast"
+    #   icon : "fa fa-fw mr-1 fa-podcast"
+    #   link : "podcast/"
+    #   description : "Hear what's new in the world of Python programming"

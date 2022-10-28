@@ -1,0 +1,13 @@
+{{/*  Tag list  */}}
+{{- $taxo := "tags" -}}
+{{- with .Param $taxo }}
+{{- range . }}
+<span class="ml-2 fa fa-tags" aria-hidden="true"></span>
+    {{- $url := urls.Parse (. | urlize) -}}
+    {{- $path := $url.Path -}}
+    {{- with $.Site.GetPage (printf "/%s/%s" $taxo $path) }}
+        <a class="badge badge-light text-muted" href="{{ .RelPermalink }}"> {{ .Title }}</a>
+    {{- end }}
+{{- end }}
+{{- end }}
+

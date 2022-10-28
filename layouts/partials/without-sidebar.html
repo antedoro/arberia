@@ -1,0 +1,33 @@
+{{/*  {{- $params := .Params | merge .Site.Params.page -}}  */}}
+
+<div class="container main-content">
+    <div class="row justify-content-center">
+
+<div class="col-md-10 col-lg-8 article">
+    <div class="article-body page-body">
+
+        <h1 class="text-center" id="post-title">{{ .Title | markdownify }}<a class="headerlink"
+                href="{{- .RelPermalink -}}" title="Permanent link"></a></h1>
+
+        {{ with .Params.subtitle }}
+        <p class="text-center text-muted">{{ . | markdownify }}</p>
+        {{ end }}
+
+        {{- /* Post Cover Image */ -}}
+        {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+        {{ with $img }}
+        {{ partial "tools/img" (dict "img" . "alt" $img.Title ) }}
+        {{ end }}
+
+        {{ if .Params.toc }}
+        {{- partial "components/toc.html"  -}}
+        {{ end }}
+
+        {{/*  {{- partial "components/search.html"  -}} */}}
+
+        {{- /* Content */ -}}
+        {{ .Content }}
+    </div>
+</div>
+</div>
+</div>

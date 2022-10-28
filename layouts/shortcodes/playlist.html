@@ -1,0 +1,77 @@
+{{/*  
+This sortcode can generate html from a yaml data file that contain a playlist of video.
+The fle must be contained on page folder content.
+Usage:
+Edit playlist file and add {{< playlist >}}  shortcode in index.md  */}}
+
+
+{{ $data := .Page.Resources.GetMatch "playlist.yml" | transform.Unmarshal }} 
+
+
+{{/*  {{ with $data.playlist }}
+{{len $data.playlist.item}}
+{{ .pl_title | markdownify }}
+{{ .total_duration | markdownify }}
+
+{{ range $index, $item :=  .item }}
+{{ $index :=add $index 1 }}
+<p>{{$index}}</p>
+<p>{{.icon}}</p>
+<p >{{ .link | absURL }}</p>
+<p>{{.duration  | markdownify}}</p>
+{{ end }}
+{{end}}  */}}
+
+
+{{ with $data.playlist }}
+<div class="mb-5 p-3 bg-white rounded border shadow-sm">
+    <h2 class="border-bottom border-gray pb-2 mb-0 h3 mt-0 pt-0">{{ .pl_title | markdownify }}</h2>
+    <p class="text-muted mt-1">{{len $data.playlist.item}} Lessons<span class="ml-2 fa fa-clock-o"></span> {{ .total_duration | markdownify }}</p>
+    <div class="media my-3 mt-4">
+        <div class="container">
+            {{ range  $index, $item :=  .item }}
+            {{ $index :=add $index 1 }}
+            <div class="row">
+                <div class="col-1 p-1 align-self-center mr-1">
+                    <a href="{{ .link | absURL }}">
+                        <i class="{{ .icon | markdownify }} text-muted fa-2x fa-fw text-center w-100"></i>
+                    </a>
+                </div>
+                <div class="col pr-0 d-flex align-items-center">
+                    <p class="h5 mb-0"><a href="{{ .link | absURL }}" class=""><span>{{$index}}.
+                        {{ .title | markdownify }}</span></a> <span class="text-muted"> {{ .duration | markdownify }}</span>
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}
+
+
+
+
+{{/*  <div class="mb-5 p-3 bg-white rounded border shadow-sm">
+    <h2 class="border-bottom border-gray pb-2 mb-0 h3 mt-0 pt-0">Section 1: Immutable Data Structures</h2>
+    <p class="text-muted mt-1">6 Lessons<span class="ml-2 fa fa-clock-o"></span> 17m</p>
+    <div class="media my-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 p-0 align-self-center mr-1">
+                    <a href="/lessons/functional-programming-course-overview/"><i
+                            class="fa fa-film text-muted fa-2x fa-fw text-center w-100"></i></a>
+                </div>
+                <div class="col pr-0 d-flex align-items-center">
+                    <p class="h5 mb-0"><a href="/lessons/functional-programming-course-overview/" class=""><span>1.
+                                Functional Programming Course Overview</span></a> <span class="text-muted">01:15</span>
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  */}}

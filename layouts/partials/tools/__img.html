@@ -1,0 +1,14 @@
+{{/*
+    Only include image if image width exceeds breakpoint width, and if breakpoint
+    shouldn't be skipped.
+*/}}
+{{ $width := cond (eq .width -1) .img.Width .width }}
+{{ if and (lt $width .img.Width) (ne $width -2) }}
+    {{ with .img.Resize (printf "%dx webp q%d %s" $width .quality .webpHint) }}
+        {{ $breakpoint := "" }}
+        {{ with $.breakpoint }}
+            {{ $breakpoint = printf "media=(min-width:%dpx)" . }}
+        {{ end }}
+        <source {{$breakpoint|safeHTMLAttr}} srcset="{{.RelPermalink}}" type="image/webp" />
+    {{ end }}
+{{ end }}

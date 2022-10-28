@@ -1,0 +1,59 @@
+<div class="col-md-12 mt-2">
+
+  <!-- Last Posts -->
+  <div class="d-flex justify-content-between align-items-center w-100 mt-0 mb-2">
+    <h2 class="my-0"><a href="posts/" class="text-body">Last Posts</a></h2>
+    <a href="posts/" class="btn btn-secondary btn-sm">View&nbsp;All&nbsp;»</a>
+  </div>
+
+  <div class="row">
+
+    {{- $pages := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+    {{- if .Site.Params.page.hiddenFromHomePage -}}
+    {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
+    {{- else -}}
+    {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
+    {{- end -}}
+
+    {{ range first 6 $pages }}
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+      <div class="card border-0">
+        <a href="{{ .RelPermalink }}">
+          {{/*  <div class="embed-responsive embed-responsive-16by9">
+          <img loading="lazy" class="card-img-top m-0 p-0 embed-responsive-item rounded" style="object-fit: contain;"
+            alt="Hosting a Django Project on Heroku"
+            src="https://files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg"
+            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg&amp;w=480&amp;sig=9deb63cee9b6c61e20ce456e2897b28794f6a1bc 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg&amp;w=960&amp;sig=3cffe540acd2053dd47801d4a9cbcdaf4e4d6279 960w, https://files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg 1920w"
+            sizes="25vw" width="1920" height="1080">
+
+        </div>  */}}
+
+          {{- /* Post Cover Image */ -}}
+          {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+          {{ with $img }}
+          {{ $imageName := $img.Title }}
+          {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+          {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+          {{ end }}
+
+        </a>
+        <div class="card-body m-0 p-0 mt-2">
+          <a class=" " href="{{ .RelPermalink }}">
+            <h2 class="card-title h4 my-0 py-0">{{.Title}}</h2>
+          </a>
+          <p class="card-text">
+            <small class="text-muted">
+              <span class="mr-2">{{ .PublishDate.Format "January 2, 2006" }}</span>
+              {{/*  Tag list  */}}
+              {{ partial "components/tag.html" . }}
+            </small>
+            {{/*  <small><p class="my-1">{{ .Summary | truncate 140 | safeHTML }}</p></small> */}}
+          </p>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+
+
+</div>

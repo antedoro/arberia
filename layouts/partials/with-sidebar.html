@@ -1,0 +1,69 @@
+{{/*  {{- $params := .Params | merge .Site.Params.page -}} */}}
+
+<div class="container main-content">
+    <div class="row justify-content-center">
+        {{/*  Article content  */}}
+        <div class="col-md-11 col-lg-8 article with-headerlinks">
+
+            {{- /* Post Cover Image */ -}}
+            {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+            {{ with $img }}
+            {{ $imageName := $img.Title }}
+            {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+            {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+            {{ end }}
+
+            <h1>{{ .Title | markdownify }}</h1>
+
+            <div class="mb-0">
+                <span class="text-muted">by <a class="text-muted" href="#author">{{ .Params.author }}</a>
+                    <span class="ml-2 fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+
+                    <span class="ml-2 mr-1 fa fa-comments"></span><a class="text-muted" href="#reader-comments">
+                        <span class="disqus-comment-count" data-disqus-identifier="{{.Permalink}}">0 Comments</span></a>
+
+                    {{/*  Tag list  */}}
+                    {{ partial "components/tag.html" . }}
+                    <div class="float-right mt-2">
+                        {{ partial "components/share-buttons.html" . }}
+                    </div>
+
+                    <div class="d-sm-flex flex-row justify-content-between my-3 text-center">
+                        {{/*  {{ partial "components/completed-mark" . }} Mark as completed */}}
+                    </div>
+                </span>
+            </div>
+
+            <div class="article-body">
+                {{/*  Table of Contents  */}}
+                {{ if .Params.toc }}
+                {{- partial "components/toc.html" . -}}
+                {{ end }}
+                {{- /* Content */ -}}
+                {{ .Content }}
+            </div>
+            {{- partial "components/mailchimp.html" . -}}
+            {{- partial "components/author.html" . -}} {{/* Author box  */}}
+        </div>
+
+        {{/*  Sidebar  */}}
+        <aside class="col-md-7 col-lg-4">
+            {{- partial "components/author-sb.html" . -}} {{/* Author box  */}}
+            {{- partial "components/yt-banner.html" . -}} {{/* YouTube Banner  */}}
+            {{- partial "components/mailchimp.html" . -}} {{/*  Email Subscription  */}}
+            {{ partial "recent-widget-new.html" . }} {{/* TAG Collection  */}}
+            {{/*  {{ partial "recent-widget.html" . }} Recent Post Collection */}}
+            {{/*  {{- partial "components/email-subscription.html"  -}}Email Subscription */}}
+            {{/*  {{- partial "components/completed-mark.html" . -}} */}}
+            {{/*  {{- partial "components/adv-sd.html"  -}} ADV Image */}}
+            {{/*  Table of Contents on sidebar  */}}
+            {{- partial "components/tag-cloud.html" . -}}
+            {{ if .Params.toc }}
+            {{- partial "components/toc.html" . -}}
+            {{ end }}
+    </div>
+
+    </aside>
+
+</div>
+</div>

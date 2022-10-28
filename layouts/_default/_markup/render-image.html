@@ -1,0 +1,70 @@
+{{/*  {{ if .Title }}
+  <figure>
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+    <figcaption>{{ .Title }}</figcaption>
+  </figure>
+{{ else }}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+{{ end }}  */}}
+
+{{/* Original code from: https://laurakalbag.com/processing-responsive-images-with-hugo/   */}}
+{{/* Just modified a bit to work with render_image hook and output webp images   */}}
+{{/* get file that matches the filename as specified as src=""  */}}
+{{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL))  }}
+{{ $alt := .PlainText | safeHTML }}
+
+{{/* So for posts that aren't setup in the page bundles, it doesn't fail  */}}
+{{ if $src }}
+
+
+{{ $tinyw := default "500x webp" }}
+{{ $smallw := default "800x webp" }}
+{{ $mediumw := default "1200x webp" }}
+{{ $largew := default "1500x webp" }}
+
+{{/* resize the src image to the given sizes */}}
+{{/* We create a a temp scratch because it's not available in this context */}}
+{{ $data := newScratch }}
+{{ $data.Set "tiny" ($src.Resize $tinyw) }}
+{{ $data.Set "small" ($src.Resize $smallw) }}
+{{ $data.Set "medium" ($src.Resize $mediumw) }}
+{{ $data.Set "large" ($src.Resize $largew) }}
+
+{{/* add the processed images to the scratch */}}
+
+{{ $tiny := $data.Get "tiny" }}
+{{ $small := $data.Get "small" }}
+{{ $medium := $data.Get "medium" }}
+{{ $large := $data.Get "large" }}
+
+{{/* only use images smaller than or equal to the src (original) 
+image size, as Hugo will upscale small images */}}
+
+
+<a href="{{ $src.RelPermalink }}">
+    <picture>
+    
+    <source media="(max-width: 376px)" 
+        srcset="{{with $tiny.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(max-width: 992px)" 
+        srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(max-width: 1400px)" 
+        srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(min-width: 1600px)" 
+        srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
+    
+    <img 
+ 
+   alt="{{ $alt }}" title="{{ $alt }}" src="{{ $src }}" 
+   height="{{ $src.Height}}" width="{{ $src.Width }}" class="img-fluid">
+
+</picture>
+</a>
+  
+  {{/* Since I do image-response class, the only thing that really 
+  matters is the height and width matches the image aspect ratio */}}
+
+  {{ end }}

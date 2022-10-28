@@ -1,0 +1,9 @@
+{{/*  Table of Contents  */}}
+<div class="bg-light sidebar-module sidebar-module-inset" id="toc">
+    <p class="h3 mb-2 text-muted"> {{ i18n "tableOfContents" . }}</p>
+    <div class="toc">
+        {{ if and (.Page.Params.toc) (gt .WordCount .Site.Params.tocMinWordCount ) }}
+        {{ .Page.TableOfContents }}
+        {{ end }}
+    </div>
+</div>

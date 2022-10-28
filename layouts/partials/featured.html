@@ -1,0 +1,71 @@
+{{/*  {{- $params := .Scratch.Get "params" -}} */}}
+
+<div class="row mb-4">
+    {{- $featured := (where (where .Site.RegularPages "Section" "posts" ) "Params.featured" "=" true) -}}
+    {{ range first 1 $featured }}
+    <div class="col-md-12 col-lg-8">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="card border-0">
+
+                    {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+                    <a href="{{ .Permalink | absURL }}">
+                        {{ with $img }}
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img class="card-img-top m-0 p-0 embed-responsive-item rounded" style="object-fit: contain;"
+                                src="{{ .Permalink }}" alt="{{ $.Title }}" srcset="{{ .Permalink }}480w, 
+                                {{ .Permalink }} 960w, 
+                                {{ .Permalink }} 1920w" sizes="75vw" width="1920" height="1080">
+                            <div class="shadow-sm p-0 bg-dark rounded-left border-left border-top border-bottom border-light 
+                            text-center d-flex align-items-center justify-content-center"
+                                style="position:absolute; top:1em; right:0; width: 5em; height: 2em; ">
+                                <span class="text-light m-0 p-0">NEW</span>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </a>
+
+                    {{- /* Post Cover Image */ -}}
+                    {{/*  {{ with $img }}
+                    {{ $imageName := $img.Title }}
+                    {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+                    {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+                    {{ end }} */}}
+
+                    <div class="card-body m-0 p-0 pt-3">
+                        <a href="{{ .Permalink | absURL }}">
+                            <h2 class="card-title h2 my-0 py-0">{{ .Title | markdownify }}</h2>
+                        </a>
+
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <span class="ml-2 fa fa-clock-o" aria-hidden="true"></span>
+                                <span class="mr-2"> {{ .PublishDate.Format "January 2, 2006" }}</span>
+
+                                {{/*  Tag list  */}}
+                                {{/*  <span class="ml-2 fa fa-tags" aria-hidden="true"></span>
+                                {{ range .Params.tags }}
+                                <a class="badge badge-light text-muted"
+                                    href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                {{end}}  */}}
+                                {{ partial "components/tag.html" . }}
+
+                            </small>
+                        </p>
+                        <p class="text-muted my-1">{{ .Summary }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/*  Sidebar  */}}
+    <div class="col-12 col-lg-4">
+        {{- partial "components/author-sb.html" . -}} {{/* Author box  */}}
+        {{- partial "components/yt-banner.html" . -}} {{/* YouTube Banner  */}}
+        {{- partial "components/tag-cloud.html" . -}} {{/* TAG Cloud  */}}
+    </div>
+
+</div>
+{{ end }}
+</div>

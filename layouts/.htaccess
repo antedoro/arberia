@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} arberiatheme\.netlify\.it [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://arberiatheme.netlify.app/$1 [R,L]
+
+ErrorDocument 404 /404.html

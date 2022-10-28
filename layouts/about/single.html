@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<div class="container main-content">
+        <div class="row justify-content-center">
+                <div class="col-md-11 col-lg-8 article ">
+                        <div class="article-body page-body">
+                                {{/*  Avatar  */}}
+                                <div class="col-6 mx-auto">
+
+                                        {{ if  .Params.avatar }}
+                                        {{ $img := .Resources.GetMatch "me.webp" }}
+                                        <div class="embed-responsive embed-responsive-1by1 mb-3">
+                                                {{/* resize the src image to the given sizes */}}
+                                                {{ .Scratch.Set "small_img" ($img.Resize "200x") }}
+                                                {{ .Scratch.Set "medium_img" ($img.Resize "400x") }}
+                                                {{ .Scratch.Set "large_img" ($img.Resize "800x") }}
+                                                {{/* add the processed images to the scratch */}}
+                                                {{ $small_img := .Scratch.Get "small_img" }}
+                                                {{ $medium_img := .Scratch.Get "medium_img" }}
+                                                {{ $large_img := .Scratch.Get "large_img" }}
+
+                                                <img src="{{ $img.RelPermalink}}" srcset="{{ with $small_img.RelPermalink }}{{.}} 200w{{ end }},
+                                               {{ with $medium_img.RelPermalink }}{{.}} 400w{{ end }},
+                                               {{ with $large_img.RelPermalink }}{{.}} 800w{{ end }}," sizes="25vw"
+                                                        alt=" {{ .Params.author  | safeHTML}}"
+                                                        class="rounded-circle img-fluid embed-responsive-item">
+
+                                                {{/*  <img src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=c363b704eeccb35f2247db13baff3d4383459858"
+                                                        srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=200&amp;h=200&amp;mode=crop&amp;sig=706b16de3cb88a8f353f4a98d7c7bc7234229bd0 200w, 
+                                                        https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=400&amp;h=400&amp;mode=crop&amp;sig=6d7aa672ca3f1ac5f7cd62ed1641b60f98d04d8b 400w, 
+                                                        {https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=c363b704eeccb35f2247db13baff3d4383459858 }800w"
+                                                        sizes="25vw" alt=" {{ .Params.author  | safeHTML}}"
+                                                class="rounded-circle img-fluid embed-responsive-item"> */}}
+                                        </div>
+                                        {{end}}
+                                        
+
+                                </div>
+
+                                {{/*  Social Link  */}}
+                                <div class="col text-center">
+                                        <h1>About {{ .Params.author  | markdownify }}</h1>
+                                        <ul class="list-inline">
+
+                                                <li class="list-inline-item"><a href="{{ .Params.website }}" class=""><i
+                                                        class="fa fa-user" style=""></i> Personal
+                                                Website</a></li> 
+
+                                                <li class="list-inline-item"><a href="{{ .Params.twitter }}" class=""><i
+                                                        class="fa fa-twitter-square"></i>
+                                                Twitter</a></li>
+
+                                                        <li class="list-inline-item"><a href="{{ .Params.instagram}}"
+                                                                class=""><i class="fa fa-instagram"></i>
+                                                                Instagram</a></li>                                                            
+
+                                                <li class="list-inline-item"><a href="{{ .Params.github}}" class=""><i
+                                                                        class="fa fa-github-square" style=""></i>
+                                                                GitHub</a></li>
+
+                                                <li class="list-inline-item"><a href="{{ .Params.linkedin }}"
+                                                                class=""><i class="fa fa-linkedin" style=""></i>
+                                                                LinkedIn</a></li>
+                                        </ul>
+                                </div>
+                                {{ .Content }}
+                        </div>
+                        {{- partial "components/mailchimp.html" . -}}
+                </div>
+
+
+        </div>
+</div>
+
+{{ end }}
