@@ -35,22 +35,81 @@ license: ""
 slug: start-here
 ---
 
-# Arberia Theme - An adaptation of the Beautiful Jekyll theme
+# Arberia Theme
 
-![Beautiful Hugo Theme Screenshot](https://github.com/halogenica/beautifulhugo/blob/master/images/screenshot.png)
+![Arberia Hugo Theme Screenshot](/start-here.webp)
 
 ## Live demo
 
-See https://hugo-theme-beautifulhugo.netlify.app/
+See https://arberiatheme.netlify.app/
 
 ## Installation
 
     $ mkdir themes
     $ cd themes
-    $ git submodule add https://github.com/halogenica/beautifulhugo.git beautifulhugo
+    $ git submodule add https://github.com/antedoro/arberia-test.git 
     
 
 See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
+
+## Links
+
+Product Hunt: [producthunt.com/posts/hugo-paper-6](https://www.producthunt.com/posts/hugo-paper-6)
+
+Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
+
+## Overview
+
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot.png)
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_dark.png)
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_mobile.png)
+
+## Install
+
+Inside the folder of your Hugo project, run:
+
+```bash
+git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+```
+
+Open `config.toml`, change `theme` to `"paper"`:
+
+```toml
+theme = "paper"
+```
+
+For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
+
+## Options
+
+Available options to `config.toml`:
+
+```toml
+disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # add disqus comments
+
+[params]
+  # color style
+  color = 'linen'                 # linen, wheat, gray, light
+
+  # header social icons
+  twitter = 'YOUR_TWITTER_ID'     # twitter.com/YOUR_TWITTER_ID
+  github = 'YOUR_GITHUB_ID'       # github.com/YOUR_GITHUB_ID
+  instagram = 'YOUR_INSTAGRAM_ID' # instagram.com/YOUR_INSTAGRAM_ID
+  rss = true                      # show rss icon with link
+
+  # home page profile
+  avatar = 'GRAVATAR_EMAIL'       # Gravatar email or image url(e.g. "https://deno.land/logo.svg")
+  name = 'YOUR_NAME'
+  bio = 'YOUR_BIO'
+
+  # misc
+  disableHLJS = true              # disable requesting highlight.js
+  monoDarkIcon = true             # show monochrome dark mode icon
+```
+
+## License
+
+[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/main/LICENSE) (c) [nanxiaobei](https://lee.so/)
 
 ## Extra Features
 
