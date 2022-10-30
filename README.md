@@ -6,7 +6,6 @@ You can find a live demo of the Hugo theme here: [https://arberiatheme.netlify.a
 
 The goal of this project is to add more features and customization to the og theme.
 
-
 ## Features
 
 - **Responsive layout**
