@@ -6,7 +6,6 @@
 
 The goal of this project is to add more features and customization to the og theme.
 
-
 ## Live demo
 
 See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
@@ -14,7 +13,6 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 ## Installation/updating
 
 a) Simple mode: **Download as Zip** from Github Page **and extract in your themes directory** or
-
 
 b) Inside the folder of your Hugo site, run:
 
@@ -25,9 +23,8 @@ b) Inside the folder of your Hugo site, run:
 
 After that copy /exampleSite content on /root_site and add in `config.toml`:
 
-```toml
-theme: "arberia"
-```
+`theme: "arberia"`
+
     
 To update theme installe in b mode:
 
