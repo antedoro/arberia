@@ -86,7 +86,7 @@ identifier = "start_here"
 pre = "fa fa-drafting-compass"
 post = ""
 name = "Start Here"
-url = "/arberia-installation-update"
+url = "/start-here"
 title = ""
 weight = 2
 
