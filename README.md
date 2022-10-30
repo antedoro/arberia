@@ -116,13 +116,12 @@ For more information about all available standard front matter variables, please
 ## Contributing
 
 Have you found a bug or got an idea for a new feature? Feel free to use the
-[issue tracker](https://github.com/Vimux/mainroad/issues) to let me know. Or make directly a
-[pull request](https://github.com/Vimux/mainroad/pulls), but please respect the following
-[contributing guide](https://github.com/Vimux/mainroad/blob/master/CONTRIBUTING.md).
+[issue tracker](https://github.com/antedoro/arberia/issues) to let me know. Or make directly a
+[pull request](https://github.com/antedoro/arberia//pulls).
 
 ## License
 
-This theme is released under the [GPLv2 license](https://github.com/Vimux/mainroad/blob/master/LICENSE.md).
+This theme is released under the [GPLv2 license](https://github.com/antedoro/arberia/blob/master/LICENSE).
 
 ## FAQs / How To's Guide
 
