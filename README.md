@@ -4,7 +4,7 @@
 
 ![Arberia Theme Screenshot](https://github.com/antedoro/arberia/blob/master/static/img/screenshot.png)
 
-The goal of this project is to add more features and customization to the og theme.
+The goal of this project is to add more features and customization to the base theme.
 
 ## Live demo
 
