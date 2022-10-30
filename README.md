@@ -14,7 +14,7 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 
 a) Simple mode: **Download as Zip** from Github Page **and extract in your themes directory** or
 
-b) Inside the folder of your Hugo site, run:
+b) More dev mode: Inside the folder of your Hugo site, run:
 
     $ mkdir themes
     $ cd themes
