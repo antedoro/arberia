@@ -26,7 +26,7 @@ After that copy /exampleSite content on /root_site and add in `config.toml`:
 `theme: "arberia"`
 
     
-To update theme installe in b mode:
+To update theme installed in b mode:
 
 ```bash
 cd themes/arberia
@@ -61,23 +61,16 @@ Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) Hugo guide 
 - Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default (No webpack, nodejs and other dependencies are required to edit the theme.
 
 ---
-
-
 ## FAQs / How To's Guide
 
 Read Wiki For More Details => **[Arberia-FAQs]()**
-
----
 
 ## Release Changelog
 
 Release ChangeLog has info about stuff added: **[Releases](https://github.com/antedoro/arberia/releases)**
 
-
----
-
 ## Special Thanks
 
-- [**flexsearch.js**](- https://github.com/nextapps-de/flexsearch)
+- [**flexsearch.js**](https://github.com/nextapps-de/flexsearch)
 - [**mark.js**](https://github.com/julmot/mark.js)
 - **All Contributors and Supporters**
