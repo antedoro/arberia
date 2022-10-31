@@ -1,13 +1,18 @@
 name = "Arberia Theme"
 license = "MIT"
-licenselink = "https://github.com/antedoro/Arberia/blob/master/LICENSE"
-description = "Arberia Theme for Hugo Static Site Generator."
-homepage = "https://github.com/antedoro/Arberia"
+licenselink = "https://github.com/antedoro/arberia/blob/master/LICENSE"
+description = "Arberia Theme is a fully responsive theme for tech blogger with 4 single post layout and 2 list layout!"
+homepage = "https://github.com/antedoro/arberia"
 demosite = "https://arberiatheme.netlify.app/"
 tags = ["blog", "clean", "responsive", "theme"]
-features = ["cover-image", "favicon", "multilingual", "pagination", "social-menu", "syntax-highlighting", "SEO Optimized"]
-min_version = "0.101.0"
+hugo-theme hugo static-site mit-license tech-blog video-blog arberia 
+features = ["post-with-sidebar", "video-post", "cover-post", "post-no-sidebar", "search", "disqus", "social-share", "SEO Optimized"]
 
 [author]
   name = "antedoro"
   homepage = "https://github.com/antedoro"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.101.0"
