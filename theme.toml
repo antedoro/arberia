@@ -5,7 +5,6 @@ description = "Arberia Theme is a fully responsive theme for tech blogger with 4
 homepage = "https://github.com/antedoro/arberia"
 demosite = "https://arberiatheme.netlify.app/"
 tags = ["blog", "clean", "responsive", "theme"]
-hugo-theme hugo static-site mit-license tech-blog video-blog arberia 
 features = ["post-with-sidebar", "video-post", "cover-post", "post-no-sidebar", "search", "disqus", "social-share", "SEO Optimized"]
 
 [author]
