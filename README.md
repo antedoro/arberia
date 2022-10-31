@@ -1,6 +1,6 @@
 # Arberia Theme for Hugo
 
-**Arberia Theme** is a theme for the Hugo static site generator inspired from RealPython site.
+**Arberia Theme** is a theme for the Hugo for tech blogger with 4 single post layout and 2 list layout!
 
 ![Arberia Theme Screenshot](https://github.com/antedoro/arberia/blob/master/static/img/screenshot.png)
 
