@@ -1,8 +1,7 @@
 ---
 weight: 1
 title: Start Here
-subtitle: Take your coding skills to the next level with Real Python’s accelerated study
-  plans for beginner, intermediate, and advanced Python developers.
+subtitle: Arberia Theme is a fully responsive tech-blogger theme for Hugo with 4 single post and 2 list layout!! 
 date: 2020-10-15T20:58:53+02:00
 lastmod: 2020-10-15T20:58:53+02:00
 draft: false
@@ -27,7 +26,7 @@ resources:
 
 featured: true
 sidebar: true
-toc: true
+toc: false
 math:
   enable: false
 lightgallery: false
@@ -35,169 +34,160 @@ license: ""
 slug: start-here
 ---
 
-# Arberia Theme
+**Arberia Theme** is a theme for the Hugo for tech blogger with 4 single post layout and 2 list layout!
 
-![Arberia Hugo Theme Screenshot](/start-here.webp)
+## Features
 
-## Live demo
+- **Responsive layout**
+- **3 Single post view:**
+  - **Post view with sidebar**
+  - **Post view without sidebar**
+  - **Post view with cover image**
+  - **Video post view**
+- **2 List post view:**
+  - **List posts**
+  - **Grid posts**
+- **Landing page**
+- **List Cathegory/Tag view**
+- **Icon colored submenu**
+- **Table of Contents**
+- **Search** supported by [Flexbox.js](flexbox.js)
+- **[Google Analytics](https://analytics.google.com/analytics)** supported
+- **[Disqus](https://disqus.com)** comment system
+- Social-Media Share buttons on posts
+- Multilingual support. (not yet implemented!)
+- Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default (No webpack, nodejs and other dependencies are required to edit the theme.
 
-See https://arberiatheme.netlify.app/
+## Installation/updating
 
-## Installation
+*Before starting, please be sure that you have
+[installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and
+[created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you are ready to install **Arberia**.*
 
-    $ mkdir themes
+There are two mode:
+
+a) Simple mode: **Download as Zip** from Github Page **and extract in your themes directory** or
+
+b) Or you can add it as a git submodule via the following command: 
+
     $ cd themes
-    $ git submodule add https://github.com/antedoro/arberia-test.git 
+    $ git submodule add https://github.com/antedoro/arberia.git arberia
     
 
-See [the Hugo documentation](https://gohugo.io/themes/installing/) for more information.
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
 
-## Links
-
-Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
-
-## Overview
-
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot.png)
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_dark.png)
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_mobile.png)
-
-## Install
-
-Inside the folder of your Hugo project, run:
-
-```bash
-git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+```
+theme = "arberia"
 ```
 
-Open `config.toml`, change `theme` to `"paper"`:
+To update theme installed in b mode:
+
+    cd themes/arberia
+    git pull
+
+## Configuration
+
+### Config.toml example
 
 ```toml
-theme = "paper"
+title = "Arberia Theme"
+baseURL = "https://exampleSite.com/"
+relativeURLs = "True"
+languageName = "En"
+languageCode = "en-us"
+theme = "arberia"
 ```
 
-For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
+### Front Matter example
 
-## Options
+```yaml
+---
+title: "Insert title here"
+subtitle: "Insert a subtitle here"
+date: 2020-10-15T20:58:53+02:00
+lastmod: 2020-10-15T20:58:53+02:00
+draft: true
+type:  # Use standard-view on nothing for default or courses - video - landingpage null for list view
+weight: null 
 
-Available options to `config.toml`:
+featured: false
+sidebar: false # Works only with standard-view
+toc: true # Works only with standard-view
+math:
+  enable: false # Actualy not implemented
+lightgallery: false # Actualy not implemented
+license: ""
+slug:  # slug exemple: solidworks-2020-tutorial
 
-```toml
-disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # add disqus comments
+hiddenFromHomePage: false
+hiddenFromSearch: false # da implementare
 
-[params]
-  # color style
-  color = 'linen'                 # linen, wheat, gray, light
+author: "author"
+avatar: /img/me.jpg  # link to avatar file
+authorLink: ""
+description: "Descrizione da rivedere se è un doppione subtitle"
 
-  # header social icons
-  twitter = 'YOUR_TWITTER_ID'     # twitter.com/YOUR_TWITTER_ID
-  github = 'YOUR_GITHUB_ID'       # github.com/YOUR_GITHUB_ID
-  instagram = 'YOUR_INSTAGRAM_ID' # instagram.com/YOUR_INSTAGRAM_ID
-  rss = true                      # show rss icon with link
+tags:
+  - tag1
+  - tag2
+  - tag3
+  - tag4
+categories:
+  - category
 
-  # home page profile
-  avatar = 'GRAVATAR_EMAIL'       # Gravatar email or image url(e.g. "https://deno.land/logo.svg")
-  name = 'YOUR_NAME'
-  bio = 'YOUR_BIO'
+# resources:
+#   - name: featured-image
+#     src: featured-image.png
 
-  # misc
-  disableHLJS = true              # disable requesting highlight.js
-  monoDarkIcon = true             # show monochrome dark mode icon
+resources:
+- name: "featured-image"
+  src: "Real-Python-Learning-Paths_Watermarked.webp"
+- name: "featured-image-preview"
+  src: "Real-Python-Learning-Paths_Watermarked.webp"
+
+
+# If its a video post compile below
+video:
+  title: "YouTube Video Title"
+  link: # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+  duration: # Example 14:16
+
+playlist:
+  item:
+    - title: "YouTube Video Title"
+      icon: fa fa-fw fa-play
+      link:  # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+      duration: # Example 14:16
+    - title: "YouTube Video Title"
+      icon: far fa-circle
+      link: # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+      duration: # Example 4:42
+---
 ```
+
+For more information about all available standard front matter variables, please read
+[Hugo Front Matter](https://gohugo.io/content-management/front-matter).
+
+## Contributing
+
+Have you found a bug or got an idea for a new feature? Feel free to use the
+[issue tracker](https://github.com/antedoro/arberia/issues) to let me know. Or make directly a
+[pull request](https://github.com/antedoro/arberia//pulls).
 
 ## License
 
-[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/main/LICENSE) (c) [nanxiaobei](https://lee.so/)
+This theme is released under the [GPLv2 license](https://github.com/antedoro/arberia/blob/master/LICENSE).
 
-## Extra Features
+## FAQs / How To's Guide
 
-### Responsive
+Read Wiki For More Details => **[Arberia-FAQs]()**
 
-This theme is designed to look great on both large-screen and small-screen (mobile) devices.
+## Release Changelog
 
-### Syntax highlighting
+Release ChangeLog has info about stuff added: **[Releases](https://github.com/antedoro/arberia/releases)**
 
-This theme has support for either Hugo's lightning fast Chroma, or both server side and client side highlighting. See [the Hugo docs for more](https://gohugo.io/content-management/syntax-highlighting/).
+## Special Thanks
 
-### Disqus support
-
-To use this feature, uncomment and fill out the `disqusShortname` parameter in `config.toml`.
-
-### Google Analytics
-
-To add Google Analytics, simply sign up to [Google Analytics](https://www.google.com/analytics/) to obtain your Google Tracking ID, and add this tracking ID to the `googleAnalytics` parameter in `config.toml`.
-
-Note that the Google Analytics tracking code will only be inserted into the page when the site isn't served on Hugo's built-in server, to prevent tracking from local testing environments.
-
-### Commit SHA on the footer
-
-If the source of your site is in a Git repo, the SHA corresponding to the commit the site is built from can be shown on the footer. To do so, two site parameters `commit` has to be defined in the config file `config.toml`:
-
-```
-enableGitInfo = true
-[Params]
-  commit = "https://github.com/<username>/<siterepo>/tree/"
-```
-
-See at [vincenttam/vincenttam.gitlab.io](https://gitlab.com/vincenttam/vincenttam.gitlab.io) for an example of how to add it to a continuous integration system.
-
-### Multilingual
-
-To allow Beautiful Hugo to go multilingual, you need to define the languages
-you want to use inside the `languages` parameter on `config.toml` file, also
-redefining the content dir for each one. Check the `i18n/` folder to see all
-languages available.
-
-```toml
-[languages]
-  [languages.en] 
-    contentDir = "content/en" # English
-  [languages.ja]
-    contentDir = "content/ja" # Japanese
-  [languages.br]
-    contentDir = "content/br" # Brazilian Portuguese
-```
-
-Now you just need to create a subdir within the `content/` folder for each
-language and just put stuff inside `page/` and `post/` regular directories.
-```
-content/      content/      content/  
-└── en/       └── br/       └── ja/ 
-    ├── page/     ├── page/     ├── page/
-    └── post/     └── post/     └── post/
-
-```
- 
-### Extra shortcodes
-
-There are two extra shortcodes provided (along with the customized figure shortcode):
-
-#### Details
-
-This simply adds the html5 detail attribute, supported on all *modern* browsers. Use it like this:
-
-```
-{{< details "This is the details title (click to expand)" >}}
-This is the content (hidden until clicked).
-{{< /details >}}
-```
-
-#### Split
-
-This adds a two column side-by-side environment (will turn into 1 col for narrow devices):
-
-```
-{{< columns >}}
-This is column 1.
-{{< column >}}
-This is column 2.
-{{< endcolumns >}}
-```
-
-## About
-
-This is an adaptation of the Hugo theme [Arberia](https://deanattali.com/beautiful-jekyll/) by [Vincenzo Antedoro](https://antedoro.it/contatti/). It supports most of the features of the original theme, and many new features. It has diverged from the Jekyll theme over time, with years of community updates.
-
-## License
-
-MIT Licensed, see [LICENSE](https://github.com/halogenica/Hugo-BeautifulHugo/blob/master/LICENSE).
+- [**flexsearch.js**](https://github.com/nextapps-de/flexsearch)
+- [**mark.js**](https://github.com/julmot/mark.js)
+- **All Contributors and Supporters**

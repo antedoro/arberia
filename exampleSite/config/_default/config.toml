@@ -185,14 +185,14 @@ parent = "view"
   color = ""
   bordertop = true
 
-[[menu.main]]
-identifier = "books"
-pre = ""
-post = ""
-name = "Books"
-url = "/books"
-title = ""
-weight = 11
+# [[menu.main]]
+# identifier = "books"
+# pre = ""
+# post = ""
+# name = "Books"
+# url = "/books"
+# title = ""
+# weight = 11
 
 [[menu.main]]
 identifier = "contact"

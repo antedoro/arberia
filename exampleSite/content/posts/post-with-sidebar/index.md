@@ -62,8 +62,6 @@ To follow along, you can download the code and other resources by clicking the l
 
 You’re going to create a bare-bones Django project and deploy it to the cloud straight from the terminal. By the end, you’ll have a public and shareable link to your first Heroku app.
 
-## Titolo di prova
-
 Here’s a one-minute video demonstrating the necessary steps, from initializing an empty Git repository to viewing your finished project in the browser. Hang on and watch till the end for a quick preview of what you’re about to find in this tutorial:
 
 
@@ -83,7 +81,7 @@ Before jumping ahead, make sure that you’re familiar with the basics of the Dj
 
 You should also have a Git client installed and configured so that you can interact conveniently with the Heroku platform from the command line. Finally, you should seriously consider using a virtual environment for your project. If you don’t already have a specific virtual environment tool in mind, you’ll find some options in this tutorial soon. 
 
-### Sottotitolo
+### Subtitle
 
 You should also have a Git client installed and configured so that you can interact conveniently with the Heroku platform from the command line. Finally, you should seriously consider using a virtual environment for your project. If you don’t already have a specific virtual environment tool in mind, you’ll find some options in this tutorial soon.
 

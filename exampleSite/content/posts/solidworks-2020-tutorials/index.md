@@ -1,6 +1,6 @@
 ---
-title: Solidworks 2020 Tutorials
-subtitle: Impara Solidworks 2020 con 5 mini-tutorial
+title: Video Post View 
+subtitle: Video post view example
 date: 2022-07-09T23:08:01+02:00
 lastmod: 2022-07-09T23:08:01+02:00
 draft: false
@@ -49,26 +49,29 @@ math:
   enable: false
 lightgallery: false
 license: ""
-slug: solidworks-2020-tutorials
+slug: video-post-view
 ---
 
-Anche tu come me in questi giorni ti trovi bloccato a casa e sei in cerca di imparare qualcosa di nuovo? Allora vieni con me ad imparare la modellazione 3D con Solidworks.
-Mentre tu impari la modellazione 3D, io imparo a registrare e montare piccoli video tutorial. Come vedi si tratta comunque di uno scambio alla pari. Per registrare lo schermo sto usando OBS e per montare i video sto famigliarizzando con DaVinci Resolve.
+This is a **video post view** example.
 
-Molto probabilmente i miei tutorial sono lontani dall’essere perfetti e per questo gradirei che le tue critiche fossero anche aspre ma sincere. Ti chiedo pertanto di segnalarmi nei commenti qualsiasi errore o concetto poco chiaro e nella prossima tornata ce la metterò tutta per migliorare.
+Do you, like me, find yourself stuck at home these days and are looking to learn something new? Then come with me to learn 3D modeling with Solidworks.
+While you learn 3D modeling, I learn how to record and edit small video tutorials. As you can see, it is still an equal exchange. To record the screen I am using OBS and to edit the videos I am familiarazing with DaVinci Resolve.
 
-In questa serie di 5 video modelliamo un supporto per un albero composto da due parti:
+My tutorials are far from perfect and for this reason I would like your criticisms to be also harsh but sincere. I therefore ask you to report any errors or unclear concepts in the comments and I will do my best to improve in the next round.
 
-- il supporto inferiore
-- il guscio superiore
+In this series of 5 videos we model a support for a tree consisting of two parts:
 
-Nel primo video modelliamo il supporto inferiore ed imparerai ad usare gli strumento Schizzo 2D e le funzioni Estrusione e Creazione guidata dei fori;
-Nel secondo modelliamo il supporto superiore che io chiamo guscio rafforzerai l’uso delgi strimenti del primo video.
-Nel terzo viseo comporremo l’assieme per verificare se ci sono interferenze tra i pezzi.
-Nel quarto e quinto video faremo la messa in tavola dei singili pezzi. Impareremo ad usare lo strumento Quota intelligente, compileremo il Cartiglio e produrremo la tavola stampabile in PDF.
+- the lower support
+- the upper shell
 
-Per seguire il primo tutorial su Solidworks **ti consiglio di scaricare la tavola in PDF** che ho creato per te. Segui questo link e inizia l’esercizio:
+In the first video we model the lower support and you will learn how to use the 2D Sketch tools and the Extrude and Hole Wizard functions;
+In the second we model the upper support that I call the shell you will reinforce the use of the tools of the first video.
+
+In the third video we will compose the assembly to check if there is any interference between the pieces.
+In the fourth and fifth video we will prepare the individual pieces on the table. We will learn how to use the Smart Dimension tool, fill in the Title Block and produce the printable sheet in PDF.
+
+To follow the first tutorial on Solidworks **I suggest you download PDF drawing** I created for you. Follow this link and start the exercise:
 
 {{< download_file "http://bit.ly/2W6j3xi" "1.3 MB" >}}
 
-Segui i prossimi post per realizzare gli altri tutorial.
+Follow the next posts to make the other tutorials.
