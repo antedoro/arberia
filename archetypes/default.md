@@ -4,7 +4,7 @@ subtitle: "Insert a subtitle here"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
-type:  # Use standard-view on nothing for default or courses - video - landingpage null for list view
+type:  # Use standard-view or nothing for default or courses - video - landingpage - null for list view
 weight: null 
 
 featured: false
@@ -19,10 +19,10 @@ slug:  # slug exemple: solidworks-2020-tutorial
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare
 
-author: "author"
+author: "Insert author"
 avatar: /img/me.jpg  # link to avatar file
 authorLink: ""
-description: "Descrizione da rivedere se è un doppione subtitle"
+description: "A short description"
 
 tags:
   - tag1
@@ -32,31 +32,26 @@ tags:
 categories:
   - category
 
-# resources:
-#   - name: featured-image
-#     src: featured-image.png
-
 resources:
 - name: "featured-image"
-  src: "Real-Python-Learning-Paths_Watermarked.webp"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "Real-Python-Learning-Paths_Watermarked.webp"
-
+  src: "featured-image.webp.webp"
 
 # If its a video post compile below
 video:
   title: "YouTube Video Title"
-  link: # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+  link: # YouTube Video Link for example: https://www.youtube.com/embed/"+videonumber"
   duration: # Example 14:16
 
 playlist:
   item:
     - title: "YouTube Video Title"
       icon: fa fa-fw fa-play
-      link:  # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+      link:  # YouTube Video Link for example: https://www.youtube.com/embed/"+videonumber"
       duration: # Example 14:16
     - title: "YouTube Video Title"
       icon: fa fa-circle
-      link: # YouTube Video Link for example: https://www.youtube.com/embed/taxItkTlY_0
+      link: # YouTube Video Link for example: https://www.youtube.com/embed/"+videonumber"
       duration: # Example 4:42
 ---
