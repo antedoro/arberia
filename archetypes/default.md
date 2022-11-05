@@ -9,7 +9,7 @@ weight: null
 
 featured: false
 sidebar: false # Works only with standard-view
-toc: true # Works only with standard-view
+toc: false # Works only with standard-view
 math:
   enable: false # Actualy not implemented
 lightgallery: false # Actualy not implemented
