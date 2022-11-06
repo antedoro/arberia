@@ -34,7 +34,7 @@ theme = "arberia"
   unsafe = true
 
 [permalinks]
-  posts = "/:title/"
+  posts = "/:title/" # Use posts = "/:title/" or posts = '/:year/:month/:title/'
 
 [minify]
   minifyOutput = true
