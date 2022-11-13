@@ -4,8 +4,9 @@
 siteBrand = true
 BrandName = "Arberia Theme"
 BrandLogo = "img/arberia-logo.webp"
-siteBrandWidth = 42
-siteBrandHeight = 42
+BrandBorder = "rounded" # Use rounded or rounded-circle
+siteBrandWidth = 38
+siteBrandHeight = 38
 # siteBrandFill = "#fff"
 # Unit: em
 # siteBrandFontSize = 1

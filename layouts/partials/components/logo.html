@@ -12,9 +12,9 @@
     <img src="{{ .BrandLogo | relURL }}" 
     width="{{ .siteBrandWidth }}" 
     height="{{ .siteBrandHeight }}" 
-    class="d-inline-block align-top"
+    class="d-inline-block align-top {{ .BrandBorder }} border"
     loading="lazy" 
-    alt="">
+    alt="brand-logo">
     {{ .BrandName }}
 </a>
 
