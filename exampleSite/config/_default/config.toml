@@ -67,11 +67,8 @@ enableRobotsTXT= true
   # msapplication_TileColor = "#ffc40d"
 
 
-
-
-
-######################################
-#  Menu
+####################### Menu Config ########################
+[menu]
 # [[menu.main]]
 # identifier = "home"
 # pre = ""
@@ -261,66 +258,37 @@ weight = 13
 			# "color: #e5c6ab;
 			# "color: #b8abe5; 
 
-# Footer config
+####################### Footer Config ########################
 [footer]
-enable = true
-title = "||||"
-greatings = "❤️ Happy Pythoning!"
-  
 [[menu.footer]]
   name = "Newsletter"
   link = "newsletter/"
   weight = 1
 
 [[menu.footer]]
-  name = "Podcast"
-  link = "podcast/"
-  weight = 2
-
-[[menu.footer]]
-  name = "Youtube"
-  link = "youtube/"
-  weight = 3
-
-[[menu.footer]]
   name = "Twitter"
   link = "twitter/"
-  weight = 4
+  weight = 2
 
 [[menu.footer]]
   name = "Facebook"
   link = "facebook/"
-  weight = 5
+  weight = 3
 
 [[menu.footer]]
   name = "Instagram"
   link = "Instagram/"
-  weight = 6
-
-[[menu.footer]]
-  name = "Python Tutorials"
-  link = "python-tutorials/"
-  weight = 7
-
-[[menu.footer]]
-  name = "Search"
-  link = "search/"
-  weight = 8
+  weight = 4
 
 [[menu.footer]]
   name = "Privacy Policy"
   link = "privacy-policy/"
-  weight = 9
-
-[[menu.footer]]
-  name = "Energy Policy"
-  link = "energy-policy/"
-  weight = 10
+  weight = 5
 
 [[menu.footer]]
   name = "Contact"
   link = "contact/"
-  weight = 11
+  weight = 6
 
 
 ############################# social site ########################
