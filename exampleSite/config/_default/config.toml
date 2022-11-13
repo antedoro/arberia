@@ -261,35 +261,14 @@ weight = 13
 ####################### Footer Config ########################
 [footer]
 [[menu.footer]]
-  name = "Newsletter"
-  link = "newsletter/"
+  name = "Privacy Policy"
+  url = "/policy-privacy"
   weight = 1
 
 [[menu.footer]]
-  name = "Twitter"
-  link = "twitter/"
-  weight = 2
-
-[[menu.footer]]
-  name = "Facebook"
-  link = "facebook/"
-  weight = 3
-
-[[menu.footer]]
-  name = "Instagram"
-  link = "Instagram/"
-  weight = 4
-
-[[menu.footer]]
-  name = "Privacy Policy"
-  link = "privacy-policy/"
-  weight = 5
-
-[[menu.footer]]
   name = "Contact"
-  link = "contact/"
-  weight = 6
-
+  url = "/contact"
+  weight = 2
 
 ############################# social site ########################
 [[params.social]]
