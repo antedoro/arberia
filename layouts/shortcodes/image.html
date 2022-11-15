@@ -1,0 +1,11 @@
+{{- /* Post Image */ -}}
+{{/*  How to use it:
+{{< image "insert image.png" "Insert caption">}}  */}}
+
+<figure>
+    <img loading="lazy" class="img-fluid mx-auto d-block rounded" 
+        src="{{.Get 0}}" type="image/webp"
+        alt="{{.Get 1 | plainify}}" 
+        width="w-100" height="h-100">
+    <figcaption style="text-align: center">{{.Get 1 | safeHTML }}</figcaption>
+</figure>
