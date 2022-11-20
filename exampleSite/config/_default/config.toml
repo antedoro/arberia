@@ -5,6 +5,8 @@ languageName = "En"
 languageCode = "en-us"
 theme = "arberia"
 
+[permalinks]
+  posts = "/:title/" # Use posts = "/:title/" or posts = '/:year/:month/:title/'
 
 # To list the most relevant pages on the front page or similar, 
 # you should use the site.Params.mainSections list instead of comparing 
@@ -33,9 +35,6 @@ theme = "arberia"
 [markup.goldmark.renderer] # Controllare cosa faccia
   unsafe = true
 
-[permalinks]
-  posts = "/:title/" # Use posts = "/:title/" or posts = '/:year/:month/:title/'
-
 [minify]
   minifyOutput = true
 
@@ -55,7 +54,7 @@ enableRobotsTXT= true
 
 
 # Generate favicon with https://realfavicongenerator.net/
-# and copy favicon folder (name it facicon) to static/ folder
+# and copy favicon folder (name it favicon) to static/ folder
 [assets]
   favicon = "favicon/favicon.ico"
   favicon16x16 = "favicon/favicon-16x16.png>"
