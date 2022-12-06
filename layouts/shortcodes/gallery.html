@@ -1,3 +1,7 @@
+{{- /* Gallery image */ -}}
+{{/*  How to use it:
+{{< gallery dir= "image-dir" >}}  */}}
+
 {{ $dir := print (.Get "dir") "/*"}}
 {{ with .Page.Resources.Match $dir }}
 {{ range . }}
