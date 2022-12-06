@@ -36,7 +36,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image.webp.webp"
+  src: "featured-image.webp"
 
 # If its a video post compile below
 video:
