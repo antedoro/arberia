@@ -113,10 +113,10 @@
 										<p class="my-0">
 											<span class="text-muted">
 												<span class="mr-2"><a class="text-muted"
-														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}></span>
-												<span class="mr-2">16 Lessons</span>
-												<span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;17m</span>
-												<br>
+														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</span>
+												{{/*  <span class="mr-2">16 Lessons</span>  */}}
+												{{/*  <span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;17m</span>  */}}
+												{{/*  <br>  */}}
 
 												{{/*  Tag list  */}}
 												{{ partial "components/tag.html" . }}
