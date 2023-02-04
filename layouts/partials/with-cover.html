@@ -37,9 +37,8 @@
                 <span class="text-muted">
                   <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
                       target="_blank">{{ .Params.author | markdownify }}</a></span>
-                  {{/*  <span class="mr-2">12 Lessons</span>  */}}
-                  {{/*  <span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;39m</span>  */}}
                   <br>
+                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
                   {{/*  Tag list  */}}
                   {{ partial "components/tag.html" . }}
                 </span>

@@ -19,6 +19,27 @@
         {{ partial "tools/img" (dict "img" . "alt" $img.Title ) }}
         {{ end }}
 
+        <div class="row mb-1">
+            <div class="col-2 col-md-1 p-0 ml-3 align-self-center">
+                  <a href="{{.Params.authorLink | urlize }}">
+                    <img src="{{ .Params.avatar }}" 
+                    class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
+            </div>
+
+            <div class="col pr-0 d-flex align-items-center">
+              <p>
+                <span class="text-muted">
+                  <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
+                      target="_blank">{{ .Params.author | markdownify }}</a></span>
+                  <br>
+                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                  {{/*  Tag list  */}}
+                  {{ partial "components/tag.html" . }}
+                </span>
+              </p>
+            </div>
+          </div>
+
         {{ if .Params.toc }}
         {{- partial "components/toc.html"  -}}
         {{ end }}
