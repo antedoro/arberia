@@ -42,7 +42,6 @@ weight: 1
 
 Hi I'm the developer of Arberia Theme for Hugo. If you want to know some about me read this _short bio_.
 
-My name is **Vincenzo Antedoro**. I was born and grew up in south of Italy. In my challenge of creativity, I was ispired from near ancient greek culture and mediterranean in general.theme
-I build a professional curriculum in mechanical engineering studies during I obtained Mechanical Engineering Degree at Università della Calabria. My’s career in Mechanical  designs has spanned 18 years, during whitch I was involved in several projects. Now I’m a teacher of mechanical technology at Istituto Tecnico Industriale “E. Fermi” of Castrovillari, Italy. And I am interested in new exciting projects…
+My name is **Vincenzo Antedoro**. I'm an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of learning by doing.
 
-Visualize my LinkedIn profile o get my resume (sorry only in italian for now!).
+Visualize my profile at my persona blog: [https://antedoro.it/about/](https://antedoro.it/about/)
