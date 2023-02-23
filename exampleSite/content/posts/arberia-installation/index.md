@@ -10,7 +10,7 @@ weight: null
 
 featured: false
 sidebar: true
-toc: true
+toc: false
 math:
   enable: false
 lightgallery: false

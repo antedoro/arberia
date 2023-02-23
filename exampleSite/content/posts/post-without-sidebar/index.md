@@ -38,59 +38,31 @@ license: ""
 slug: post-sidebar
 ---
 
-As a novice [web developer](https://antedoro.it), you’ve built your portfolio app and shared your code on GitHub. Perhaps, you’re hoping to attract technical recruiters to land your first programming job. 
+## What is Lorem Ipsum?
 
-Many coding bootcamp graduates are likely doing the same thing. To differentiate yourself from the crowd and boost your chances of getting noticed, you can start hosting your Django project online.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it?
 
-For a hobby Django project, you’ll want a hosting service that’s free of charge, quick to set up, user-friendly, and well-integrated with your existing technology stack. While GitHub Pages is perfect for hosting static websites and websites with JavaScript, you’ll need a web server to run your Flask or Django project.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-There are a few major cloud platform providers operating in different models, but you’re going to explore Heroku in this tutorial. It ticks all the boxes—it’s free, quick to set up, user-friendly, and well-integrated with Django—and is the favorite cloud platform provider of many startups.
+## Where does it come from?
 
-In this tutorial, you’ll learn how to:
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-- Take your Django project online in minutes
-- Deploy your project to Heroku using Git
-- Use a Django-Heroku integration library
-- Hook your Django project up to a standalone relational database
-- Manage the configuration along with sensitive data
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+
+## Why do we use it?
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+## Where can I get some?
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
 
 To follow along, you can download the code and other resources by clicking the link below:
 
-> **[Get Source Code](https://antedoro.it): Click here to get the companion Django project as well as snapshots of the individual steps** followed in this tutorial.
+> **[Get Source Code](https://github.com/antedoro/arberia): Click here to get the code project as well as snapshots of the individual steps** followed in this tutorial.
 >
-## Demo: What You’ll Build
-
-You’re going to create a bare-bones Django project and deploy it to the cloud straight from the terminal. By the end, you’ll have a public and shareable link to your first Heroku app.
-
-### Titolo di prova
-
-Here’s a one-minute video demonstrating the necessary steps, from initializing an empty Git repository to viewing your finished project in the browser. Hang on and watch till the end for a quick preview of what you’re about to find in this tutorial:
-
-
-
-In addition to the steps shown in the screencast above, you’ll find a few more later on, but this should be enough to give you a general idea about how you’ll be working with Heroku in this tutorial.
-
-## Project Overview
-
-This tutorial isn’t so much about building any particular project, but rather **hosting** one in the cloud using **Heroku**. While Heroku supports [various languages](https://antedoro.it) and web frameworks, you’ll stick to Python and Django. Don’t worry if you don’t have any Django projects on hand. The first step will walk you through scaffolding a new Django project to get you started quickly. Alternatively, you can use a ready-made sample project that you’ll find later.
-
-Once you have your Django project ready, you’re going to sign up for a free Heroku account. Next, you’ll download a convenient command-line tool that will help you manage your apps online. As demonstrated in the screencast above, the command line is a quick way of working with Heroku. Finally, you’ll finish off with a deployed Django project hosted on your newly-configured Heroku instance. You can think of your final result as a placeholder for your future project ideas.
-
-## Prerequisites
-
-Before jumping ahead, make sure that you’re familiar with the basics of the Django web framework and that you’re comfortable using it to set up a bare-bones project.
-
-> **Note:** If you’re more experienced with Flask than Django, then you can check out a similar tutorial about Deploying a Python Flask Example Application Using Heroku.
-
-You should also have a Git client installed and configured so that you can interact conveniently with the Heroku platform from the command line. Finally, you should seriously consider using a virtual environment for your project. If you don’t already have a specific virtual environment tool in mind, you’ll find some options in this tutorial soon.
-
-### Sottotitolo
-
-You should also have a Git client installed and configured so that you can interact conveniently with the Heroku platform from the command line. Finally, you should seriously consider using a virtual environment for your project. If you don’t already have a specific virtual environment tool in mind, you’ll find some options in this tutorial soon.
-
-
-{{< alert-info"[**Click here to get the companion Django project as well as snapshots of the individual steps**](https://realpython.com/bonus/django-hosting-heroku-project-code/) followed in this tutorial.">}}
-
-{{< list-element  title="Who I am?"  link="/about/" photo="Real-Python-Learning-Paths_Watermarked.webp" summary="My name is Vincenzo Antedoro. I was born and grew up in south of Italy. In my challenge of creativity, I was ispired from near ancient greek culture and mediterranean in general.">}}
-
-
+___

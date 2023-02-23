@@ -5,9 +5,6 @@ languageName = "En"
 languageCode = "en-us"
 theme = "arberia"
 
-[permalinks]
-  posts = "/:title/" # Use posts = "/:title/" or posts = '/:year/:month/:title/'
-  # or  posts = '/:year/:month/:filename/'
 
 # To list the most relevant pages on the front page or similar, 
 # you should use the site.Params.mainSections list instead of comparing 
@@ -36,6 +33,9 @@ theme = "arberia"
 [markup.goldmark.renderer] # Controllare cosa faccia
   unsafe = true
 
+[permalinks]
+  posts = "/:title/"
+
 [minify]
   minifyOutput = true
 
@@ -55,7 +55,7 @@ enableRobotsTXT= true
 
 
 # Generate favicon with https://realfavicongenerator.net/
-# and copy favicon folder (name it favicon) to static/ folder
+# and copy favicon folder (name it facicon) to static/ folder
 [assets]
   favicon = "favicon/favicon.ico"
   favicon16x16 = "favicon/favicon-16x16.png>"
@@ -67,7 +67,10 @@ enableRobotsTXT= true
   # msapplication_TileColor = "#ffc40d"
 
 
-####################### Menu Config ########################
+
+
+
+######################################
 [menu]
 # [[menu.main]]
 # identifier = "home"
@@ -162,7 +165,7 @@ identifier = "video_post"
 pre = "fa fa-film"
 post = "Single post view of video post"
 name = "Video Post"
-url = "/solidworks-2020-tutorials/"
+url = "/video-post-view/"
 title = ""
 weight = 9
 parent = "view"
@@ -258,7 +261,7 @@ weight = 13
 			# "color: #e5c6ab;
 			# "color: #b8abe5; 
 
-####################### Footer Config ########################
+# Footer config
 [footer]
 [[menu.footer]]
   name = "Privacy Policy"
@@ -269,6 +272,7 @@ weight = 13
   name = "Contact"
   url = "/contact"
   weight = 2
+
 
 ############################# social site ########################
 [[params.social]]

@@ -22,7 +22,7 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: python-data-classes.png
+    src: what-is-lorem-impum.png
 
 type: cover-view
 featured: false

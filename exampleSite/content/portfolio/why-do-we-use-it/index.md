@@ -22,7 +22,7 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: rock-paper-scissor.png
+    src: why-do-we-use-it.png
 
 type: cover-view
 featured: false

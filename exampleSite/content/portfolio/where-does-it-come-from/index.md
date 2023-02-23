@@ -22,9 +22,9 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: python-data-classes.png
+    src: where-does-it-come-from.png
   - name: featured-image-preview
-    src: python-data-classes.png
+    src: where-does-it-come-from.png
 
 type: cover-view
 featured: false

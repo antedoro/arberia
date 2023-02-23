@@ -8,8 +8,9 @@ weight: null
 type: cover-view
 
 author: Vincenzo Antedoro
-authorLink: ""
-description: author description
+authorLink: /about
+avatar: /img/me.jpg
+description: Insert description here. This don't affects subtitle but only html internals
 
 tags:
   - tag1
