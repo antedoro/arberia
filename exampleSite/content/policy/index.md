@@ -40,7 +40,7 @@ slug: policy-privacy
 
 ## Privacy Policy Example
 
-Arberia Theme for Hugo (“us”, “we”, or “our”) operates the realpython.com website (the “Service”).
+Arberia Theme for Hugo (“us”, “we”, or “our”) operates the https://arberiatheme.netlify.app/ website (the “Service”).
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
@@ -74,7 +74,7 @@ Contact Us
 
 **Service**
 
-Service is the realpython.com website operated by Arberia Theme for Hugo
+Service is the https://arberiatheme.netlify.app/ website operated by Arberia Theme for Hugo
 
 **Personal Data**
 
