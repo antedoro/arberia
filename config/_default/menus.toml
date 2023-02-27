@@ -1,0 +1,165 @@
+# ################### Menu ###################
+
+# Elenco colori da usare nel  menu 
+    # "color: #ff7e73;
+    # "color: #abe5b1;
+    # "color: #abe0e5;
+    # "color: #ffc873;
+    # "color: #e5c6ab;
+    # "color: #b8abe5; 
+
+# # [[menu.main]]
+# # identifier = "home"
+# # pre = ""
+# # post = ""
+# # name = "Home"
+# # url = "/"
+# # title = ""
+# # weight = 1
+
+# [[main]]
+# identifier = "portfolio"
+# pre = "fal fa-drafting-compass"
+# post = ""
+# name = "Portfolio"
+# url = "/portfolio/"
+# title = ""
+# weight = 2
+
+
+# [[main]]
+# identifier = "tutorial"
+# pre = "fas fa-graduation-cap"
+# post = ""
+# name = "Tutorial"
+# url = "#"
+# title = ""
+# weight = 3
+
+# [[main]]
+# identifier = "python_tutorials"
+# pre = "fas fa-graduation-cap"
+# post = "In deep articles and tutorials"
+# name = "Python Tutorials"
+# url = "/python-tutorials/"
+# title = ""
+# weight = 4
+# parent = "tutorial"
+# [menu.main.params]
+#   color = "#ff7e73"
+
+# [[main]]
+# identifier = "python_topics"
+# pre = "fas fa-tag"
+# post = "Focus on specific area level"
+# name = "Python Topics →"
+# url = "/python-topics/"
+# title = ""
+# weight = 5
+# parent = "tutorial"
+# [menu.main.params]
+#   color = "#abe5b1"
+
+# [[main]]
+# identifier = "video"
+# pre = "fas fa-film"
+# post = "Step-by-step video lesson"
+# name = "Video Tutorial"
+# url = "/portfolio/"
+# title = ""
+# weight = 6
+# parent = "tutorial"
+# [menu.main.params]
+#   color = "#abe0e5"
+
+# [[main]]
+# identifier = "quizzies"
+# pre = "fas fa-trophy"
+# post = "Check your learning progress"
+# name = "Quizzies→"
+# url = "/quizzies/"
+# title = ""
+# weight = 7
+# parent = "tutorial"
+# [menu.main.params]
+#   color = "#ffc873"
+
+# [[main]]
+# identifier = "unlock"
+# pre = "fas fa-star text-warning"
+# post = ""
+# name = "Unlock All Content"
+# url = "/quizzies/"
+# title = ""
+# weight = 8
+# parent = "tutorial"
+# [menu.main.params]
+#   color = ""
+#   bordertop = true
+
+# [[main]]
+# identifier = "libri"
+# pre = ""
+# post = ""
+# name = "Libri"
+# url = "/libri/"
+# title = ""
+# weight = 9
+
+# [[main]]
+# identifier = "contact"
+# pre = ""
+# post = ""
+# name = "Contatti"
+# url = "/contatti/"
+# title = ""
+# weight = 10
+
+# [[main]]
+# identifier = "about"
+# pre = ""
+# post = ""
+# name = "About "
+# url = "/about/"
+# title = ""
+# weight = 11
+
+
+# # [[menu.main]]
+# # identifier = "more"
+# # pre = ""
+# # post = ""
+# # name = "More"
+# # url = "/more/"
+# # title = ""
+# # weight = 10
+
+# # [[menu.main]]
+# # identifier = "python_newsletter"
+# # pre = ""
+# # post = ""
+# # name = "Python Newsletter"
+# # url = "/more/"
+# # title = ""
+# # weight = 11
+# # parent = "more"
+
+# # [[menu.main]]
+# # identifier = "python_podcast"
+# # pre = ""
+# # post = ""
+# # name = "Python Podcast"
+# # url = "/more/"
+# # title = ""
+# # weight = 11
+# # parent = "more"
+
+# # [[menu.main]]
+# # identifier = "python_job_board"
+# # pre = ""
+# # post = ""
+# # name = "Python Job Board →"
+# # url = "/more/"
+# # title = ""
+# # weight = 12
+# # parent = "more"

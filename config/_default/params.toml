@@ -1,0 +1,51 @@
+#################### default params ################################
+
+# Brand Bar (inside header)
+siteBrand = true
+BrandName = "Arberia Theme"
+BrandLogo = "img/arberia-logo.webp"
+BrandBorder = "rounded" # Use rounded or rounded-circle
+siteBrandWidth = 38
+siteBrandHeight = 38
+# siteBrandFill = "#fff"
+# Unit: em
+# siteBrandFontSize = 1
+# siteBrandFont = "Arial"
+# siteBrandFontColor = "white"
+
+tagline = "Responsive Hugo Theme"
+description = "Arberia Theme for Hugo Static Site Generator. Insert here general site description"
+keywords = "Insert keywords"
+author = "Vincenzo Antedoro"
+author_resume = "<strong>Vincenzo Antedoro</strong> is an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of <em>learning by doing</em>."
+
+# #################### default parameters ################################
+# number of post on pagination list
+paginate = "6"
+# summary lenght on list post 
+summaryLength = "225"
+# default is false
+disableSearch = false 
+# google analytics
+googleAnalytics = "UA-74607909-1" # example : UA-123-45
+# YouTube Channel ID
+YTChannelID = "UClA8GwWzurVCprEY6OsCvhw"
+# Formspree Contact Form Link
+contact_form_action = "https://formspree.io/f/link" # go to https:formspre.io and open a free account an insert here the link
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+
+# #################### Social Share Buttom ################################
+[social.share]
+    enable = true
+    Twitter = true
+    Facebook = true
+    Linkedin = true
+    Whatsapp = false
+    Telegram = false
+    Email = true
+    Pinterest = false
+    Reddit = false
+    Pocket = false
+    Instapaper = false
+
