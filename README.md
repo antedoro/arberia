@@ -121,7 +121,7 @@ Have you found a bug or got an idea for a new feature? Feel free to use the
 
 ## License
 
-This theme is released under the [GPLv2 license](https://github.com/antedoro/arberia/blob/master/LICENSE).
+This theme is released under the [MIT license](https://github.com/antedoro/arberia/blob/master/LICENSE).
 
 ## FAQs / How To's Guide
 
