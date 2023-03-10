@@ -125,7 +125,7 @@ This theme is released under the [MIT license](https://github.com/antedoro/arber
 
 ## FAQs / How To's Guide
 
-Read Wiki For More Details => **[Arberia-FAQs]()**
+Read Wiki For More Details => **[Arberia-FAQs](https://arberiatheme.netlify.app/arberia-faqs/)**
 
 ## Release Changelog
 
