@@ -9,14 +9,123 @@ other = "Back to Top"
 other = "View Comments"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Posts"
-# === Post ===
+# === defaults/summary.html ===
+# === grid-view/list.html ===
+[readMore]
+other = "Read more..."
 
-# === Taxonomy ===
-[allSome]
-other = "All {{ .Some }}"
+# === defaults/taxonomy.html ===
+[allPostsforCategory]
+other = "All Posts for "
+
+# === defaults/terms.html ===
+[all]
+other = "All "
+
+# === category/taxonomy.html ===
+# [allPostsforCategory]
+# other = "All Posts for ... "
+
+# === category/terms.html ===
+[allPostsforTerms]
+other = "All Posts for ... "
+
+# === about.html ===
+[about]
+other = "About "
+
+# === contact.html ===
+[gotFeedback]
+other = "Got feedback on some my project?"
+
+# === video-layout.html ===
+[courseContents]
+other = "Course Contents"
+
+# === with-sidebar.html ===
+[comments]
+other = "0 Comments"
+
+# === last-post-widget.html ===
+[lastPosts]
+other = "Last Posts"
+
+[viewAll]
+other = "View All »"
+
+# === Pagination ===
+[previousPage]
+other = "Previous Page"
+
+[nextPage]
+other = "Next Page"
+# === Pagination ===
+
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Recent Posts"
+
+# === shortcodes ===
+# === shortcodes/download-files.html ===
+[download]
+other = "Download"
+
+# === shortcodes/faq.html ===
+[showHide]
+other = "Show/Hide"
+
+# === shortcodes/list-element.html ===
+[topic]
+other = "Topic"
+
+# === shortcodes/playlist.html ===
+[lessons]
+other = "Lessons"
+
+# === components ===
+
+# === components/author-sb.html ===
+# === components/author.html ===
+[aboutMe]
+other = "About Me"
+
+[moreAbout]
+other = "» More about"
+
+# === components/completes-mark.html ===
+[markAscompleted]
+other = "Mark as Completed"
+
+# === components/contact-form.html ===
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[subject]
+other = "Subject"
+
+[message]
+other = "Type You Message Here"
+
+# === components/mailchimp.html ===
+[subscribe]
+other = "Subscribe"
+
+[nospam]
+other = "🔒 No spam. Unsubscribe any time."
+
+# === components/tag-cloud.html ===
+[tagTopics]
+other = "All Tag Topics"
+
+# === toc.html ===
+[tableOfContents]
+other = "Table of Contents"
+
+# --------------------------------------
+# {{i18n "tableOfContents"}}
 
 [tag]
 other = "Tag"
@@ -36,13 +145,8 @@ other = "Categories"
 other = "More"
 # === Pagination ===
 
-# === partials/header.html ===
-[selectLanguage]
-other = "Select Language"
 
-[switchTheme]
-other = "Switch Theme"
-# === partials/header.html ===
+
 
 # === partials/footer.html ===
 [poweredBySome]
@@ -56,9 +160,6 @@ other = "en"
 [valinePlaceholder]
 other = "Your comment ..."
 
-[facebookLanguageCode]
-other = "en_US"
-# === partials/comment.html ===
 
 # === partials/assets.html ===
 [search]
@@ -76,8 +177,6 @@ other = "Cancel"
 [noResultsFound]
 other = "No results found"
 
-[lunrLanguageCode]
-other = "en"
 
 [copyToClipboard]
 other = "Copy to clipboard"
@@ -97,9 +196,7 @@ other = "Learn more"
 other = "Share on"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
-[contents]
-other = "Contents"
+
 
 [publishedOnDate]
 other = "published on {{ .Date }}"
@@ -121,17 +218,10 @@ other = "{{ .Count }} minutes"
 [views]
 other = "views"
 
-[author]
-other = "Author"
 
 [updatedOnDate]
 other = "Updated on {{ .Date }}"
 
-[readMarkdown]
-other = "Read Markdown"
-
-[improveArticle]
-other = "Improve Article"
 
 [back]
 other = "Back"
@@ -148,10 +238,6 @@ other = "Page not found"
 other = "The page you're looking for doesn't exist. Sorry."
 # === 404.html ===
 
-# === Offline Page ===
-[pageOffline]
-other = "You're offline. Check your internet connection."
-# === Offline Page ===
 
 # === shortcodes/admonition.html ===
 [note]
@@ -191,19 +277,4 @@ other = "Example"
 other = "Quote"
 # === shortcodes/admonition.html ===
 
-# === shortcodes/version.html ===
-[new]
-other = "NEW"
 
-[changed]
-other = "CHANGED"
-
-[deleted]
-other = "DELETED"
-# === shortcodes/version.html ===
-
-
-# === toc.html ===
-[tableOfContents]
-  other = "Table of Contents"
-# === toc.html ===

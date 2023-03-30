@@ -39,13 +39,6 @@
 								<div class="col-2 col-md-1 p-0 align-self-center">
 
 									<a href="{{ .RelPermalink }}">
-										{{/*  <img loading="lazy"
-											src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/headshot_2018_x500_sharpen_compress.198bfb04d7f9.JPG&amp;w=500&amp;h=500&amp;mode=crop&amp;sig=96b4bd41ff3f90d880a4ab5acbbe43eaff81b1e5"
-											srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/headshot_2018_x500_sharpen_compress.198bfb04d7f9.JPG&amp;w=125&amp;h=125&amp;mode=crop&amp;sig=c4c75cb8adbd6599d0712f39bb5b4d941952d04b 125w, 
-											https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/headshot_2018_x500_sharpen_compress.198bfb04d7f9.JPG&amp;w=250&amp;h=250&amp;mode=crop&amp;sig=7f3333d3963c2ad741f41618a51e24e14ce2952b 250w, 
-											https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/headshot_2018_x500_sharpen_compress.198bfb04d7f9.JPG&amp;w=500&amp;h=500&amp;mode=crop&amp;sig=96b4bd41ff3f90d880a4ab5acbbe43eaff81b1e5 500w"
-											sizes="10vw" class="rounded-circle img-fluid w-100"
-											alt="Christopher Trudeau"></a>  */}}
 										<a href="{{.Params.authorLink | urlize }}">
 											<img loading="lazy" src="{{ .Params.avatar }}"
 												class="rounded-circle img-fluid w-100" sizes="10vw"
@@ -56,8 +49,6 @@
 										<span class="text-muted">
 											<span class="mr-2"><a class="text-muted"
 													href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</a></span>
-											<span class="mr-2">5 Lessons</span>
-											<span class="mr-2"><i class="fa fa-clock-o"></i> 26m</span>
 											<br>
 											{{/*  Tag list  */}}
 											{{ partial "components/tag.html" . }}
@@ -69,7 +60,7 @@
 						<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 						<div class="text-center mt-auto">
 							<a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg px-4 "><i
-									class="fa fa-play fa-fw"></i> Read More</a>
+									class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
 						</div>
 					</div>
 					{{- end -}}
@@ -82,13 +73,6 @@
 
 					{{- range $pages -}}
 					<div class="card bg-white rounded border  my-4 w-100" style="min-width: 45%">
-						{{/*  <figure class="embed-responsive embed-responsive-16by9 my-0">
-							<a href="{{ .RelPermalink }}"><img loading="lazy"
-							src="https://files.realpython.com/media/Pass-by-Reference-in-Python_Watermarked.15e180bf1d43.jpg"
-							srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Pass-by-Reference-in-Python_Watermarked.15e180bf1d43.jpg&amp;w=480&amp;sig=b14ca080ad6077fb0d7bea085792161830eb15e0 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Pass-by-Reference-in-Python_Watermarked.15e180bf1d43.jpg&amp;w=960&amp;sig=5a418c32bd4939ed23f45c62f83397282f085b18 960w, https://files.realpython.com/media/Pass-by-Reference-in-Python_Watermarked.15e180bf1d43.jpg 1920w"
-							class="embed-responsive-item card-img-top"
-							alt="Pass by Reference in Python: Background and Best Practices" sizes="66vw"></a>
-						</figure> */}}
 
 						{{- /* Post Cover Image */ -}}
 						{{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
@@ -114,10 +98,6 @@
 											<span class="text-muted">
 												<span class="mr-2"><a class="text-muted"
 														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</span>
-												{{/*  <span class="mr-2">16 Lessons</span>  */}}
-												{{/*  <span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;17m</span>  */}}
-												{{/*  <br>  */}}
-
 												{{/*  Tag list  */}}
 												{{ partial "components/tag.html" . }}
 											</span>
@@ -128,75 +108,22 @@
 							<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 							<div class="text-center mt-auto">
 								<a href="{{ .RelPermalink }}" class="btn btn-outline-dark "><i
-										class="fa fa-play fa-fw"></i> Read More</a>
+										class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
 							</div>
 						</div>
 					</div>
 					{{- end -}}
 					{{- partial "paginator.html" . -}}
-
-					{{/*  terzo post */}}
-					{{/*  <div class="card bg-white rounded border  my-4 w-100">
-						<figure class="embed-responsive embed-responsive-16by9 my-0">
-							<a href="/courses/python-data-classes/"><img loading="lazy"
-									src="https://files.realpython.com/media/The-Ultimate-Guide-to-Data-Classes-in-Python-3.7_Watermarked.96432fedfe8f.jpg"
-									srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/The-Ultimate-Guide-to-Data-Classes-in-Python-3.7_Watermarked.96432fedfe8f.jpg&amp;w=480&amp;sig=f90360ebf52a9ed604c464d9693ef4eda2d4b7e7 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/The-Ultimate-Guide-to-Data-Classes-in-Python-3.7_Watermarked.96432fedfe8f.jpg&amp;w=960&amp;sig=66bbdca5c7941e2abb3a554e5540934046f41a8f 960w, https://files.realpython.com/media/The-Ultimate-Guide-to-Data-Classes-in-Python-3.7_Watermarked.96432fedfe8f.jpg 1920w"
-									class="embed-responsive-item card-img-top"
-									alt="Data Classes in Python 3.7 (And Above)" sizes="66vw"></a>
-						</figure>
-						<div class="card-body d-flex flex-column">
-							<h2 class="card-title mt-0 "><a class="link-unstyled"
-									href="/courses/python-data-classes/">Using Data
-									Classes in Python</a></h2>
-							<div class="container">
-								<div class="row">
-									<div class="col-2 col-md-1 p-0 align-self-center">
-										<a href="/courses/python-data-classes/#team"><img loading="lazy"
-												src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/dj-profile-square-med.e9f478927b62.jpg&amp;w=1000&amp;h=1000&amp;mode=crop&amp;sig=43d60c8c8f74b18d9ad3ee11dde5489ba77c683b"
-												srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/dj-profile-square-med.e9f478927b62.jpg&amp;w=250&amp;h=250&amp;mode=crop&amp;sig=16161dd4dc90081d38d6e050c84e042d5ffc9bd4 250w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/dj-profile-square-med.e9f478927b62.jpg&amp;w=500&amp;h=500&amp;mode=crop&amp;sig=f8d4f5c9c08d30c16a427730edc41db01cd5fcb8 500w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/dj-profile-square-med.e9f478927b62.jpg&amp;w=1000&amp;h=1000&amp;mode=crop&amp;sig=43d60c8c8f74b18d9ad3ee11dde5489ba77c683b 1000w"
-												sizes="10vw" class="rounded-circle img-fluid w-100"
-												alt="Darren Jones"></a>
-									</div>
-									<div class="col pr-0 d-flex align-items-center">
-										<p class="my-0">
-											<span class="text-muted">
-												<span class="mr-2"><a class="text-muted"
-														href="/courses/python-data-classes/#team">Darren
-														Jones</a></span>
-												<span class="mr-2">12 Lessons</span>
-												<span class="mr-2"><i class="fa fa-clock-o"></i> 45m</span>
-												<br>
-												<span class="fa fa-tags" aria-hidden="true"></span>
-												<a href="/tutorials/intermediate/" target="_blank"
-													class="badge badge-light text-muted">intermediate</a>
-												<a href="/tutorials/python/" target="_blank"
-													class="badge badge-light text-muted">python</a>
-											</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<p class="card-text text-muted mt-3">Data classes are one of the new features introduced in
-								Python 3.7.
-								When using data classes, you don't have to write boilerplate code to get proper
-								initialization,
-								representation, and comparisons for your objects.</p>
-							<div class="text-center mt-auto">
-								<a href="/courses/python-data-classes/" class="btn btn-outline-dark "><i
-										class="fa fa-play fa-fw"></i> Get Started</a>
-							</div>
-						</div>
-					</div>  */}}
 				</div>
 
-				<div class="row justify-content-center w-100">
+				{{/*  <div class="row justify-content-center w-100">
 					<div class="col-md-10 col-lg-8 article">
 						<div class="article-body page-body">
-							<p class="text-center"><a href="../../contatti/"><i class="fa fa-comment"
-										aria-hidden="true"></i> Got feedback on some my project?</a></p>
+							<p class="text-center"><a href="{{ "/contact/" | relURL}}"><i class="fa fa-comment"
+										aria-hidden="true"></i> {{i18n "gotFeedback"}}</a></p>
 						</div>
 					</div>
-				</div>
+				</div>  */}}
 
 			</div>
 		</div>

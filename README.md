@@ -65,10 +65,11 @@ To update theme installed in b mode:
 
 ```toml
 title = "Arberia Theme"
-baseURL = "https://exampleSite.com/"
+title = "Arberia Theme"
+baseURL = "https://arberiatheme.netlify.app/"
 relativeURLs = "True"
-languageName = "En"
 languageCode = "en-us"
+defaultContentLanguage = 'en'
 theme = "arberia"
 ```
 

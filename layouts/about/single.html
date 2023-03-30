@@ -25,12 +25,6 @@
                                                         alt=" {{ .Params.author  | safeHTML}}"
                                                         class="rounded-circle img-fluid embed-responsive-item">
 
-                                                {{/*  <img src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=c363b704eeccb35f2247db13baff3d4383459858"
-                                                        srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=200&amp;h=200&amp;mode=crop&amp;sig=706b16de3cb88a8f353f4a98d7c7bc7234229bd0 200w, 
-                                                        https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=400&amp;h=400&amp;mode=crop&amp;sig=6d7aa672ca3f1ac5f7cd62ed1641b60f98d04d8b 400w, 
-                                                        {https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/jjablonksi-avatar.e37c4f83308e.jpg&amp;w=800&amp;h=800&amp;mode=crop&amp;sig=c363b704eeccb35f2247db13baff3d4383459858 }800w"
-                                                        sizes="25vw" alt=" {{ .Params.author  | safeHTML}}"
-                                                class="rounded-circle img-fluid embed-responsive-item"> */}}
                                         </div>
                                         {{end}}
                                         
@@ -39,7 +33,7 @@
 
                                 {{/*  Social Link  */}}
                                 <div class="col text-center">
-                                        <h1>About {{ .Params.author  | markdownify }}</h1>
+                                        <h1>{{i18n "about"}}{{ .Params.author  | markdownify }}</h1>
                                         <ul class="list-inline small">
 
                                                 <li class="list-inline-item"><a href="{{ .Params.website }}" class=""><i
@@ -67,8 +61,6 @@
                         </div>
                         {{- partial "components/mailchimp.html" . -}}
                 </div>
-
-
         </div>
 </div>
 

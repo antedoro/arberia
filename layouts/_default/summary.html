@@ -2,18 +2,6 @@
 	<div class="container my-3">
 		<div class="row">
 			<div class="col-12 col-sm-4 align-self-top px-0">
-				{{/*  <a href="./lessons/mutable-data-structures-lists-dictionaries/">
-					<div class="embed-responsive embed-responsive-16by9"><img loading="lazy"
-							src="https://files.realpython.com/media/Core-Python-Tutorials_Watermarked.d6103c02c67c.jpg"
-							srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Core-Python-Tutorials_Watermarked.d6103c02c67c.jpg&amp;w=480&amp;sig=360a2ddc0864f581f35398bddf046eb8ff973cf4 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Core-Python-Tutorials_Watermarked.d6103c02c67c.jpg&amp;w=960&amp;sig=7775f7d38f3b1e317b73d70a0a28d568253b6562 960w, https://files.realpython.com/media/Core-Python-Tutorials_Watermarked.d6103c02c67c.jpg 1920w"
-							sizes="5vw" class="embed-responsive-item rounded img-fluid w-100 my-0 bg-light"
-							style="object-fit: contain;">
-						<div class="card-img-overlay d-flex align-items-center">
-							<div class="mx-auto"><span class="text-light" style="opacity: 0.9;"><i
-										class="fa fa-3x fa-play"></i></span></div>
-						</div>
-					</div>
-				</a>  */}}
 
 				{{- /* Post Cover Image */ -}}
 				{{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
@@ -42,7 +30,7 @@
 					<p class="text-muted my-0 mt-1">
 						{{ .Summary | truncate (.Site.Params.summaryLength | default 225) | safeHTML }}
 						{{ if .Truncated }}
-						<a href="{{ .Permalink }}">Read more...</a>
+						<a href="{{ .Permalink }}"> {{ i18n "readMore"}}</a>
 						{{ end }}
 					</p>
 			</div>

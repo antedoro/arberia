@@ -1,7 +1,6 @@
 {{/*  TAG Cloud  */}}
 <div class="sidebar-module sidebar-module-inset border">
-    <p class="h4"><a class="link-unstyled" href="/tags">All Tag
-            Topics</a></p>
+    <p class="h4"><a class="link-unstyled" href="/tags">{{i18n "tagTopics"}}</a></p>
 <div id="theme-tagcloud" style="margin-bottom: 10px;">
     {{ $tags := $.Site.Taxonomies.tags.ByCount }}
     {{ $v1 := where $tags "Count" ">=" 3 }}
