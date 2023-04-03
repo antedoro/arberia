@@ -30,7 +30,7 @@
 					<p class="text-muted my-0 mt-1">
 						{{ .Summary | truncate (.Site.Params.summaryLength | default 225) | safeHTML }}
 						{{ if .Truncated }}
-						<a href="{{ .Permalink }}"> {{ i18n "readMore"}}</a>
+						<a href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
 						{{ end }}
 					</p>
 			</div>

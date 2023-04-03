@@ -51,7 +51,7 @@
 						<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 						<div class="text-center mt-auto">
 							<a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg px-4 "><i
-									class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
+									class="fa fa-play fa-fw"></i> {{ i18n "readMore" }}</a>
 						</div>
 					</div>
 					{{- end -}}
@@ -78,19 +78,20 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-2 col-md-1 p-0 align-self-center">
-	
-										<a href="{{ .RelPermalink }}">
-											<a href="{{.Params.authorLink | urlize }}">
-												<img loading="lazy" src="{{ .Params.avatar }}"
-													class="rounded-circle img-fluid w-100" sizes="10vw"
-													alt="{{ .Params.author | markdownify }}"></a>
+										<a href="{{.Params.authorLink | urlize }}">
+											<img loading="lazy" src="{{ .Params.avatar }}"
+												class="rounded-circle img-fluid w-100" sizes="10vw"
+												alt="{{ .Params.author | markdownify }}"></a>
 									</div>
 									<div class="col pr-0 d-flex align-items-center">
 										<p class="my-0">
 											<span class="text-muted">
 												<span class="mr-2"><a class="text-muted"
-														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</a></span>
+														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}></span>
+												{{/*  <span class="mr-2">16 Lessons</span>
+												<span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;17m</span>  */}}
 												<br>
+
 												{{/*  Tag list  */}}
 												{{ partial "components/tag.html" . }}
 											</span>
@@ -101,7 +102,7 @@
 							<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 							<div class="text-center mt-auto">
 								<a href="{{ .RelPermalink }}" class="btn btn-outline-dark "><i
-										class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
+										class="fa fa-play fa-fw"></i> {{ i18n "readMore" }}</a>
 							</div>
 						</div>
 					</div>
@@ -109,11 +110,11 @@
 					{{/*  {{- partial "paginator.html" . -}} */}}
 
 
-				{{/*  <div class="row justify-content-center w-100">
+					{{/*  <div class="row justify-content-center w-100">
 					<div class="col-md-10 col-lg-8 article">
 						<div class="article-body page-body">
-							<p class="text-center"><a href="{{ "/contact/" | relURL}}"><i class="fa fa-comment"
-										aria-hidden="true"></i> {{i18n "gotFeedback"}}</a></p>
+							<p class="text-center"><a href="/contatti/" target="_blank"><i class="fas fa-comment"
+										aria-hidden="true"></i> Got feedback on some my project?</a></p>
 						</div>
 					</div>
 				</div>  */}}

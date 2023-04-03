@@ -8,7 +8,7 @@ Usage:
     <div class="row my-3">
         <div class="col">
             <p class="small text-muted mb-0"><i class="fa fa-cloud-download mr-1" aria-hidden="true"></i>
-                <strong>{{i18n "download"}}</strong></p>
+                <strong>{{ i18n "download" }}</strong></p>
                 {{- with .Get 0 -}}
                 <a class="stretched-link" href="{{ . }}" download  target="_blank"><p class="h2 my-0 h3">File (.pdf)</p></a>
                 {{end}}

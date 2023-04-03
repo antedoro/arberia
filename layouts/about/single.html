@@ -24,7 +24,6 @@
                                                {{ with $large_img.RelPermalink }}{{.}} 800w{{ end }}," sizes="25vw"
                                                         alt=" {{ .Params.author  | safeHTML}}"
                                                         class="rounded-circle img-fluid embed-responsive-item">
-
                                         </div>
                                         {{end}}
                                         
@@ -33,7 +32,7 @@
 
                                 {{/*  Social Link  */}}
                                 <div class="col text-center">
-                                        <h1>{{i18n "about"}}{{ .Params.author  | markdownify }}</h1>
+                                        <h1>{{ i18n "about" }} {{ .Params.author  | markdownify }}</h1>
                                         <ul class="list-inline small">
 
                                                 <li class="list-inline-item"><a href="{{ .Params.website }}" class=""><i
@@ -61,6 +60,8 @@
                         </div>
                         {{- partial "components/mailchimp.html" . -}}
                 </div>
+
+
         </div>
 </div>
 

@@ -49,6 +49,8 @@
 										<span class="text-muted">
 											<span class="mr-2"><a class="text-muted"
 													href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</a></span>
+											{{/*  <span class="mr-2">5 Lessons</span>
+											<span class="mr-2"><i class="fa fa-clock-o"></i> 26m</span>  */}}
 											<br>
 											{{/*  Tag list  */}}
 											{{ partial "components/tag.html" . }}
@@ -60,7 +62,7 @@
 						<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 						<div class="text-center mt-auto">
 							<a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg px-4 "><i
-									class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
+									class="fa fa-play fa-fw"></i> {{ i18n "readMore" }}</a>
 						</div>
 					</div>
 					{{- end -}}
@@ -98,6 +100,10 @@
 											<span class="text-muted">
 												<span class="mr-2"><a class="text-muted"
 														href="{{ .Params.authorlink | urlize }}">{{ .Params.author | markdownify }}</span>
+												{{/*  <span class="mr-2">16 Lessons</span>  */}}
+												{{/*  <span class="mr-2"><i class="fa fa-clock-o"></i> 1h&nbsp;17m</span>  */}}
+												{{/*  <br>  */}}
+
 												{{/*  Tag list  */}}
 												{{ partial "components/tag.html" . }}
 											</span>
@@ -108,22 +114,23 @@
 							<p class="card-text text-muted mt-3">{{ .Summary | truncate 240 | safeHTML }}</p>
 							<div class="text-center mt-auto">
 								<a href="{{ .RelPermalink }}" class="btn btn-outline-dark "><i
-										class="fa fa-play fa-fw"></i> {{i18n "readMore"}}</a>
+										class="fa fa-play fa-fw"></i> {{ i18n "readMore" }}</a>
 							</div>
 						</div>
 					</div>
 					{{- end -}}
 					{{- partial "paginator.html" . -}}
+
 				</div>
 
-				{{/*  <div class="row justify-content-center w-100">
+				<div class="row justify-content-center w-100">
 					<div class="col-md-10 col-lg-8 article">
 						<div class="article-body page-body">
-							<p class="text-center"><a href="{{ "/contact/" | relURL}}"><i class="fa fa-comment"
-										aria-hidden="true"></i> {{i18n "gotFeedback"}}</a></p>
+							<p class="text-center"><a href="/contact/ | relURL"><i class="fa fa-comment"
+										aria-hidden="true"></i> {{ i18n "gotFeedback" }}</a></p>
 						</div>
 					</div>
-				</div>  */}}
+				</div>
 
 			</div>
 		</div>

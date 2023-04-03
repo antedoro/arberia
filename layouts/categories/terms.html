@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
 
         {{/*  Title  */}}
-        <h1 id="page-title" class="text-center my-5">{{ i18n "allPostsforTerms"}} "{{ .Title }}"
+        <h1 id="page-title" class="text-center my-5">{{i18n "allPostsforTerms" }} "{{ .Title }}"
             <a class="headerlink" href="{{- .RelPermalink -}}" title="Permanent link"></a>
         </h1>
 
@@ -36,14 +36,11 @@
                     {{end}}
                 </div>
                 {{/*  <a href="#top" class="float-right">
-                    <small>{{i18n "back to top"}}</small>
+                    <small>back to top</small>
                 </a>  */}}
             </div>
         </div>
         {{end}}
-
-
-
     </div>
     {{ end }}
 </div>

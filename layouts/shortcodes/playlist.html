@@ -26,7 +26,7 @@ Edit playlist file and add {{< playlist >}}  shortcode in index.md  */}}
 {{ with $data.playlist }}
 <div class="mb-5 p-3 bg-white rounded border shadow-sm">
     <h2 class="border-bottom border-gray pb-2 mb-0 h3 mt-0 pt-0">{{ .pl_title | markdownify }}</h2>
-    <p class="text-muted mt-1">{{len $data.playlist.item}} {{i18n "lessons"}} <span class="ml-2 fa fa-clock-o"></span> {{ .total_duration | markdownify }}</p>
+    <p class="text-muted mt-1">{{len $data.playlist.item}} {{ i18n "lessons" }}<span class="ml-2 fa fa-clock-o"></span> {{ .total_duration | markdownify }}</p>
     <div class="media my-3 mt-4">
         <div class="container">
             {{ range  $index, $item :=  .item }}

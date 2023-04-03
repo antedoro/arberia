@@ -1,0 +1,192 @@
+<style>
+  .widget__title {
+    position: relative;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1;
+    color: #17181e
+  }
+
+  .widget__title::before {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #17181e
+  }
+
+  .widget__title::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #e6e6e6
+  }
+
+
+  .recent-posts {
+    position: relative;
+    display: flex;
+    margin-left: 4px;
+    margin-bottom: 20px
+  }
+
+  .recent-posts:last-child {
+    margin-bottom: 0
+  }
+
+  .recent-posts:hover .recent-posts__title a {
+    color: #17181e;
+    opacity: 1;
+    box-shadow: 0 -1px #fff inset, 0 -3px #ffe66a inset
+  }
+
+  .recent-posts__header {
+    margin-right: 15px
+  }
+
+  .recent-posts__image {
+    position: relative;
+    display: block;
+    margin-right: 15px;
+    min-width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat
+  }
+
+  .recent-posts__image:hover::after {
+    opacity: 1;
+    visibility: visible
+  }
+
+  .recent-posts__image::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 0;
+    visibility: hidden
+  }
+
+  .recent-posts__title {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px
+  }
+
+  .recent-posts__date {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 16px
+  }
+
+  .recent-posts__count {
+    position: absolute;
+    top: -11px;
+    left: -4px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #17181e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    transition: all .3s
+  }
+</style>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 article">
+      <div class="article-body page-body">
+
+
+        <div class="widget widget-recent">
+
+          <div class="d-flex justify-content-between align-items-center w-100 mt-0 mb-2">
+            <h2 class="my-0"><a href="" class="text-body">Recent Posts</a></h2>
+          </div>
+
+          <div class="card-deck" style="margin: 15px">
+            <a class="recent-posts__image" href="/posts/that-which-does-not-kill-us-makes-us-stronger/"
+              style="background-image: url('https://hally-hugo.netlify.app/images/02.jpg')"
+              aria-label="That which does not kill us makes us stronger"></a>
+            <span class="recent-posts__count">1</span>
+
+            <div class="card-text">
+              <h4 class="small text-muted my-0">
+                <a href="/fusion-360-messa-in-tavola-2d/">Fusion 360: Come renderizzare</a></h4>
+              <small class="text-muted">
+                <span class="small mr-2">Nov 13, 2018</span>
+              </small>
+              <p class="small text-muted my-0">Come funziona la messa in tavola in Fusion 360? Ti mostro come...</p>
+            </div>
+          </div>
+
+
+          <div class="card-deck" style="margin: 15px">
+            <a class="recent-posts__image" href="/posts/that-which-does-not-kill-us-makes-us-stronger/"
+              style="background-image: url('https://hally-hugo.netlify.app/images/02.jpg')"
+              aria-label="That which does not kill us makes us stronger"></a>
+            <span class="recent-posts__count">1</span>
+
+            <div class="card-text">
+              <h4 class="small text-muted my-0">
+                <a href="/fusion-360-messa-in-tavola-2d/">Fusion 360: Come renderizzare</a></h4>
+              <small class="text-muted">
+                <span class="small mr-2">Nov 13, 2018</span>
+              </small>
+              <p class="small text-muted my-0">Come funziona la messa in tavola in Fusion 360? Ti mostro come...</p>
+            </div>
+          </div>
+
+          <div class="card-deck" style="margin: 15px">
+            <a class="recent-posts__image" href="/posts/that-which-does-not-kill-us-makes-us-stronger/"
+              style="background-image: url('https://hally-hugo.netlify.app/images/02.jpg')"
+              aria-label="That which does not kill us makes us stronger"></a>
+            <span class="recent-posts__count">3</span>
+
+            <div class="card-text">
+              <h4 class="small text-muted my-0">
+                <a href="/fusion-360-messa-in-tavola-2d/">Fusion 360: Come renderizzare</a></h4>
+              <small class="text-muted">
+                <span class="small mr-2">Nov 13, 2018</span>
+              </small>
+              <p class="small text-muted my-0">Come funziona la messa in tavola in Fusion 360? Ti mostro come...</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <hr style="border: 0; border-color: #dee2e6">
+
+    </div>
+  </div>
+  <hr style="border: 0; border-color: #dee2e6">
+
+</div>
+</div>

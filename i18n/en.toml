@@ -7,12 +7,15 @@ other = "Back to Top"
 
 [viewComments]
 other = "View Comments"
+
+[readMore]
+other = "Read More"
 # === baseof ==
 
-# === defaults/summary.html ===
-# === grid-view/list.html ===
-[readMore]
-other = "Read more..."
+# === Post ===
+[posts]
+other = "Posts"
+# === Post ===
 
 # === defaults/taxonomy.html ===
 [allPostsforCategory]
@@ -61,11 +64,6 @@ other = "Previous Page"
 other = "Next Page"
 # === Pagination ===
 
-# === components/recent-widget.html ===
-[recentPosts]
-other = "Recent Posts"
-
-# === shortcodes ===
 # === shortcodes/download-files.html ===
 [download]
 other = "Download"
@@ -91,6 +89,10 @@ other = "About Me"
 
 [moreAbout]
 other = "» More about"
+
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Recent Posts"
 
 # === components/completes-mark.html ===
 [markAscompleted]
