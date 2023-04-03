@@ -1,8 +1,7 @@
 ---
 weight: 1
 title: Post with sidebar
-subtitle: Take your coding skills to the next level with Real Python’s accelerated study
-  plans for beginner, intermediate, and advanced Python developers.
+subtitle: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 date: 2020-10-15T20:58:53+02:00
 lastmod: 2020-10-15T20:58:53+02:00
 draft: false

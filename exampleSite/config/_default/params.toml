@@ -31,7 +31,7 @@ googleAnalytics = "UA-74607909-1" # example : UA-123-45
 # YouTube Channel ID
 YTChannelID = "UClA8GwWzurVCprEY6OsCvhw"
 # Formspree Contact Form Link
-contact_form_action = "https://formspree.io/f/link" # go to https:formspre.io and open a free account an insert here the link
+contact_form_action = "https://formspree.io/f/mvovbvga" # go to https:formspre.io and open a free account an insert here the link
 # disqus short name
 disqusShortname = "" # get your shortname form here : https://disqus.com
 

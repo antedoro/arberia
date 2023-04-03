@@ -69,7 +69,7 @@ Shortcode to inset varius alert on markdown post use this code:
 
 ## Image
 
-{{< image "extended-shortcodes.webp" "Caption">}} 
+{{< image "artwork.webp" "Caption">}} 
 
 ## Playlist of videos
 

@@ -37,7 +37,6 @@ slug: policy-privacy
 ---
 
 
-
 ## Privacy Policy Example
 
 Arberia Theme for Hugo (“us”, “we”, or “our”) operates the https://arberiatheme.netlify.app/ website (the “Service”).

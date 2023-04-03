@@ -9,7 +9,8 @@ theme = "arberia"
   [module.hugoVersion]
     extended = true
     min = "0.101.0"
-    max = "0.110.0"
+    max = "0.111.3"
+
 
 # To list the most relevant pages on the front page or similar, 
 # you should use the site.Params.mainSections list instead of comparing 

@@ -3,24 +3,24 @@
 
 # === baseof ==
 [backToTop]
-other = "Back to Top"
+other = "Kthehu në fillim"
 
 [viewComments]
-other = "View Comments"
+other = "Shiko komentet"
 # === baseof ==
 
 # === defaults/summary.html ===
 # === grid-view/list.html ===
 [readMore]
-other = "Read more..."
+other = "Lexo më shumë..."
 
 # === defaults/taxonomy.html ===
 [allPostsforCategory]
-other = "All Posts for "
+other = "Të gjitha postimet për "
 
 # === defaults/terms.html ===
 [all]
-other = "All "
+other = "Të gjitha "
 
 # === category/taxonomy.html ===
 # [allPostsforCategory]
@@ -28,7 +28,7 @@ other = "All "
 
 # === category/terms.html ===
 [allPostsforTerms]
-other = "All Posts for ... "
+other = "Të gjitha postimet për ... "
 
 # === about.html ===
 [about]
@@ -36,22 +36,22 @@ other = "About "
 
 # === contact.html ===
 [gotFeedback]
-other = "Got feedback on some my project?"
+other = "Keni komente për disa projekte të mia?"
 
 # === video-layout.html ===
 [courseContents]
-other = "Course Contents"
+other = "Përmbajtja e kursit"
 
 # === with-sidebar.html ===
 [comments]
-other = "0 Comments"
+other = "0 Komentet"
 
 # === last-post-widget.html ===
 [lastPosts]
-other = "Last Posts"
+other = "Postimet e fundit"
 
 [viewAll]
-other = "View All »"
+other = "Shiko te gjitha »"
 
 # === Pagination ===
 [previousPage]
@@ -63,7 +63,7 @@ other = "Next Page"
 
 # === components/recent-widget.html ===
 [recentPosts]
-other = "Recent Posts"
+other = "Postimet e fundit"
 
 # === shortcodes ===
 # === shortcodes/download-files.html ===
@@ -80,7 +80,7 @@ other = "Topic"
 
 # === shortcodes/playlist.html ===
 [lessons]
-other = "Lessons"
+other = "Mësimet"
 
 # === components ===
 
@@ -94,27 +94,27 @@ other = "» More about"
 
 # === components/completes-mark.html ===
 [markAscompleted]
-other = "Mark as Completed"
+other = "Shënoni si të përfunduar"
 
 # === components/contact-form.html ===
 [name]
-other = "Name"
+other = "Emri"
 
 [email]
 other = "Email"
 
 [subject]
-other = "Subject"
+other = "Subjekti"
 
 [message]
-other = "Type You Message Here"
+other = "Shkruani Mesazhin Ju këtu"
 
 # === components/mailchimp.html ===
 [subscribe]
-other = "Subscribe"
+other = "Abonohu"
 
 [nospam]
-other = "🔒 No spam. Unsubscribe any time."
+other = "🔒 Nuk ka spam. Çregjistrohu në çdo kohë."
 
 # === components/tag-cloud.html ===
 [tagTopics]
@@ -122,4 +122,4 @@ other = "All Tag Topics"
 
 # === toc.html ===
 [tableOfContents]
-other = "Table of Contents"
+other = "Tabela e Përmbajtjes"

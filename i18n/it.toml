@@ -6,21 +6,21 @@
 other = "Back to Top"
 
 [viewComments]
-other = "View Comments"
+other = "Verdi i Commenti"
 # === baseof ==
 
 # === defaults/summary.html ===
 # === grid-view/list.html ===
 [readMore]
-other = "Read more..."
+other = "Leggi ..."
 
 # === defaults/taxonomy.html ===
 [allPostsforCategory]
-other = "All Posts for "
+other = "Tutti i Post per "
 
 # === defaults/terms.html ===
 [all]
-other = "All "
+other = "Tutti "
 
 # === category/taxonomy.html ===
 # [allPostsforCategory]
@@ -28,7 +28,7 @@ other = "All "
 
 # === category/terms.html ===
 [allPostsforTerms]
-other = "All Posts for ... "
+other = "Tutti i Post per ... "
 
 # === about.html ===
 [about]
@@ -36,39 +36,39 @@ other = "About "
 
 # === contact.html ===
 [gotFeedback]
-other = "Got feedback on some my project?"
+other = "Dammi feedback su qualcuno dei miei progetti"
 
 # === video-layout.html ===
 [courseContents]
-other = "Course Contents"
+other = "Contenuto Corsi"
 
 # === with-sidebar.html ===
 [comments]
-other = "0 Comments"
+other = "0 Commenti"
 
 # === last-post-widget.html ===
 [lastPosts]
-other = "Last Posts"
+other = "Ultimi Post"
 
 [viewAll]
-other = "View All »"
+other = "Vedi Tutto »"
 
 # === Pagination ===
 [previousPage]
-other = "Previous Page"
+other = "Precedenti"
 
 [nextPage]
-other = "Next Page"
+other = "Prossimi"
 # === Pagination ===
 
 # === components/recent-widget.html ===
 [recentPosts]
-other = "Recent Posts"
+other = "Post Recenti"
 
 # === shortcodes ===
 # === shortcodes/download-files.html ===
 [download]
-other = "Download"
+other = "Scarica"
 
 # === shortcodes/faq.html ===
 [showHide]
@@ -80,7 +80,7 @@ other = "Topic"
 
 # === shortcodes/playlist.html ===
 [lessons]
-other = "Lessons"
+other = "Lezioni"
 
 # === components ===
 
@@ -94,27 +94,27 @@ other = "» More about"
 
 # === components/completes-mark.html ===
 [markAscompleted]
-other = "Mark as Completed"
+other = "Marca come Completato"
 
 # === components/contact-form.html ===
 [name]
-other = "Name"
+other = "Nome"
 
 [email]
 other = "Email"
 
 [subject]
-other = "Subject"
+other = "Suggetto"
 
 [message]
-other = "Type You Message Here"
+other = "Scrivi il tuo messaggio qui"
 
 # === components/mailchimp.html ===
 [subscribe]
-other = "Subscribe"
+other = "Iscriviti"
 
 [nospam]
-other = "🔒 No spam. Unsubscribe any time."
+other = "🔒 No spam. Disiscriviti in ogni momento."
 
 # === components/tag-cloud.html ===
 [tagTopics]
@@ -122,4 +122,4 @@ other = "All Tag Topics"
 
 # === toc.html ===
 [tableOfContents]
-other = "Table of Contents"
+other = "Indice Contenuti"
