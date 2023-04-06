@@ -20,6 +20,8 @@ author = "Vincenzo Antedoro"
 author_resume = "<strong>Vincenzo Antedoro</strong> is an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of <em>learning by doing</em>."
 
 # #################### default parameters ################################
+# format date. See https://gohugo.io/functions/format/
+dateformat = "Monday, January 2, 2006"
 # number of post on pagination list
 paginate = "6"
 # summary lenght on list post 

@@ -44,4 +44,4 @@ Hi I'm the developer of Arberia Theme for Hugo. If you want to know some about m
 
 My name is **Vincenzo Antedoro**. I'm an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of learning by doing.
 
-Visualize my profile at my persona blog: [https://antedoro.it/about/](https://antedoro.it/about/)
+Visualize my profile at my personal blog: [https://antedoro.it/about/](https://antedoro.it/about/)

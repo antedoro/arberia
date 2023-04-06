@@ -1,22 +1,23 @@
-# Translations for English
+# Translations for Albanian
+# Përkthime për shqip
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === baseof ==
-[backToTop]
-other = "Kthehu në fillim"
+# === general ==
 
 [viewComments]
 other = "Shiko komentet"
-# === baseof ==
 
-# === defaults/summary.html ===
-# === grid-view/list.html ===
 [readMore]
-other = "Lexo më shumë..."
+other = "Lexo më shumë"
+
+[posts]
+other = "Postimet"
+
+# === general ==
 
 # === defaults/taxonomy.html ===
-[allPostsforCategory]
-other = "Të gjitha postimet për "
+[allPostsforTerms]
+other = "Të gjitha postimet për ... "
 
 # === defaults/terms.html ===
 [all]
@@ -27,24 +28,17 @@ other = "Të gjitha "
 # other = "All Posts for ... "
 
 # === category/terms.html ===
-[allPostsforTerms]
-other = "Të gjitha postimet për ... "
+[allPostsforCategory]
+other = "Të gjitha postimet për "
 
 # === about.html ===
+# === components/author.html ===
 [about]
 other = "About "
 
-# === contact.html ===
+# === grid-view/list.html ===???
 [gotFeedback]
 other = "Keni komente për disa projekte të mia?"
-
-# === video-layout.html ===
-[courseContents]
-other = "Përmbajtja e kursit"
-
-# === with-sidebar.html ===
-[comments]
-other = "0 Komentet"
 
 # === last-post-widget.html ===
 [lastPosts]
@@ -55,28 +49,31 @@ other = "Shiko te gjitha »"
 
 # === Pagination ===
 [previousPage]
-other = "Previous Page"
+other = "Faqja e meparshme"
 
 [nextPage]
-other = "Next Page"
+other = "Faqja tjetër"
 # === Pagination ===
 
-# === components/recent-widget.html ===
-[recentPosts]
-other = "Postimet e fundit"
+# === video-layout.html ===
+[courseContents]
+other = "Përmbajtja e kursit"
 
-# === shortcodes ===
+# === with-sidebar.html ===
+[comments]
+other = "0 komente"
+
 # === shortcodes/download-files.html ===
 [download]
-other = "Download"
+other = "Shkarko"
 
 # === shortcodes/faq.html ===
 [showHide]
-other = "Show/Hide"
+other = "Shfaq/Fshih"
 
 # === shortcodes/list-element.html ===
 [topic]
-other = "Topic"
+other = "Tema"
 
 # === shortcodes/playlist.html ===
 [lessons]
@@ -86,11 +83,15 @@ other = "Mësimet"
 
 # === components/author-sb.html ===
 # === components/author.html ===
+[moreAbout]
+other = "» Më shumë për"
+
 [aboutMe]
 other = "About Me"
 
-[moreAbout]
-other = "» More about"
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Postimet e fundit"
 
 # === components/completes-mark.html ===
 [markAscompleted]
@@ -109,16 +110,19 @@ other = "Subjekti"
 [message]
 other = "Shkruani Mesazhin Ju këtu"
 
+[send]
+other = "Dërgo"
+
 # === components/mailchimp.html ===
 [subscribe]
 other = "Abonohu"
 
 [nospam]
-other = "🔒 Nuk ka spam. Çregjistrohu në çdo kohë."
+other = "🔒 No spam. Çregjistrohu në çdo kohë."
 
 # === components/tag-cloud.html ===
 [tagTopics]
-other = "All Tag Topics"
+other = "Të gjitha temat e etiketave"
 
 # === toc.html ===
 [tableOfContents]

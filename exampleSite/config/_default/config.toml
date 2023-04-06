@@ -1,14 +1,12 @@
 title = "Arberia Theme"
 baseURL = "https://arberiatheme.netlify.app/"
 relativeURLs = "True"
-languageName = "En"
 languageCode = "en-us"
+defaultContentLanguage = 'en'
 theme = "arberia"
 
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.101.0"
+# format date. See https://gohugo.io/functions/format/
+dateformat = "Monday, January 2, 2006"
 
 
 # To list the most relevant pages on the front page or similar, 

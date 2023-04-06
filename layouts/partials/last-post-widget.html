@@ -35,7 +35,7 @@
           </a>
           <p class="card-text">
             <small class="text-muted">
-              <span class="mr-2">{{ .PublishDate.Format "January 2, 2006" }}</span>
+              <span class="mr-2">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
               {{/*  Tag list  */}}
               {{ partial "components/tag.html" . }}
             </small>

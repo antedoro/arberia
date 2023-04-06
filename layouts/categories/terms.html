@@ -31,7 +31,7 @@
                     <div class="categories-item">
                         <a href="{{ .RelPermalink }}" class="categories-item-link">
                             <i class="fa fa-angle-right fa-fw"></i>&nbsp;{{ .Title }} -
-                            <small>{{ .PublishDate.Format "Jan 02, 2006" }}</small></a>
+                            <small>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</small></a>
                     </div>
                     {{end}}
                 </div>

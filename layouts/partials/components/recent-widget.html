@@ -25,10 +25,10 @@
                     <strong>{{.Title | truncate 50}}</strong></a><br>
                     <p class="small text-muted align-items-end w-100">
                         <span class="fa fa-clock-o" aria-hidden="true"></span>
-                        <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>
+                        <span class="">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
                     </p>
                     {{/*  <span class="fa fa-clock-o" aria-hidden="true"></span>
-                    <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>  */}}
+                    <span class="">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>  */}}
             </div>
         </div>
 

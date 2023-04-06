@@ -17,8 +17,8 @@
 
             <div class="mb-0">
                 <span class="text-muted">by <a class="text-muted" href="#author">{{ .Params.author }}</a>
-                    <span class="ml-2 fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
-
+                    <span class="ml-2 fa fa-clock-o"></span> 
+                    <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
                     <span class="ml-2 mr-1 fa fa-comments"></span><a class="text-muted" href="#reader-comments">
                         <span class="disqus-comment-count" data-disqus-identifier="{{.Permalink}}">{{ i18n "comments"}}</span></a>
 

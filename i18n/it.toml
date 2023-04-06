@@ -1,212 +1,128 @@
-# Translations for Italian
-# Traduzioni per l'italiano
+# Translations for English
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === baseof ==
-[backToTop]
-other = "Torna all'inizio"
+# === general ==
 
 [viewComments]
-other = "Vedi commenti"
-# === baseof ==
+other = "Vedi Commenti"
 
-# === Post ===
+[readMore]
+other = "Leggi"
+
 [posts]
-other = "Articoli"
-# === Post ===
+other = "Posts"
 
-# === Taxonomy ===
-[allSome]
-other = "Tutti {{ .Some }}"
+# === general ==
 
-[tag]
-other = "Etichetta"
+# === defaults/taxonomy.html ===
+[allPostsforTerms]
+other = "Tutti i Post per ... "
 
-[tags]
-other = "Etichette"
+# === defaults/terms.html ===
+[all]
+other = "Tutti "
 
-[category]
-other = "Categoria"
+# === category/taxonomy.html ===
+# [allPostsforCategory]
+# other = "All Posts for ... "
 
-[categories]
-other = "Categorie"
-# === Taxonomy ===
+# === category/terms.html ===
+[allPostsforCategory]
+other = "Tutti i Post per "
+
+# === about.html ===
+# === components/author.html ===
+[about]
+other = "About "
+
+# === grid-view/list.html ===???
+[gotFeedback]
+other = "Dammi feedback sui miei progetti"
+
+# === last-post-widget.html ===
+[lastPosts]
+other = "Ultimi Post"
+
+[viewAll]
+other = "Mostra Tutti »"
 
 # === Pagination ===
-[more]
-other = "Più"
+[previousPage]
+other = "Pagina Precedente"
+
+[nextPage]
+other = "Pagina Successiva"
 # === Pagination ===
 
-# === partials/header.html ===
-[selectLanguage]
-other = "Scegliere la lingua"
+# === video-layout.html ===
+[courseContents]
+other = "Contenuti Corsi"
 
-[switchTheme]
-other = "Cambiare il tema"
-# === partials/header.html ===
+# === with-sidebar.html ===
+[comments]
+other = "0 Commenti"
 
-# === partials/footer.html ===
-[poweredBySome]
-other = "Realizzato da {{ .Hugo }} | Tema - {{ .Theme }}"
-# === partials/footer.html ===
+# === shortcodes/download-files.html ===
+[download]
+other = "Download"
 
-# === partials/comment.html ===
-[valineLang]
-other = "en"
+# === shortcodes/faq.html ===
+[showHide]
+other = "Mostra/Nascondi"
 
-[valinePlaceholder]
-other = "Il tuo commento ..."
+# === shortcodes/list-element.html ===
+[topic]
+other = "Topic"
 
-[facebookLanguageCode]
-other = "it"
-# === partials/comment.html ===
+# === shortcodes/playlist.html ===
+[lessons]
+other = "Lezioni"
 
-# === partials/assets.html ===
-[search]
-other = "Cerca"
+# === components ===
 
-[searchPlaceholder]
-other = "Cerca il titolo o il contenuto dell'articolo ..."
+# === components/author-sb.html ===
+# === components/author.html ===
+[moreAbout]
+other = "» Di più su di me"
 
-[clear]
-other = "Chiaro"
+[aboutMe]
+other = "About Me"
 
-[cancel]
-other = "Annulla"
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Post Recenti"
 
-[noResultsFound]
-other = "Nessun risultato trovato"
+# === components/completes-mark.html ===
+[markAscompleted]
+other = "Segna Completato"
 
-[lunrLanguageCode]
-other = "it"
+# === components/contact-form.html ===
+[name]
+other = "Nome"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.it.js"
+[email]
+other = "Email"
 
-[copyToClipboard]
-other = "Copia negli appunti"
+[subject]
+other = "Soggetto"
 
-[cookieconsentMessage]
-other = "Questo sito Web utilizza i Cookies per migliorare la tua esperienza."
+[message]
+other = "Scrivi il tuo messaggio qui"
 
-[cookieconsentDismiss]
-other = "Essere d'accordo"
+[send]
+other = "Invia"
 
-[cookieconsentLink]
-other = "Per saperne di più"
-# === partials/assets.html ===
+# === components/mailchimp.html ===
+[subscribe]
+other = "Iscriviti"
 
-# === partials/plugin/share.html ===
-[shareOn]
-other = "Condividi su"
-# === partials/plugin/share.html ===
+[nospam]
+other = "🔒 No spam. Disiscriviti in ogni momento."
 
-# === posts/single.html ===
-[contents]
-other = "Contenuti"
-
-[publishedOnDate]
-other = "pubblicato su {{ .Date }}"
-
-[publishedInCategories]
-other = "pubblicato in {{ .Categories }}"
-
-[includedInCategories]
-other = "incluso in {{ .Categories }}"
-
-[wordCount]
-one = "Una parola"
-other = "{{ .Count }} parole"
-
-[readingTime]
-one = "Un minuto"
-other = "{{ .Count }} minuti"
-
-[views]
-other = "visualizzazioni"
-
-[author]
-other = "Autore"
-
-[updatedOnDate]
-other = "Aggiornato il {{ .Date }}"
-
-[readMarkdown]
-other = "Leggi Markdown"
-
-[improveArticle]
-other = "Improve Article"
-
-[back]
-other = "Indietro"
-
-[home]
-other = "Home"
-# === posts/single.html ===
-
-# === 404.html ===
-[pageNotFound]
-other = "Pagina non trovata"
-
-[pageNotFoundText]
-other = "Mi spiace, la pagina cercata non esiste."
-# === 404.html ===
-
-# === Offline Page ===
-[pageOffline]
-other = "Sei offline. Controlla la tua connessione Internet."
-# === Offline Page ===
-
-# === shortcodes/admonition.html ===
-[note]
-other = "Note"
-
-[abstract]
-other = "Sommario"
-
-[info]
-other = "Info"
-
-[tip]
-other = "Suggerimenti"
-
-[success]
-other = "Successo"
-
-[question]
-other = "Domande"
-
-[warning]
-other = "Avvertimento"
-
-[failure]
-other = "Fallimento"
-
-[danger]
-other = "Pericolo"
-
-[bug]
-other = "Bug"
-
-[example]
-other = "Esempio"
-
-[quote]
-other = "Citazione"
-# === shortcodes/admonition.html ===
-
-# === shortcodes/version.html ===
-[new]
-other = "NUOVO"
-
-[changed]
-other = "CAMBIATO"
-
-[deleted]
-other = "CANCELLATO"
-# === shortcodes/version.html ===
+# === components/tag-cloud.html ===
+[tagTopics]
+other = "Tutti Tag Topics"
 
 # === toc.html ===
 [tableOfContents]
-  other = "Sommario"
-# === toc.html ===
+other = "Sommario"

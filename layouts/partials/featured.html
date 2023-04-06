@@ -40,7 +40,7 @@
                         <p class="card-text">
                             <small class="text-muted">
                                 <span class="ml-2 fa fa-clock-o" aria-hidden="true"></span>
-                                <span class="mr-2"> {{ .PublishDate.Format "January 2, 2006" }}</span>
+                                <span class="mr-2"> {{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
 
                                 {{/*  Tag list  */}}
                                 {{/*  <span class="ml-2 fa fa-tags" aria-hidden="true"></span>
