@@ -8,10 +8,10 @@ lastmod: 2022-04-27T20:58:53+02:00
 draft: false
 type: standard-view
 
-author: Vincenzo Antedoro
+author: "author"
+avatar: /img/me.jpg  # link to avatar file
 authorLink: ""
-description: Abbiamo selezionato alcuni accesori indispensabili se decidi di acquistare un
-  portabici per automobile
+description: "Descrizione da rivedere se è un doppione subtitle"
 
 tags:
   - tag1

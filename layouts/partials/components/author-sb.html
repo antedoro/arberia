@@ -1,5 +1,5 @@
 <div id="author" class="card mt-0 mb-4">
-    <p class="card-header h3 text-center bg-light text-uppercase">About Me</p>
+    <p class="card-header h3 text-center bg-light text-uppercase">{{ i18n "about Me"}}</p>
     <div class="card-body" style="margin: -5px -15px -15px -15px">
         <div class="container">
 
@@ -20,7 +20,7 @@
                         alt="{{- .Params.author  | markdownify -}}" width="72" height="72"> 
                         {{- .Site.Params.author_resume| markdownify -}} </p>
             </div>
-            <a href="/about/" class="small text-muted mr-1">» More about {{ .Params.author | markdownify }}</a>
+            <a href="{{"/about/" | relURL }}" class="small text-muted mr-1">{{ i18n "moreAbout" }} {{ .Params.author | markdownify }}</a>
         </div>
     </div>
 </div>

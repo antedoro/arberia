@@ -1,25 +1,22 @@
 # Translations for English
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === baseof ==
-[backToTop]
-other = "Back to Top"
+# === general ==
 
 [viewComments]
 other = "View Comments"
 
 [readMore]
 other = "Read More"
-# === baseof ==
 
-# === Post ===
 [posts]
 other = "Posts"
-# === Post ===
+
+# === general ==
 
 # === defaults/taxonomy.html ===
-[allPostsforCategory]
-other = "All Posts for "
+[allPostsforTerms]
+other = "All Posts for ... "
 
 # === defaults/terms.html ===
 [all]
@@ -30,24 +27,17 @@ other = "All "
 # other = "All Posts for ... "
 
 # === category/terms.html ===
-[allPostsforTerms]
-other = "All Posts for ... "
+[allPostsforCategory]
+other = "All Posts for "
 
 # === about.html ===
+# === components/author.html ===
 [about]
 other = "About "
 
-# === contact.html ===
+# === grid-view/list.html ===???
 [gotFeedback]
 other = "Got feedback on some my project?"
-
-# === video-layout.html ===
-[courseContents]
-other = "Course Contents"
-
-# === with-sidebar.html ===
-[comments]
-other = "0 Comments"
 
 # === last-post-widget.html ===
 [lastPosts]
@@ -63,6 +53,14 @@ other = "Previous Page"
 [nextPage]
 other = "Next Page"
 # === Pagination ===
+
+# === video-layout.html ===
+[courseContents]
+other = "Course Contents"
+
+# === with-sidebar.html ===
+[comments]
+other = "0 Comments"
 
 # === shortcodes/download-files.html ===
 [download]
@@ -84,11 +82,11 @@ other = "Lessons"
 
 # === components/author-sb.html ===
 # === components/author.html ===
-[aboutMe]
-other = "About Me"
-
 [moreAbout]
 other = "» More about"
+
+[aboutMe]
+other = "About Me"
 
 # === components/recent-widget.html ===
 [recentPosts]
@@ -110,6 +108,9 @@ other = "Subject"
 
 [message]
 other = "Type You Message Here"
+
+[send]
+other = "Send"
 
 # === components/mailchimp.html ===
 [subscribe]

@@ -178,10 +178,10 @@ hugo mod get -u
 
 ```toml
 title = "Arberia Theme"
-baseURL = "http://example.com/"
+baseURL = "https://arberiatheme.netlify.app/"
 relativeURLs = "True"
-languageName = "En"
 languageCode = "en-us"
+defaultContentLanguage = 'en'
 theme = "arberia"
 
 

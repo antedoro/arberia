@@ -38,7 +38,6 @@ slug: build-in-shortcodes
 
 **Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
 
-
 Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.
 
 But this happens to be a bad idea. Everyone uses Markdown because it’s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.
@@ -164,8 +163,6 @@ Example `tweet` input:
 ```
 
 The rendered output looks like this:
-
-{{< tweet 917359331535966209 >}}
 
 ## 8 vimeo
 
