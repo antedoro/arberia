@@ -29,7 +29,7 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 - **[Google Analytics](https://analytics.google.com/analytics)** supported
 - **[Disqus](https://disqus.com)** comment system
 - Social-Media Share buttons on posts
-- Multilingual support. (not yet implemented!)
+- Multilingual support
 - Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default (No webpack, nodejs and other dependencies are required to edit the theme.
 
 ## Installation/updating
