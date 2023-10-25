@@ -44,11 +44,14 @@ a) Simple mode: **Download as Zip** from Github Page **and extract in your theme
 
 b) Or you can add it as a git submodule via the following command: 
 
-    $ cd themes
-    $ git submodule add https://github.com/antedoro/arberia.git arberia
+    git init
+    cd themes
+    git submodule add https://github.com/antedoro/arberia.git arberia
     
+Next,copy contents from themes/arberia/exampleSite on site root folder.
+Copy folder from themesthemes/arberia/archetypes on site root folder.
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
+open `config/_defaults/config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
 
 ```
 theme = "arberia"
