@@ -49,18 +49,21 @@ b) Or you can add it as a git submodule via the following command:
     git submodule add https://github.com/antedoro/arberia.git arberia
     
 Next,copy contents from themes/arberia/exampleSite on site root folder.
-Copy folder from themesthemes/arberia/archetypes on site root folder.
+Copy folder from themes/arberia/archetypes on site root folder.
 
-open `config/_defaults/config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
+Open `config/_defaults/config.toml` folder and ensure the theme option is set to `arberia`:
 
 ```
 theme = "arberia"
 ```
 
-To update theme installed in b mode:
+**NOTE**
+To update theme installed:
 
+```
     cd themes/arberia
     git pull
+```
 
 ## Configuration
 
