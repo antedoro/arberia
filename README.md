@@ -57,9 +57,15 @@ Open `config/_defaults/config.toml` folder and ensure the theme option is set to
 theme = "arberia"
 ```
 
+Now you can start hugo server and view the site:
+```shell
+hugo server -D
+```
+
+open browser and follow this link: [http://localhost:1313](http://localhost:1313) 
+
 **NOTE**
 To update theme installed:
-
 ```
     cd themes/arberia
     git pull
