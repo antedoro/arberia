@@ -16,7 +16,7 @@
                 </div>
                 <div class="col mt-3">
                     <p> {{- .Site.Params.author_resume| markdownify -}} .</p>
-                    <a href="{{ "/about" |relURL }}" class="card-link">{{ i18n "moreAbout" }}{{ .Params.author  | markdownify }}</a>
+                    <a href="{{ "/about" |relURL }}" class="card-link">{{ i18n "moreAbout" }} {{ .Params.author  | markdownify }}</a>
                 </div>
             </div>
         </div>
