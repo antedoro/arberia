@@ -14,7 +14,7 @@
 			aria-label="Main Navigation">
 			<ul class="navbar-nav mr-5 flex-fill">
 				{{- range .Site.Menus.main.ByWeight }}
-				{{/*  Menu con cascata  */}}
+				{{/*  Cascade Menu  */}}
 				{{- if .HasChildren }}
 				<li class="nav-item dropdown">
 					{{/*  Primo elemento del menu  */}}
@@ -25,10 +25,10 @@
 
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownLibrary">
 						{{ range .Children }}
-						{{ if .Params.bordertop  }} {{/*  Menu con linea separatrice  */}}
+						{{ if .Params.bordertop  }} {{/*  Menu with separation line  */}}
 						<a class="dropdown-item border-top" href="{{ .URL | relURL }}"><i class="{{.Pre}}"
 								aria-hidden="true"></i> {{ .Name}}</a>
-						{{ else }} {{/*  Menu senza linea separatrice  */}}
+						{{ else }} {{/*  Menu without separation line  */}}
 						<a class="dropdown-item" href="{{ .URL | relURL }}"
 							style="color: {{ .Params.color }}; line-height: 110%;"><i class="{{ .Pre }}"
 								aria-hidden="true"></i> {{.Name}} <br><small class="text-secondary">{{ .Post }}</small>

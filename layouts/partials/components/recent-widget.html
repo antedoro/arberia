@@ -1,7 +1,7 @@
 {{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
 
 <div id="recent-posts-widget" class="card mt-0 mb-4">
-    <p class="card-header h3 text-center bg-light text-uppercase">Recent Posts</p>
+    <p class="card-header h3 text-center bg-light text-uppercase">{{ i18n "recentPosts" }}</p>
 
     {{ range first 5 $posts }}
     <div class="card-body" style="max-height: 86px; border-bottom: 1px solid rgba(0,0,0,.125)">
@@ -25,10 +25,10 @@
                     <strong>{{.Title | truncate 50}}</strong></a><br>
                     <p class="small text-muted align-items-end w-100">
                         <span class="fa fa-clock-o" aria-hidden="true"></span>
-                        <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>
+                        <span class="">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
                     </p>
                     {{/*  <span class="fa fa-clock-o" aria-hidden="true"></span>
-                    <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>  */}}
+                    <span class="">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>  */}}
             </div>
         </div>
 

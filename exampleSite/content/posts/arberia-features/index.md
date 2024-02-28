@@ -89,7 +89,6 @@ Add the following to site config, `config.toml`
   page = ["HTML"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML", "RSS"] 
 ```
 
 Create a page with `search/_index.md` in `content` directory with following content

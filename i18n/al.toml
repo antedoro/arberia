@@ -1,26 +1,27 @@
-# Translations for English
+# Translations for Albanian
+# Përkthime për shqip
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === general ==
 
 [viewComments]
-other = "Vedi Commenti"
+other = "Shiko komentet"
 
 [readMore]
-other = "Leggi"
+other = "Lexo më shumë"
 
 [posts]
-other = "Posts"
+other = "Postimet"
 
 # === general ==
 
 # === defaults/taxonomy.html ===
 [allPostsforTerms]
-other = "Tutti i Post per ... "
+other = "Të gjitha postimet për ... "
 
 # === defaults/terms.html ===
 [all]
-other = "Tutti "
+other = "Të gjitha "
 
 # === category/taxonomy.html ===
 # [allPostsforCategory]
@@ -28,7 +29,7 @@ other = "Tutti "
 
 # === category/terms.html ===
 [allPostsforCategory]
-other = "Tutti i Post per "
+other = "Të gjitha postimet për "
 
 # === about.html ===
 # === components/author.html ===
@@ -37,92 +38,92 @@ other = "About "
 
 # === grid-view/list.html ===???
 [gotFeedback]
-other = "Dammi feedback sui miei progetti"
+other = "Keni komente për disa projekte të mia?"
 
 # === last-post-widget.html ===
 [lastPosts]
-other = "Ultimi Post"
+other = "Postimet e fundit"
 
 [viewAll]
-other = "Mostra Tutti »"
+other = "Shiko te gjitha »"
 
 # === Pagination ===
 [previousPage]
-other = "Pagina Precedente"
+other = "Faqja e meparshme"
 
 [nextPage]
-other = "Pagina Successiva"
+other = "Faqja tjetër"
 # === Pagination ===
 
 # === video-layout.html ===
 [courseContents]
-other = "Contenuti Corsi"
+other = "Përmbajtja e kursit"
 
 # === with-sidebar.html ===
 [comments]
-other = "0 Commenti"
+other = "0 komente"
 
 # === shortcodes/download-files.html ===
 [download]
-other = "Download"
+other = "Shkarko"
 
 # === shortcodes/faq.html ===
 [showHide]
-other = "Mostra/Nascondi"
+other = "Shfaq/Fshih"
 
 # === shortcodes/list-element.html ===
 [topic]
-other = "Topic"
+other = "Tema"
 
 # === shortcodes/playlist.html ===
 [lessons]
-other = "Lezioni"
+other = "Mësimet"
 
 # === components ===
 
 # === components/author-sb.html ===
 # === components/author.html ===
 [moreAbout]
-other = "» Di più su di me"
+other = "» Më shumë për"
 
 [aboutMe]
 other = "About Me"
 
 # === components/recent-widget.html ===
 [recentPosts]
-other = "Post Recenti"
+other = "Postimet e fundit"
 
 # === components/completes-mark.html ===
 [markAscompleted]
-other = "Segna Completato"
+other = "Shënoni si të përfunduar"
 
 # === components/contact-form.html ===
 [name]
-other = "Nome"
+other = "Emri"
 
 [email]
 other = "Email"
 
 [subject]
-other = "Soggetto"
+other = "Subjekti"
 
 [message]
-other = "Scrivi il tuo messaggio qui"
+other = "Shkruani Mesazhin Ju këtu"
 
 [send]
-other = "Invia"
+other = "Dërgo"
 
 # === components/mailchimp.html ===
 [subscribe]
-other = "Iscriviti"
+other = "Abonohu"
 
 [nospam]
-other = "🔒 No spam. Disiscriviti in ogni momento."
+other = "🔒 No spam. Çregjistrohu në çdo kohë."
 
 # === components/tag-cloud.html ===
 [tagTopics]
-other = "Tutti Tag Topics"
+other = "Të gjitha temat e etiketave"
 
 # === toc.html ===
 [tableOfContents]
-other = "Sommario"
+other = "Tabela e Përmbajtjes"

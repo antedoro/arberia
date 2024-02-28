@@ -22,7 +22,7 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: Python-Projects-for-Intermediate-Developers_Watermarked.png
+    src: featured-image.png
 
 featured: false
 sidebar: true

@@ -37,9 +37,9 @@ slug: policy-privacy
 ---
 
 
-Effective date: May 21, 2018
+## Privacy Policy Example
 
-DevCademy Media Inc. (“us”, “we”, or “our”) operates the realpython.com website (the “Service”).
+Arberia Theme for Hugo (“us”, “we”, or “our”) operates the https://arberiatheme.netlify.app/ website (the “Service”).
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
@@ -73,7 +73,7 @@ Contact Us
 
 **Service**
 
-Service is the realpython.com website operated by DevCademy Media Inc
+Service is the https://arberiatheme.netlify.app/ website operated by Arberia Theme for Hugo
 
 **Personal Data**
 
@@ -165,9 +165,9 @@ DevCademy Media Inc. may process your Personal Data because:
 
 ## Retention of Data
 
-DevCademy Media Inc. will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+Arberia Theme for Hugo will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
 
-DevCademy Media Inc. will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.
+Arberia Theme for Hugo will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.
 
 ## Transfer Of Data
 
@@ -177,21 +177,21 @@ If you are located outside Canada and choose to provide information to us, pleas
 
 Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
 
-DevCademy Media Inc. will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
+Arberia Theme for Hugo will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
 
 ## Disclosure Of Data
 
 ### Business Transaction
 
-If DevCademy Media Inc. is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
+If Arberia Theme for Hugo is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
 
 ### Disclosure for Law Enforcement
 
-Under certain circumstances, DevCademy Media Inc. may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+Under certain circumstances, Arberia Theme for Hugo may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
 
 ### Legal Requirements
 
-DevCademy Media Inc. may disclose your Personal Data in the good faith belief that such action is necessary to:
+Arberia Theme for Hugo may disclose your Personal Data in the good faith belief that such action is necessary to:
 
 - To comply with a legal obligation
 - To protect and defend the rights or property of DevCademy Media Inc
@@ -245,26 +245,6 @@ You can opt-out of having made your activity on the Service available to Google 
 
 For more information on the privacy practices of Google, please visit the Google Privacy Terms web page: http://www.google.com/intl/en/policies/privacy/
 
-### Payments
-
-We may provide paid products and/or services within the Service. In that case, we use third-party services for payment processing (e.g. payment processors).
-
-We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, Mastercard, American Express and Discover. PCI-DSS requirements help ensure the secure handling of payment information.
-
-The payment processors we work with are:
-
-**Stripe**
-
-Their Privacy Policy can be viewed at https://stripe.com/us/privacy
-
-**PayPal or Braintree**
-
-Their Privacy Policy can be viewed at https://www.paypal.com/webapps/mpp/ua/privacy-full
-
-**FastSpring**
-
-Their Privacy Policy can be viewed at http://fastspring.com/privacy/
-
 ## Links To Other Sites
 
 Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit.
@@ -289,11 +269,10 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us:
 
-DevCademy Media Inc. DBA Real Python
-#720-999 West Broadway
-Vancouver BC V5Z 1K5
-CANADA
+Arberia Theme for Hugo
+via Vattelapesca 1
+City of Dev
+WORLD
 
-info@realpython.com
 
-This document was last updated on June 1, 2019.
+This document was last updated on February 27, 2023.

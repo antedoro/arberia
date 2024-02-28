@@ -29,7 +29,7 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 - **[Google Analytics](https://analytics.google.com/analytics)** supported
 - **[Disqus](https://disqus.com)** comment system
 - Social-Media Share buttons on posts
-- Multilingual support. (not yet implemented!)
+- Multilingual support
 - Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default (No webpack, nodejs and other dependencies are required to edit the theme.
 
 ## Installation/updating
@@ -44,20 +44,32 @@ a) Simple mode: **Download as Zip** from Github Page **and extract in your theme
 
 b) Or you can add it as a git submodule via the following command: 
 
-    $ cd themes
-    $ git submodule add https://github.com/antedoro/arberia.git arberia
+    git init
+    cd themes
+    git submodule add https://github.com/antedoro/arberia.git arberia
     
+Next,copy contents from themes/arberia/exampleSite on site root folder.
+Copy folder from themes/arberia/archetypes on site root folder.
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
+Open `config/_defaults/config.toml` folder and ensure the theme option is set to `arberia`:
 
 ```
 theme = "arberia"
 ```
 
-To update theme installed in b mode:
+Now you can start hugo server and view the site:
+```shell
+hugo server -D
+```
 
+open browser and follow this link: [http://localhost:1313](http://localhost:1313) 
+
+**NOTE**
+To update theme installed:
+```
     cd themes/arberia
     git pull
+```
 
 ## Configuration
 
@@ -121,11 +133,11 @@ Have you found a bug or got an idea for a new feature? Feel free to use the
 
 ## License
 
-This theme is released under the [GPLv2 license](https://github.com/antedoro/arberia/blob/master/LICENSE).
+This theme is released under the [MIT license](https://github.com/antedoro/arberia/blob/master/LICENSE).
 
 ## FAQs / How To's Guide
 
-Read Wiki For More Details => **[Arberia-FAQs]()**
+Read Wiki For More Details => **[Arberia-FAQs](https://arberiatheme.netlify.app/arberia-faqs/)**
 
 ## Release Changelog
 

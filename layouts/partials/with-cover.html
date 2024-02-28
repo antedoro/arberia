@@ -21,12 +21,6 @@
         <div class="container">
           <div class="row">
             <div class="col-2 col-md-1 p-0 align-self-center">
-              {{/*  <a href="{{.Params.authorLink | urlize }}"><img
-                  src="Binary,%20Bytes,%20and%20Bitwise%20Operators%20in%20Python%20%E2%80%93%20Real%20Python_files/a.webp"
-                  srcset="Binary,%20Bytes,%20and%20Bitwise%20Operators%20in%20Python%20%E2%80%93%20Real%20Python_files/a_011.webp 125w, 
-                  Binary,%20Bytes,%20and%20Bitwise%20Operators%20in%20Python%20%E2%80%93%20Real%20Python_files/a_013.webp 250w, 
-                  Binary,%20Bytes,%20and%20Bitwise%20Operators%20in%20Python%20%E2%80%93%20Real%20Python_files/a.webp 500w"
-                  sizes="10vw" class="rounded-circle img-fluid w-100" alt="{{ .Params.author | markdownify }}"></a>  */}}
                   <a href="{{.Params.authorLink | urlize }}">
                     <img src="{{ .Params.avatar }}" 
                     class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
@@ -38,7 +32,7 @@
                   <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
                       target="_blank">{{ .Params.author | markdownify }}</a></span>
                   <br>
-                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
                   {{/*  Tag list  */}}
                   {{ partial "components/tag.html" . }}
                 </span>
@@ -53,9 +47,6 @@
         </div>
 
       </div>
-      {{/*  //FIXME: href  */}}
-      {{/*  <p class="mb-5"><a href="../../portfolio/">« Browse All Portfolio</a></p>  */}}
-
     </div>
   </div>
 </div>

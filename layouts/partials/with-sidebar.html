@@ -17,10 +17,10 @@
 
             <div class="mb-0">
                 <span class="text-muted">by <a class="text-muted" href="#author">{{ .Params.author }}</a>
-                    <span class="ml-2 fa fa-clock-o"></span> <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
-
+                    <span class="ml-2 fa fa-clock-o"></span> 
+                    <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
                     <span class="ml-2 mr-1 fa fa-comments"></span><a class="text-muted" href="#reader-comments">
-                        <span class="disqus-comment-count" data-disqus-identifier="{{.Permalink}}">0 Comments</span></a>
+                        <span class="disqus-comment-count" data-disqus-identifier="{{.Permalink}}">{{ i18n "comments"}}</span></a>
 
                     {{/*  Tag list  */}}
                     {{ partial "components/tag.html" . }}
@@ -51,9 +51,7 @@
             {{- partial "components/author-sb.html" . -}} {{/* Author box  */}}
             {{- partial "components/yt-banner.html" . -}} {{/* YouTube Banner  */}}
             {{- partial "components/mailchimp.html" . -}} {{/*  Email Subscription  */}}
-            {{ partial "recent-widget-new.html" . }} {{/* TAG Collection  */}}
-            {{/*  {{ partial "recent-widget.html" . }} Recent Post Collection */}}
-            {{/*  {{- partial "components/email-subscription.html"  -}}Email Subscription */}}
+            {{ partial "components/recent-widget.html" . }} {{/* TAG Collection  */}}
             {{/*  {{- partial "components/completed-mark.html" . -}} */}}
             {{/*  {{- partial "components/adv-sd.html"  -}} ADV Image */}}
             {{/*  Table of Contents on sidebar  */}}

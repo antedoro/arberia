@@ -2,8 +2,8 @@
 
   <!-- Last Posts -->
   <div class="d-flex justify-content-between align-items-center w-100 mt-0 mb-2">
-    <h2 class="my-0"><a href="posts/" class="text-body">Last Posts</a></h2>
-    <a href="posts/" class="btn btn-secondary btn-sm">View&nbsp;All&nbsp;»</a>
+    <h2 class="my-0"><a href="{{"posts/" | relURL }}" class="text-body"> {{ i18n "lastPosts"}}  </a></h2>
+    <a href="posts/" class="btn btn-secondary btn-sm">{{ i18n "viewAll"}}</a>
   </div>
 
   <div class="row">
@@ -19,14 +19,6 @@
     <div class="col-12 col-md-6 col-lg-4 mb-5">
       <div class="card border-0">
         <a href="{{ .RelPermalink }}">
-          {{/*  <div class="embed-responsive embed-responsive-16by9">
-          <img loading="lazy" class="card-img-top m-0 p-0 embed-responsive-item rounded" style="object-fit: contain;"
-            alt="Hosting a Django Project on Heroku"
-            src="https://files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg"
-            srcset="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg&amp;w=480&amp;sig=9deb63cee9b6c61e20ce456e2897b28794f6a1bc 480w, https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg&amp;w=960&amp;sig=3cffe540acd2053dd47801d4a9cbcdaf4e4d6279 960w, https://files.realpython.com/media/Project-based-How-to-Host-Your-Django-Project-on-Heroku_Watermarked.76ec0c4a54c8.jpeg 1920w"
-            sizes="25vw" width="1920" height="1080">
-
-        </div>  */}}
 
           {{- /* Post Cover Image */ -}}
           {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
@@ -43,7 +35,7 @@
           </a>
           <p class="card-text">
             <small class="text-muted">
-              <span class="mr-2">{{ .PublishDate.Format "January 2, 2006" }}</span>
+              <span class="mr-2">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
               {{/*  Tag list  */}}
               {{ partial "components/tag.html" . }}
             </small>
@@ -54,6 +46,5 @@
     </div>
     {{end}}
   </div>
-
 
 </div>

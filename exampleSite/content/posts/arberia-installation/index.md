@@ -10,7 +10,7 @@ weight: null
 
 featured: false
 sidebar: true
-toc: true
+toc: false
 math:
   enable: false
 lightgallery: false
@@ -178,10 +178,10 @@ hugo mod get -u
 
 ```toml
 title = "Arberia Theme"
-baseURL = "http://example.com/"
+baseURL = "https://arberiatheme.netlify.app/"
 relativeURLs = "True"
-languageName = "En"
 languageCode = "en-us"
+defaultContentLanguage = 'en'
 theme = "arberia"
 
 
@@ -200,7 +200,6 @@ theme = "arberia"
   page = ["HTML"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML", "RSS"]
 
 [markup]
   [markup.tableOfContents]

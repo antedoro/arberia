@@ -1,209 +1,128 @@
 # Translations for English
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === baseof ==
-[backToTop]
-other = "Back to Top"
+# === general ==
 
 [viewComments]
 other = "View Comments"
-# === baseof ==
 
-# === Post ===
+[readMore]
+other = "Read More"
+
 [posts]
 other = "Posts"
-# === Post ===
 
-# === Taxonomy ===
-[allSome]
-other = "All {{ .Some }}"
+# === general ==
 
-[tag]
-other = "Tag"
+# === defaults/taxonomy.html ===
+[allPostsforTerms]
+other = "All Posts for ... "
 
-[tags]
-other = "Tags"
+# === defaults/terms.html ===
+[all]
+other = "All "
 
-[category]
-other = "Category"
+# === category/taxonomy.html ===
+# [allPostsforCategory]
+# other = "All Posts for ... "
 
-[categories]
-other = "Categories"
-# === Taxonomy ===
+# === category/terms.html ===
+[allPostsforCategory]
+other = "All Posts for "
+
+# === about.html ===
+# === components/author.html ===
+[about]
+other = "About "
+
+# === grid-view/list.html ===???
+[gotFeedback]
+other = "Got feedback on some my project?"
+
+# === last-post-widget.html ===
+[lastPosts]
+other = "Last Posts"
+
+[viewAll]
+other = "View All »"
 
 # === Pagination ===
-[more]
-other = "More"
+[previousPage]
+other = "Previous Page"
+
+[nextPage]
+other = "Next Page"
 # === Pagination ===
 
-# === partials/header.html ===
-[selectLanguage]
-other = "Select Language"
+# === video-layout.html ===
+[courseContents]
+other = "Course Contents"
 
-[switchTheme]
-other = "Switch Theme"
-# === partials/header.html ===
+# === with-sidebar.html ===
+[comments]
+other = "0 Comments"
 
-# === partials/footer.html ===
-[poweredBySome]
-other = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
-# === partials/footer.html ===
+# === shortcodes/download-files.html ===
+[download]
+other = "Download"
 
-# === partials/comment.html ===
-[valineLang]
-other = "en"
+# === shortcodes/faq.html ===
+[showHide]
+other = "Show/Hide"
 
-[valinePlaceholder]
-other = "Your comment ..."
+# === shortcodes/list-element.html ===
+[topic]
+other = "Topic"
 
-[facebookLanguageCode]
-other = "en_US"
-# === partials/comment.html ===
+# === shortcodes/playlist.html ===
+[lessons]
+other = "Lessons"
 
-# === partials/assets.html ===
-[search]
-other = "Search"
+# === components ===
 
-[searchPlaceholder]
-other = "Search titles or contents..."
+# === components/author-sb.html ===
+# === components/author.html ===
+[moreAbout]
+other = "» More about"
 
-[clear]
-other = "Clear"
+[aboutMe]
+other = "About Me"
 
-[cancel]
-other = "Cancel"
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Recent Posts"
 
-[noResultsFound]
-other = "No results found"
+# === components/completes-mark.html ===
+[markAscompleted]
+other = "Mark as Completed"
 
-[lunrLanguageCode]
-other = "en"
+# === components/contact-form.html ===
+[name]
+other = "Name"
 
-[copyToClipboard]
-other = "Copy to clipboard"
+[email]
+other = "Email"
 
-[cookieconsentMessage]
-other = "This website uses Cookies to improve your experience."
+[subject]
+other = "Subject"
 
-[cookieconsentDismiss]
-other = "Got it!"
+[message]
+other = "Type You Message Here"
 
-[cookieconsentLink]
-other = "Learn more"
-# === partials/assets.html ===
+[send]
+other = "Send"
 
-# === partials/plugin/share.html ===
-[shareOn]
-other = "Share on"
-# === partials/plugin/share.html ===
+# === components/mailchimp.html ===
+[subscribe]
+other = "Subscribe"
 
-# === posts/single.html ===
-[contents]
-other = "Contents"
+[nospam]
+other = "🔒 No spam. Unsubscribe any time."
 
-[publishedOnDate]
-other = "published on {{ .Date }}"
-
-[publishedInCategories]
-other = "published in {{ .Categories }}"
-
-[includedInCategories]
-other = "included in {{ .Categories }}"
-
-[wordCount]
-one = "One word"
-other = "{{ .Count }} words"
-
-[readingTime]
-one = "One minute"
-other = "{{ .Count }} minutes"
-
-[views]
-other = "views"
-
-[author]
-other = "Author"
-
-[updatedOnDate]
-other = "Updated on {{ .Date }}"
-
-[readMarkdown]
-other = "Read Markdown"
-
-[improveArticle]
-other = "Improve Article"
-
-[back]
-other = "Back"
-
-[home]
-other = "Home"
-# === posts/single.html ===
-
-# === 404.html ===
-[pageNotFound]
-other = "Page not found"
-
-[pageNotFoundText]
-other = "The page you're looking for doesn't exist. Sorry."
-# === 404.html ===
-
-# === Offline Page ===
-[pageOffline]
-other = "You're offline. Check your internet connection."
-# === Offline Page ===
-
-# === shortcodes/admonition.html ===
-[note]
-other = "Note"
-
-[abstract]
-other = "Abstract"
-
-[info]
-other = "Info"
-
-[tip]
-other = "Tip"
-
-[success]
-other = "Success"
-
-[question]
-other = "Question"
-
-[warning]
-other = "Warning"
-
-[failure]
-other = "Failure"
-
-[danger]
-other = "Danger"
-
-[bug]
-other = "Bug"
-
-[example]
-other = "Example"
-
-[quote]
-other = "Quote"
-# === shortcodes/admonition.html ===
-
-# === shortcodes/version.html ===
-[new]
-other = "NEW"
-
-[changed]
-other = "CHANGED"
-
-[deleted]
-other = "DELETED"
-# === shortcodes/version.html ===
-
+# === components/tag-cloud.html ===
+[tagTopics]
+other = "All Tag Topics"
 
 # === toc.html ===
 [tableOfContents]
-  other = "Table of Contents"
-# === toc.html ===
+other = "Table of Contents"

@@ -6,8 +6,8 @@
 	<meta name="generator" content="Hugo {{ .Site.Hugo.Version }} with Arberia theme" />
 
 	<!-- Preloader -->
-	{{/*  <link href="https://cdn.realpython.com/" rel="preconnect"> 
-	<link href="https://files.realpython.com/" rel="preconnect">   */}}
+	{{/*  <link href="https://cdn.arberiatheme.netlify.app" rel="preconnect"> 
+	<link href="https://files.arberiatheme.netlify.app" rel="preconnect">   */}}
 
 	{{/*  {{"<!-- Preload -->"}}
 	<link rel="preload" as="image" href="{{ "img/theme.png" | relURL }}" /> */}}
@@ -94,9 +94,6 @@
 	{{ template "_internal/opengraph.html" . }}
 	{{ template "_internal/twitter_cards.html" . }}
 	{{ template "_internal/schema.html" . }}
-	{{/*  {{ template "_internal/google_news.html" . }}  */}}
 	{{ template "_internal/google_analytics.html" . }}
-	{{ template "_internal/google_analytics_async.html" . }}
-	{{ template "_internal/disqus.html" . }}
 	{{- end -}}
 </head>
