@@ -1,7 +1,7 @@
 {{/*  {{ if .Title }}
   <figure>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <figcaption>{{ .Title }}</figcaption>
+ <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+ <figcaption>{{ .Title }}</figcaption>
   </figure>
 {{ else }}
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
@@ -42,21 +42,21 @@ image size, as Hugo will upscale small images */}}
 
 
 <a href="{{ $src.RelPermalink }}">
-    <picture>
-    
-    <source media="(max-width: 376px)" 
-        srcset="{{with $tiny.RelPermalink }}{{.}}{{ end }}">
+ <picture>
+ 
+ <source media="(max-width: 376px)" 
+  srcset="{{with $tiny.RelPermalink }}{{.}}{{ end }}">
 
-    <source media="(max-width: 992px)" 
-        srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
+ <source media="(max-width: 992px)" 
+  srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
 
-    <source media="(max-width: 1400px)" 
-        srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
+ <source media="(max-width: 1400px)" 
+  srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
 
-    <source media="(min-width: 1600px)" 
-        srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
-    
-    <img 
+ <source media="(min-width: 1600px)" 
+  srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
+ 
+ <img 
  
    alt="{{ $alt }}" title="{{ $alt }}" src="{{ $src }}" 
    height="{{ $src.Height}}" width="{{ $src.Width }}" class="img-fluid">

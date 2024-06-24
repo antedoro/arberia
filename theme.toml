@@ -13,5 +13,5 @@ features = ["post-with-sidebar", "video-post", "cover-post", "post-no-sidebar", 
 
 [module]
   [module.hugoVersion]
-    extended = true
-    min = "0.101.0"
+ extended = true
+ min = "0.101.0"

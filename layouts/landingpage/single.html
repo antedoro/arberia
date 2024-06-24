@@ -3,20 +3,20 @@
 {{ partial "head" . }}
 
 <body>
-    {{ block "main" . }}
-    <div class="container main-content">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8 article">
-                <div class="article-body page-body">
-                    {{- /* Content */ -}}
-                    {{ .Content }}
-                </div>
-            </div>
-        </div>
+ {{ block "main" . }}
+ <div class="container main-content">
+  <div class="row justify-content-center">
+   <div class="col-md-10 col-lg-8 article">
+    <div class="article-body page-body">
+     {{- /* Content */ -}}
+     {{ .Content }}
     </div>
-    {{ end }}
-    {{/*  {{ partial "footer" . }} */}}
-    {{ partial "script" . }}
+   </div>
+  </div>
+ </div>
+ {{ end }}
+ {{/*  {{ partial "footer" . }} */}}
+ {{ partial "script" . }}
 </body>
 
 </html>

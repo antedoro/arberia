@@ -1,54 +1,54 @@
 {{/*  {{- $params := .Params | merge .Site.Params.page -}}  */}}
 
 <div class="container main-content">
-    <div class="row justify-content-center">
+ <div class="row justify-content-center">
 
 <div class="col-md-10 col-lg-8 article">
-    <div class="article-body page-body">
+ <div class="article-body page-body">
 
-        <h1 class="text-center" id="post-title">{{ .Title | markdownify }}<a class="headerlink"
-                href="{{- .RelPermalink -}}" title="Permanent link"></a></h1>
+  <h1 class="text-center" id="post-title">{{ .Title | markdownify }}<a class="headerlink"
+    href="{{- .RelPermalink -}}" title="Permanent link"></a></h1>
 
-        {{ with .Params.subtitle }}
-        <p class="text-center text-muted">{{ . | markdownify }}</p>
-        {{ end }}
+  {{ with .Params.subtitle }}
+  <p class="text-center text-muted">{{ . | markdownify }}</p>
+  {{ end }}
 
-        {{- /* Post Cover Image */ -}}
-        {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
-        {{ with $img }}
-        {{ partial "tools/img" (dict "img" . "alt" $img.Title ) }}
-        {{ end }}
+  {{- /* Post Cover Image */ -}}
+  {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+  {{ with $img }}
+  {{ partial "tools/img" (dict "img" . "alt" $img.Title ) }}
+  {{ end }}
 
-        <div class="row mb-1">
-            <div class="col-2 col-md-1 p-0 ml-3 align-self-center">
-                  <a href="{{.Params.authorLink | urlize }}">
-                    <img src="{{ .Params.avatar }}" 
-                    class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
-            </div>
+  <div class="row mb-1">
+   <div class="col-2 col-md-1 p-0 ml-3 align-self-center">
+      <a href="{{.Params.authorLink | urlize }}">
+     <img src="{{ .Params.avatar }}" 
+     class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
+   </div>
 
-            <div class="col pr-0 d-flex align-items-center">
-              <p>
-                <span class="text-muted">
-                  <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
-                      target="_blank">{{ .Params.author | markdownify }}</a></span>
-                  <br>
-                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
-                  {{/*  Tag list  */}}
-                  {{ partial "components/tag.html" . }}
-                </span>
-              </p>
-            </div>
-          </div>
-
-        {{ if .Params.toc }}
-        {{- partial "components/toc.html"  -}}
-        {{ end }}
-
-        {{/*  {{- partial "components/search.html"  -}} */}}
-
-        {{- /* Content */ -}}
-        {{ .Content }}
+   <div class="col pr-0 d-flex align-items-center">
+     <p>
+    <span class="text-muted">
+      <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
+       target="_blank">{{ .Params.author | markdownify }}</a></span>
+      <br>
+      <span class="fa fa-clock-o"></span> <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
+      {{/*  Tag list  */}}
+      {{ partial "components/tag.html" . }}
+    </span>
+     </p>
+   </div>
     </div>
+
+  {{ if .Params.toc }}
+  {{- partial "components/toc.html"  -}}
+  {{ end }}
+
+  {{/*  {{- partial "components/search.html"  -}} */}}
+
+  {{- /* Content */ -}}
+  {{ .Content }}
+ </div>
 </div>
 </div>
 </div>

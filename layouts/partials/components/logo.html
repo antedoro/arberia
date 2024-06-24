@@ -1,5 +1,5 @@
 <style>
-    .navbar-brand {
+ .navbar-brand {
 		color: #fff !important;
 		font-weight: bold !important;
 	}
@@ -9,13 +9,13 @@
 {{ with site.Params }}
 {{ if .siteBrand }}
 <a class="navbar-brand mr-0 mr-md-2" href="{{ print `/` | relLangURL }}">
-    <img src="{{ .BrandLogo | relURL }}" 
-    width="{{ .siteBrandWidth }}" 
-    height="{{ .siteBrandHeight }}" 
-    class="d-inline-block align-top {{ .BrandBorder }} border"
-    loading="lazy" 
-    alt="brand-logo">
-    {{ .BrandName }}
+ <img src="{{ .BrandLogo | relURL }}" 
+ width="{{ .siteBrandWidth }}" 
+ height="{{ .siteBrandHeight }}" 
+ class="d-inline-block align-top {{ .BrandBorder }} border"
+ loading="lazy" 
+ alt="brand-logo">
+ {{ .BrandName }}
 </a>
 
 {{ end }}

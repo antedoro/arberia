@@ -1,52 +1,52 @@
 
 <div class="container main-content">
   <div class="row justify-content-center">
-    {{/*  Copertina  */}}
-    <div class="col-12 mb-2">
-      <a href="{{ .RelPermalink }}">
-        {{- /* Post Cover Image */ -}}
-        {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
-        {{ with $img }}
-        {{ $imageName := $img.Title }}
-        {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
-        {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
-        {{ end }} 
-      </a>
+ {{/*  Copertina  */}}
+ <div class="col-12 mb-2">
+   <a href="{{ .RelPermalink }}">
+  {{- /* Post Cover Image */ -}}
+  {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+  {{ with $img }}
+  {{ $imageName := $img.Title }}
+  {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+  {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+  {{ end }} 
+   </a>
+ </div>
+
+ {{/*  Content  */}}
+ <div class="col-md-11 col-lg-8 article">
+   <div>
+  <h1>{{ .Title | markdownify }}</h1>
+  <div class="container">
+    <div class="row">
+   <div class="col-2 col-md-1 p-0 align-self-center">
+      <a href="{{.Params.authorLink | urlize }}">
+     <img src="{{ .Params.avatar }}" 
+     class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
+   </div>
+
+   <div class="col pr-0 d-flex align-items-center">
+     <p>
+    <span class="text-muted">
+      <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
+       target="_blank">{{ .Params.author | markdownify }}</a></span>
+      <br>
+      <span class="fa fa-clock-o"></span> <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
+      {{/*  Tag list  */}}
+      {{ partial "components/tag.html" . }}
+    </span>
+     </p>
+   </div>
+
     </div>
+  </div>
 
-    {{/*  Content  */}}
-    <div class="col-md-11 col-lg-8 article">
-      <div>
-        <h1>{{ .Title | markdownify }}</h1>
-        <div class="container">
-          <div class="row">
-            <div class="col-2 col-md-1 p-0 align-self-center">
-                  <a href="{{.Params.authorLink | urlize }}">
-                    <img src="{{ .Params.avatar }}" 
-                    class="rounded-circle img-fluid w-100" sizes="10vw" alt="{{ .Params.author | markdownify }}"></a>
-            </div>
+  <div class="article-body mb-4">
+    {{ .Content }}
+  </div>
 
-            <div class="col pr-0 d-flex align-items-center">
-              <p>
-                <span class="text-muted">
-                  <span class="mr-2"><a class="text-muted" href="{{.Params.authorLink | urlize }}"
-                      target="_blank">{{ .Params.author | markdownify }}</a></span>
-                  <br>
-                  <span class="fa fa-clock-o"></span> <time>{{ .PublishDate | time.Format .Site.Params.dateFormat }}</time>
-                  {{/*  Tag list  */}}
-                  {{ partial "components/tag.html" . }}
-                </span>
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="article-body mb-4">
-          {{ .Content }}
-        </div>
-
-      </div>
-    </div>
+   </div>
+ </div>
   </div>
 </div>

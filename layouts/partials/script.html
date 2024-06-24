@@ -15,60 +15,60 @@
 <script>
   var lightbox = GLightbox();
   lightbox.on('open', (target) => {
-      console.log('lightbox opened');
+   console.log('lightbox opened');
   });
   var lightboxDescription = GLightbox({
-      selector: '.glightbox2'
+   selector: '.glightbox2'
   });
   var lightboxVideo = GLightbox({
-      selector: '.glightbox3'
+   selector: '.glightbox3'
   });
   lightboxVideo.on('slide_changed', ({ prev, current }) => {
-      console.log('Prev slide', prev);
-      console.log('Current slide', current);
+   console.log('Prev slide', prev);
+   console.log('Current slide', current);
 
-      const { slideIndex, slideNode, slideConfig, player } = current;
+   const { slideIndex, slideNode, slideConfig, player } = current;
 
-      if (player) {
-          if (!player.ready) {
-              // If player is not ready
-              player.on('ready', (event) => {
-                  // Do something when video is ready
-              });
-          }
+   if (player) {
+    if (!player.ready) {
+     // If player is not ready
+     player.on('ready', (event) => {
+      // Do something when video is ready
+     });
+    }
 
-          player.on('play', (event) => {
-              console.log('Started play');
-          });
+    player.on('play', (event) => {
+     console.log('Started play');
+    });
 
-          player.on('volumechange', (event) => {
-              console.log('Volume change');
-          });
+    player.on('volumechange', (event) => {
+     console.log('Volume change');
+    });
 
-          player.on('ended', (event) => {
-              console.log('Video ended');
-          });
-      }
+    player.on('ended', (event) => {
+     console.log('Video ended');
+    });
+   }
   });
 
   var lightboxInlineIframe = GLightbox({
-      selector: '.glightbox4'
+   selector: '.glightbox4'
   });
 
   /* var exampleApi = GLightbox({ selector: null });
   exampleApi.insertSlide({
-      href: 'https://picsum.photos/1200/800',
+   href: 'https://picsum.photos/1200/800',
   });
   exampleApi.insertSlide({
-      width: '500px',
-      content: '<p>Example</p>'
+   width: '500px',
+   content: '<p>Example</p>'
   });
   exampleApi.insertSlide({
-      href: 'https://www.youtube.com/watch?v=WzqrwPhXmew',
+   href: 'https://www.youtube.com/watch?v=WzqrwPhXmew',
   });
   exampleApi.insertSlide({
-      width: '200vw',
-      content: document.getElementById('inline-example')
+   width: '200vw',
+   content: document.getElementById('inline-example')
   });
   exampleApi.open(); */
 </script>
@@ -80,9 +80,9 @@
 <link href="{{"plugins/auto-complete.css" | relURL}}" rel="stylesheet">
 <script type="text/javascript">
   {{ if .Site.IsMultiLingual }}
-      var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+   var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
   {{ else }}
-      var baseurl = "{{.Site.BaseURL}}";
+   var baseurl = "{{.Site.BaseURL}}";
   {{ end }}
 </script>
 <script type="text/javascript" src="{{"plugins/search.js" | relURL}}"></script>  */}}

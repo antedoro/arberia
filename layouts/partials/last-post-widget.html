@@ -2,49 +2,49 @@
 
   <!-- Last Posts -->
   <div class="d-flex justify-content-between align-items-center w-100 mt-0 mb-2">
-    <h2 class="my-0"><a href="{{"posts/" | relURL }}" class="text-body"> {{ i18n "lastPosts"}}  </a></h2>
-    <a href="posts/" class="btn btn-secondary btn-sm">{{ i18n "viewAll"}}</a>
+ <h2 class="my-0"><a href="{{"posts/" | relURL }}" class="text-body"> {{ i18n "lastPosts"}}  </a></h2>
+ <a href="posts/" class="btn btn-secondary btn-sm">{{ i18n "viewAll"}}</a>
   </div>
 
   <div class="row">
 
-    {{- $pages := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
-    {{- if .Site.Params.page.hiddenFromHomePage -}}
-    {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
-    {{- else -}}
-    {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
-    {{- end -}}
+ {{- $pages := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+ {{- if .Site.Params.page.hiddenFromHomePage -}}
+ {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
+ {{- else -}}
+ {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
+ {{- end -}}
 
-    {{ range first 6 $pages }}
-    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card border-0">
-        <a href="{{ .RelPermalink }}">
+ {{ range first 6 $pages }}
+ <div class="col-12 col-md-6 col-lg-4 mb-5">
+   <div class="card border-0">
+  <a href="{{ .RelPermalink }}">
 
-          {{- /* Post Cover Image */ -}}
-          {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
-          {{ with $img }}
-          {{ $imageName := $img.Title }}
-          {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
-          {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
-          {{ end }}
+    {{- /* Post Cover Image */ -}}
+    {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+    {{ with $img }}
+    {{ $imageName := $img.Title }}
+    {{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+    {{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+    {{ end }}
 
-        </a>
-        <div class="card-body m-0 p-0 mt-2">
-          <a class=" " href="{{ .RelPermalink }}">
-            <h2 class="card-title h4 my-0 py-0">{{.Title}}</h2>
-          </a>
-          <p class="card-text">
-            <small class="text-muted">
-              <span class="mr-2">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
-              {{/*  Tag list  */}}
-              {{ partial "components/tag.html" . }}
-            </small>
-            {{/*  <small><p class="my-1">{{ .Summary | truncate 140 | safeHTML }}</p></small> */}}
-          </p>
-        </div>
-      </div>
-    </div>
-    {{end}}
+  </a>
+  <div class="card-body m-0 p-0 mt-2">
+    <a class=" " href="{{ .RelPermalink }}">
+   <h2 class="card-title h4 my-0 py-0">{{.Title}}</h2>
+    </a>
+    <p class="card-text">
+   <small class="text-muted">
+     <span class="mr-2">{{ .PublishDate | time.Format .Site.Params.dateFormat }}</span>
+     {{/*  Tag list  */}}
+     {{ partial "components/tag.html" . }}
+   </small>
+   {{/*  <small><p class="my-1">{{ .Summary | truncate 140 | safeHTML }}</p></small> */}}
+    </p>
+  </div>
+   </div>
+ </div>
+ {{end}}
   </div>
 
 </div>

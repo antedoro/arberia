@@ -1,24 +1,24 @@
 <div class="card mt-3 mb-3" id="author">
-    <p class="card-header h3">{{ i18n "about"}} <strong>{{ .Params.author  | markdownify }}</strong></p>
-    
-    <div class="card-body">
-        <div class="container p-0">
-            <div class="row">
-                <div class="col-12 col-md-3 align-self-center">
-                    <a href="/about"><img loading="lazy"
-                        src="/img/me.jpg"
-                        srcset="me.jpg 225w, 
-                        /img/me.jpg 450w, 
-                        /img/me.jpg 900w"
-                        sizes="25vw" 
-                        class="d-none d-md-block rounded-circle img-fluid w-100 mb-0"
-                        alt="{{ .Params.author  | markdownify }}" width="900" height="900"></a>
-                </div>
-                <div class="col mt-3">
-                    <p> {{- .Site.Params.author_resume| markdownify -}} .</p>
-                    <a href="{{ "/about" |relURL }}" class="card-link">{{ i18n "moreAbout" }} {{ .Params.author  | markdownify }}</a>
-                </div>
-            </div>
-        </div>
+ <p class="card-header h3">{{ i18n "about"}} <strong>{{ .Params.author  | markdownify }}</strong></p>
+ 
+ <div class="card-body">
+  <div class="container p-0">
+   <div class="row">
+    <div class="col-12 col-md-3 align-self-center">
+     <a href="/about"><img loading="lazy"
+      src="/img/me.jpg"
+      srcset="me.jpg 225w, 
+      /img/me.jpg 450w, 
+      /img/me.jpg 900w"
+      sizes="25vw" 
+      class="d-none d-md-block rounded-circle img-fluid w-100 mb-0"
+      alt="{{ .Params.author  | markdownify }}" width="900" height="900"></a>
     </div>
+    <div class="col mt-3">
+     <p> {{- .Site.Params.author_resume| markdownify -}} .</p>
+     <a href="{{ "/about" |relURL }}" class="card-link">{{ i18n "moreAbout" }} {{ .Params.author  | markdownify }}</a>
+    </div>
+   </div>
+  </div>
+ </div>
 </div>

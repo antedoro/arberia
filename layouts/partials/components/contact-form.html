@@ -1,18 +1,18 @@
 <form method="POST" action="{{ .Site.Params.contact_form_action | safeURL}}" class="row my-5">
-    <div class="col-md-6">
-    <input type="text" class="form-control mb-4" placeholder="{{ i18n "name"}}" name="name" id="name">
-    </div>
-    <div class="col-md-6">
-    <input type="email" class="form-control mb-4" placeholder="{{ i18n "email"}}" name="email" id="email">
-    </div>
-    <div class="col-12">
-    <input type="text" class="form-control mb-4" placeholder="{{ i18n "subject"}}" name="subject" id="subject">
-    </div>
-    <div class="col-12">
-    <textarea name="message" id="message" class="form-control mb-4" placeholder="{{ i18n "message"}}"
-        rows="5"></textarea>
-    </div>
-    <div class="col-12">
-    <button class="btn btn-primary btn-block" type="submit">{{ i18n "send"}}</button>
-    </div>
+ <div class="col-md-6">
+ <input type="text" class="form-control mb-4" placeholder="{{ i18n "name"}}" name="name" id="name">
+ </div>
+ <div class="col-md-6">
+ <input type="email" class="form-control mb-4" placeholder="{{ i18n "email"}}" name="email" id="email">
+ </div>
+ <div class="col-12">
+ <input type="text" class="form-control mb-4" placeholder="{{ i18n "subject"}}" name="subject" id="subject">
+ </div>
+ <div class="col-12">
+ <textarea name="message" id="message" class="form-control mb-4" placeholder="{{ i18n "message"}}"
+  rows="5"></textarea>
+ </div>
+ <div class="col-12">
+ <button class="btn btn-primary btn-block" type="submit">{{ i18n "send"}}</button>
+ </div>
 </form>
