@@ -1,0 +1,37 @@
+{{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+
+<div id="recent-posts-widget" class="card mt-0 mb-4">
+    <p class="card-header h3 text-center bg-light text-uppercase">Recent Posts</p>
+
+    {{ range first 5 $posts }}
+    <div class="card-body" style="max-height: 86px; border-bottom: 1px solid rgba(0,0,0,.125)">
+        <div class="row" style="margin-top: -8px">
+    
+            {{- $type := .Params.type | default "standard-view" -}}
+            <div class="col-3 align-items-start">
+                {{- if eq $type "video" -}}
+                <a href="{{ .RelPermalink }}" alt="{{.Title}}" class="text-muted">
+                    <i class="fa fa-film fa-3x fa-fw text-center w-100"></i>
+                </a>
+                {{else}}
+                <a href="{{ .RelPermalink }}" alt="text-post" class="text-muted">
+                    <i class="fa fa-file-text-o fa-3x fa-fw text-center w-100"></i>
+                </a>
+                {{ end }}
+            </div>
+    
+            <div class="col-9 align-items-start" style="margin: -5px;">
+                <a href="{{ .RelPermalink }}" alt="{{.Title}}" class="card-text small text-muted w-100" style="line-height: .8;">
+                    <strong>{{.Title | truncate 50}}</strong></a><br>
+                    <p class="small text-muted align-items-end w-100">
+                        <span class="fa fa-clock-o" aria-hidden="true"></span>
+                        <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>
+                    </p>
+                    {{/*  <span class="fa fa-clock-o" aria-hidden="true"></span>
+                    <span class="">{{ .PublishDate.Format "January 2, 2006" }}</span>  */}}
+            </div>
+        </div>
+
+    </div>
+{{end}}
+</div>
