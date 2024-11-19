@@ -10,19 +10,27 @@
 
      {{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
      <a href="{{ .Permalink | absURL }}">
-      {{ with $img }}
-      <div class="embed-responsive embed-responsive-16by9">
-       <img class="card-img-top m-0 p-0 embed-responsive-item rounded" style="object-fit: contain;"
-        src="{{ .Permalink }}" alt="{{ $.Title }}" srcset="{{ .Permalink }} 480w, 
-        {{ .Permalink }} 960w, 
-        {{ .Permalink }} 1920w" sizes="75vw" width="1920" height="1080">
-       <div class="shadow-sm p-0 bg-dark rounded-left border-left border-top border-bottom border-light 
-       text-center d-flex align-items-center justify-content-center"
-        style="position:absolute; top:1em; right:0; width: 5em; height: 2em; ">
-        <span class="text-light m-0 p-0">NEW</span>
-       </div>
-      </div>
-      {{ end }}
+         {{ with $img }}
+         <div class="embed-responsive embed-responsive-16by9">
+             
+             <img class="card-img-top m-0 p-0 embed-responsive-item rounded" style="object-fit:contain" 
+             src="{{ .Permalink }}" 
+             alt="{{ $.Title }}" 
+             srcset="{{ .Permalink }} 480w,
+                     {{ .Permalink }} 960w,
+                     {{ .Permalink }} 1920w" 
+             sizes="(max-width: 480px) 480px, 
+                    (max-width: 960px) 960px, 
+                    1920px" 
+             width="1920" height="1080">
+
+             <div class="shadow-sm p-0 bg-dark rounded-left border-left border-top border-bottom border-light 
+             text-center d-flex align-items-center justify-content-center"
+                 style="position:absolute; top:1em; right:0; width: 5em; height: 2em; ">
+                 <span class="text-light m-0 p-0">NEW</span>
+             </div>
+         </div>
+         {{ end }}
      </a>
 
      {{- /* Post Cover Image */ -}}
