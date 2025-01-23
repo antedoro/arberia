@@ -11,5 +11,25 @@
    {{ end }}
    {{ end }}
   </div>
+  
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("pre > code").forEach((codeBlock) => {
+              const pre = codeBlock.parentElement;
+              const button = document.createElement("button");
+              button.innerHTML = '📋 Copiar';
+              button.className = "copy-button";
+              pre.style.position = 'relative';
+              pre.insertBefore(button, pre.firstChild);
+              
+              button.addEventListener("click", () => {
+                  navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                      button.innerHTML = '✅ Copiado!';
+                      setTimeout(() => (button.innerHTML = '📋 Copiar'), 2000);
+                  });
+              });
+          });
+      });
+  </script>
 </footer>
 {{end}}

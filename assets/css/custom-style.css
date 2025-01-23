@@ -1,1 +1,18 @@
 /* Insert here custom CSS */
+.copy-button {
+    position: absolute;
+    top: 12px;  /* Increased from 8px to move it away from the text */
+    right: 12px;  /* Increased from 8px to move it away from the text */
+    background-color: #3a3a3a;  /* Darker background to contrast with black code box */
+    color: #f0f0f0;  /* Lighter text for better readability */
+    border: 1px solid #555;
+    border-radius: 4px;  /* Rounded corners */
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;  /* Removed box-shadow */
+}
+
+.copy-button:hover {
+    background-color: #4a4a4a;  /* Slightly lighter on hover */
+}
