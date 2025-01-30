@@ -11,5 +11,35 @@
    {{ end }}
    {{ end }}
   </div>
+  
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("pre > code").forEach((codeBlock) => {
+              const pre = codeBlock.parentElement;
+
+              // Crear un contenedor para el botón y la caja de código
+              const container = document.createElement("div");
+              container.className = "code-block-container";
+              pre.parentElement.insertBefore(container, pre);
+              container.appendChild(pre);
+
+              // Crear el botón
+              const button = document.createElement("button");
+              button.innerHTML = '📋 Copiar';
+              button.className = "copy-button";
+
+              // Insertar el botón en el contenedor
+              container.insertBefore(button, pre);
+
+              // Manejador de evento para copiar el contenido
+              button.addEventListener("click", () => {
+                  navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                      button.innerHTML = '✅ Copiado!';
+                      setTimeout(() => (button.innerHTML = '📋 Copiar'), 2000);
+                  });
+              });
+          });
+      });
+  </script>
 </footer>
 {{end}}

@@ -1,1 +1,23 @@
 /* Insert here custom CSS */
+.copy-button {
+    position: absolute;
+    top: -35px; /* Posiciona el botón encima de la caja */
+    right: 12px; /* Espaciado del lado derecho */
+    background-color: #3a3a3a; /* Fondo oscuro */
+    color: #f0f0f0; /* Color del texto */
+    border: 1px solid #555; /* Borde */
+    border-radius: 6px; /* Esquinas redondeadas */
+    padding: 5px 10px; /* Tamaño del botón */
+    cursor: pointer;
+    font-size: 8px;
+    transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+    background-color: #4a4a4a; /* Color más claro al pasar el ratón */
+}
+
+/* Ajuste del margen superior para evitar superposición */
+pre {
+    margin-top: 40px; /* Deja espacio para el botón encima */
+}

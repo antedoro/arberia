@@ -94,9 +94,40 @@
 	{{ template "_internal/opengraph.html" . }}
 	{{ template "_internal/twitter_cards.html" . }}
 	{{ template "_internal/schema.html" . }}
-	{{/*  {{ template "_internal/google_news.html" . }}  */}}
-	{{ template "_internal/google_analytics.html" . }}
-	{{ template "_internal/google_analytics_async.html" . }}
+	{{/* {{ template "_internal/google_news.html" . }} */}}
+	{{ if .Site.Params.googleAnalytics }}
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0L8R30ZCR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-R0L8R30ZCR');
+	</script>
+	{{ end }} <!-- Cierra el if para .Site.Params.googleAnalytics -->
 	{{ template "_internal/disqus.html" . }}
 	{{- end -}}
+	
+	<!-- Soporte para Mathjax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	
+	<!-- Soporte para Mermaid -->
+	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+	<script>
+	mermaid.initialize({ startOnLoad: true });
+	</script>
+	
+	<!-- Incluir el archivo CSS personalizado -->
+	<link rel="stylesheet" href="{{ "css/custom-style.css" | relURL }}">
+
+	<!-- Incluir el archivo JS personalizado -->
+	<script defer src="{{ "js/custom-js.js" | relURL }}"></script>
 </head>
