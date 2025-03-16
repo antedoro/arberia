@@ -58,7 +58,7 @@ playlist:
       duration: # Example 4:42
 ---
 
-## Tutorial Solidworks
+**Tutorial Solidworks**
 
 Raccolta di mini tutorial su Solidworks 2020 che tocca tutti i principali ambienti di Solidworks: Parte, Assiemi, Disegno
 

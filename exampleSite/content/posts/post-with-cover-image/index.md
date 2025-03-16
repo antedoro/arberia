@@ -25,7 +25,7 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: post-with-cover.webp
+    src: featured-image.webp
 
 featured: false
 sidebar: true

@@ -37,6 +37,7 @@ slug: extended-shortcode
 
 **Arberia Theme** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean. To expand your possibility this is an example list of all provided shortcodes.
 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 ## Alert
 
 Shortcode to inset varius alert on markdown post use this code:

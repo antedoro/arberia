@@ -25,7 +25,7 @@ hiddenFromSearch: false
 
 resources:
   - name: featured-image
-    src: Monthly-Python-News_Blue_Watermarked.png
+    src: featured-image.png
 
 featured: false
 sidebar: true
