@@ -91,12 +91,5 @@
 	{{ with .Params.Image }}
 	<meta property="og:image" content="{{ . | absURL }}" />
 	{{ end }}
-	{{ template "_internal/opengraph.html" . }}
-	{{ template "_internal/twitter_cards.html" . }}
-	{{ template "_internal/schema.html" . }}
-	{{/*  {{ template "_internal/google_news.html" . }}  */}}
-	{{ template "_internal/google_analytics.html" . }}
-	{{ template "_internal/google_analytics_async.html" . }}
-	{{ template "_internal/disqus.html" . }}
 	{{- end -}}
 </head>
