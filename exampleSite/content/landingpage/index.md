@@ -24,7 +24,7 @@ hiddenFromSearch: true
 
 resources:
 - name: featured-image
-  src: Real-Python-Learning-Paths_Watermarked.webp
+  src: image.webp
 
 featured: false
 sidebar: false
@@ -35,6 +35,50 @@ lightgallery: false
 license: ""
 slug: landingpage
 ---
+
+<style>
+    #moving-text-container {
+        overflow: hidden;
+        padding: 20px 0;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    #moving-text {
+        white-space: nowrap;
+        color: #333;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        position: relative;
+    }
+</style>
+
+<body>
+<div id="moving-text-container">
+    <div id="moving-text">
+        This is a landing page with some moving text script
+    </div>
+</div>
+
+<script>
+    const text = document.getElementById('moving-text');
+    const container = document.getElementById('moving-text-container');
+    let position = container.offsetWidth;
+
+    function moveText() {
+        position--;
+        if (position < -text.offsetWidth) {
+            position = container.offsetWidth;
+        }
+        text.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(moveText);
+    }
+
+    moveText();
+</script>
+</body>
+
+
 
 ## La Divina Commedia incipit by Dante Alighieri
 
