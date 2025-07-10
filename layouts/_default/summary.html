@@ -4,7 +4,12 @@
 			<div class="col-12 col-sm-4 align-self-top px-0">
 
 				{{- /* Post Cover Image */ -}}
-				{{ $img := (.Resources.ByType "image").GetMatch "featured-image" }}
+				{{ $img := (.Resources.ByType "image").GetMatch "featured-image-preview" }}
+				{{ if not $img }}
+					{{ with (.Resources.ByType "image").GetMatch "featured-image" }}
+						{{ $img = .Resize "400x" }}
+					{{ end }}
+				{{ end }}
 				{{ with $img }}
 				{{ $imageName := $img.Title }}
 				{{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
