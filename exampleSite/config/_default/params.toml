@@ -47,32 +47,37 @@ shortname = "your-shortname-disqus" # Replace with your Disqus shortname
 [[social.links]]
 title = "medium"
 icon = "fa fa-medium-m"
-link = "https://medium.com/@antedoro"
+link = "https://medium.com/@yourusername"
 
 [[social.links]]
 title = "facebook"
 icon = "fa fa-facebook-f"
-link = "https://www.facebook.com/antedoroguitars"
+link = "https://www.facebook.com/yourusername"
 
 [[social.links]]
 title = "twitter"
 icon = "fa fa-twitter"
-link = "https://twitter.com/AntedoroGuitars"
+link = "https://twitter.com/yourusername"
 
 [[social.links]]
 title = "instagram"
 icon = "fa fa-instagram"
-link = "https://www.instagram.com/antedoroguitars/"
+link = "https://www.instagram.com/yourusername/"
 
 [[social.links]]
 title = "pinterest"
 icon = "fa fa-pinterest-p"
-link = "https://www.pinterest.it/antedoroguitars"
+link = "https://www.pinterest.it/yourusername"
 
 [[social.links]]
 title = "telegram"
 icon = "fa fa-telegram-plane"
-link = "https://telegram.me/antedoroguitars"
+link = "https://telegram.me/yourusername"
+
+[[social.links]]
+title = "rss"
+icon = "fa fa-rss-square"
+link = "/index.xml"
 
 #################### Social Share Buttons ################################
 [social.share]

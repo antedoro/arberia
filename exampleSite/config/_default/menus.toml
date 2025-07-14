@@ -180,11 +180,16 @@ weight = 13
 
 ############################## Footer ##############################
 [[footer]]
-    name = "Privacy Policy"
-    url = "/policy-privacy"
-    weight = 1
+  name = "Contact"
+  url = "/contatti"
+  weight = 1
 
 [[footer]]
-    name = "Contact"
-    url = "/contact"
-    weight = 2
+  name = "RSS Feed"
+  url = "/index.xml"
+  weight = 2
+
+[[footer]]
+  name = "Privacy&Policy"
+  url = "/privacy&policy"
+  weight = 3
