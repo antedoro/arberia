@@ -7,11 +7,6 @@ BrandLogo = "img/arberia-logo.webp"
 BrandBorder = "rounded" # Use rounded or rounded-circle
 siteBrandWidth = 38
 siteBrandHeight = 38
-# siteBrandFill = "#fff"
-# Unit: em
-# siteBrandFontSize = 1
-# siteBrandFont = "Arial"
-# siteBrandFontColor = "white"
 
 tagline = "Responsive Hugo Theme"
 description = "Arberia Theme for Hugo Static Site Generator. Insert here general site description"
@@ -19,35 +14,85 @@ keywords = "Insert keywords"
 author = "Vincenzo Antedoro"
 author_resume = "<strong>Vincenzo Antedoro</strong> is an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of <em>learning by doing</em>."
 
-# #################### default parameters ################################
-# format date. See https://gohugo.io/functions/format/
+# Date format. See https://gohugo.io/functions/format/
 dateformat = "Monday, January 2, 2006"
-# number of post on pagination list
+
+# Number of post on pagination list
 paginate = "6"
-# summary lenght on list post 
+
+# Summary length on list post 
 summaryLength = "225"
-# default is false
+
+# Enable or disable search
 disableSearch = false 
-# google analytics
-googleAnalytics = "UA-74607909-1" # example : UA-123-45
+
 # YouTube Channel ID
 YTChannelID = "UClA8GwWzurVCprEY6OsCvhw"
+
 # Formspree Contact Form Link
-contact_form_action = "https://formspree.io/f/mvovbvga" # go to https:formspre.io and open a free account an insert here the link
-# disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+contact_form_action = "https://formspree.io/f/mvovbvga"
 
-# #################### Social Share Buttom ################################
+# Google Analytics 4 (GA4) Configuration
+[google_analytics_config]
+enable = true
+type = "gtag" # or "analytics" for Universal Analytics (not recommended for new setups)
+id = "G-XXXXXXXXXX" # Replace with your GA4 ID
+
+# Disqus Configuration
+[disqus]
+enable = true
+shortname = "your-shortname-disqus" # Replace with your Disqus shortname
+
+#################### Social link Buttons ################################
+[[social.links]]
+title = "medium"
+icon = "fa fa-medium-m"
+link = "https://medium.com/@antedoro"
+
+[[social.links]]
+title = "facebook"
+icon = "fa fa-facebook-f"
+link = "https://www.facebook.com/antedoroguitars"
+
+[[social.links]]
+title = "twitter"
+icon = "fa fa-twitter"
+link = "https://twitter.com/AntedoroGuitars"
+
+[[social.links]]
+title = "instagram"
+icon = "fa fa-instagram"
+link = "https://www.instagram.com/antedoroguitars/"
+
+[[social.links]]
+title = "pinterest"
+icon = "fa fa-pinterest-p"
+link = "https://www.pinterest.it/antedoroguitars"
+
+[[social.links]]
+title = "telegram"
+icon = "fa fa-telegram-plane"
+link = "https://telegram.me/antedoroguitars"
+
+#################### Social Share Buttons ################################
 [social.share]
-    enable = true
-    Twitter = true
-    Facebook = true
-    Linkedin = true
-    Whatsapp = false
-    Telegram = false
-    Email = true
-    Pinterest = false
-    Reddit = false
-    Pocket = false
-    Instapaper = false
+enable = true
+Twitter = true
+Facebook = true
+Linkedin = true
+Whatsapp = false
+Telegram = false
+Email = true
+Pinterest = false
+Reddit = false
+Pocket = false
+Instapaper = false
 
+[assets]
+favicon = "favicon/favicon.ico"
+favicon16x16 = "favicon/favicon-16x16.png"
+favicon32x32 = "favicon/favicon-32x32.png"
+apple_touch_icon = "favicon/apple-touch-icon.png"
+safari_pinned_tab = "favicon/safari-pinned-tab.svg"
+theme_color = "#18354c"
+msapplication_TileColor = "#ffc40d"

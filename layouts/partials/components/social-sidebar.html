@@ -1,0 +1,12 @@
+{{/*  Social Link  */}}
+<div class="col mb-4">
+  <ul class="list-inline mb-0">
+    {{ range .Site.Params.social.links }}
+      <li class="list-inline-item mx-2">
+        <a href="{{ .link }}" style="font-size:2em; color: #00004B;" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+          <i class="{{ .icon }}"></i>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

@@ -10,7 +10,7 @@ Usage:
    <p class="small text-muted mb-0"><i class="fa fa-cloud-download mr-1" aria-hidden="true"></i>
     <strong>{{ i18n "download" }}</strong></p>
     {{- with .Get 0 -}}
-    <a class="stretched-link" href="{{ . }}" download  target="_blank"><p class="h2 my-0 h3">File (.pdf)</p></a>
+    <a class="stretched-link" href="{{ . }}" download  target="_blank"><p class="h2 my-0 h3">{{ i18n "filePdfLabel" }}</p></a>
     {{end}}
 
    {{- with .Get 1 -}}

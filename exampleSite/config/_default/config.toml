@@ -8,7 +8,6 @@ theme = "arberia"
 # format date. See https://gohugo.io/functions/format/
 dateformat = "Monday, January 2, 2006"
 
-
 # To list the most relevant pages on the front page or similar, 
 # you should use the site.Params.mainSections list instead of comparing 
 # section names to hard-coded values like "posts" or "post".
@@ -20,7 +19,7 @@ dateformat = "Monday, January 2, 2006"
   category = "categories"
 
 [outputs]
-  home = ["HTML", "JSON", "RSS", "AMP"]
+  home = ["HTML", "JSON", "RSS", "AMP", "robotsTXT"]
   page = ["HTML"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
@@ -32,8 +31,21 @@ dateformat = "Monday, January 2, 2006"
     ordered = false
     tocMinWordCount = 100 # Minimum word count to display the Table of Contents
 
-[markup.goldmark.renderer] # Controllare cosa faccia
-  unsafe = true
+  [markup.goldmark.renderer] # Controllare cosa faccia
+    unsafe = true
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true        # Cerca di indovinare il linguaggio se non specificato
+    hl_Lines = ""              # Evidenzia le righe 2 e da 4 a 6
+    lineNoStart = 1             # Numero iniziale per la numerazione righe
+    lineNos = true              # Mostra i numeri di riga
+    lineNumbersInTable = false   # Mostra i numeri in una tabella separata
+    noClasses = true            # Usa stili inline invece di classi CSS
+    style = "monokai"           # Tema per l'evidenziazione (es. "monokai", "dracula", "github")
+    tabWidth = 4                # Larghezza dei tab
+
+    
 
 [permalinks]
   posts = "/:title/"
@@ -42,6 +54,17 @@ dateformat = "Monday, January 2, 2006"
   minifyOutput = true
 
 enableRobotsTXT= true
+
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  [outputFormats.robotsTXT]
+    mediaType = "text/plain"
+    baseName = "robots"
+    isPlainText = true
+    noExtension = false
 
 
 ############################# Plugins ##############################
@@ -54,257 +77,3 @@ enableRobotsTXT= true
 # JS Plugins
 # [[params.plugins.js]]
 # link = "js/customJS.js"
-
-
-# Generate favicon with https://realfavicongenerator.net/
-# and copy favicon folder (name it facicon) to static/ folder
-[assets]
-  favicon = "favicon/favicon.ico"
-  favicon16x16 = "favicon/favicon-16x16.png>"
-  favicon32x32 = "favicon/favicon-32x32.png"
-  apple_touch_icon = "favicon/apple-touch-icon.png"
-  safari_pinned_tab = "favicon/safari-pinned-tab.svg"
-  # safari_color = "18354c"
-  # theme_color = "#18354c"
-  # msapplication_TileColor = "#ffc40d"
-
-
-
-
-
-######################################
-[menu]
-# [[menu.main]]
-# identifier = "home"
-# pre = ""
-# post = ""
-# name = "Home"
-# url = "/"
-# title = ""
-# weight = 1
-
-[[menu.main]]
-identifier = "start_here"
-pre = "fa fa-drafting-compass"
-post = ""
-name = "Start Here"
-url = "/start-here"
-title = ""
-weight = 2
-
-
-[[menu.main]]
-identifier = "view"
-pre = "fa fa-th-large"
-post = ""
-name = "View"
-url = ""
-title = ""
-weight = 3
-
-[[menu.main]]
-identifier = "list_view"
-pre = "fa fa-list"
-post = "Post list view of all posts"
-name = "List View →"
-url = "/posts/"
-title = ""
-weight = 4
-parent = "view"
-[menu.main.params]
-  color = "#ff7e73"
-
-[[menu.main]]
-identifier = "grid_view"
-pre = "fa fa-th"
-post = "Post grid view of all posts"
-name = "Grid View →"
-url = "/portfolio/"
-title = ""
-weight = 5
-parent = "view"
-[menu.main.params]
-  color = "#abe5b1"
-
-[[menu.main]]
-identifier = "post_view_sidebar"
-pre = "fa fa-file-text-o"
-post = "Single post view with sidebar"
-name = "Single Post View With Sidebar"
-url = "/post-with-sidebar/"
-title = ""
-weight = 6
-parent = "view"
-[menu.main.params]
-  color = "#ffc873"
-
-[[menu.main]]
-identifier = "post_view_no_sidebar"
-pre = "fa fa-file-text-o"
-post = "Single post view without sidebar"
-name = "Single Post View Without Sidebar"
-url = "/post-without-sidebar/"
-title = ""
-weight = 7
-parent = "view"
-[menu.main.params]
-  color = "#ffc873"
-
-[[menu.main]]
-identifier = "post_view_cover"
-pre = "fa fa-picture-o"
-post = "Single post view with cover image"
-name = "Single Post View with Cover"
-url = "/post-with-cover-image/"
-title = ""
-weight = 8
-parent = "view"
-[menu.main.params]
-  color = "#abe0e5"
-
-[[menu.main]]
-identifier = "video_post"
-pre = "fa fa-film"
-post = "Single post view of video post"
-name = "Video Post"
-url = "/video-post-view/"
-title = ""
-weight = 9
-parent = "view"
-[menu.main.params]
-  color = "#abe0e5"
-
-[[menu.main]]
-identifier = "landinpage"
-pre = "fa fa-star text-warning"
-post = "Insert html on index.md file"
-name = "Landing Page"
-url = "/landingpage/"
-title = ""
-weight = 10
-parent = "view"
-[menu.main.params]
-  color = ""
-  bordertop = true
-
-# [[menu.main]]
-# identifier = "books"
-# pre = ""
-# post = ""
-# name = "Books"
-# url = "/books"
-# title = ""
-# weight = 11
-
-[[menu.main]]
-identifier = "contact"
-pre = ""
-post = ""
-name = "Contact"
-url = "/contact/"
-title = ""
-weight = 12
-
-[[menu.main]]
-identifier = "about"
-pre = ""
-post = ""
-name = "About "
-url = "/about/"
-title = ""
-weight = 13
-
-
-# [[menu.main]]
-# identifier = "more"
-# pre = ""
-# post = ""
-# name = "More"
-# url = "/more/"
-# title = ""
-# weight = 10
-
-# [[menu.main]]
-# identifier = "python_newsletter"
-# pre = ""
-# post = ""
-# name = "Python Newsletter"
-# url = "/more/"
-# title = ""
-# weight = 11
-# parent = "more"
-
-# [[menu.main]]
-# identifier = "python_podcast"
-# pre = ""
-# post = ""
-# name = "Python Podcast"
-# url = "/more/"
-# title = ""
-# weight = 11
-# parent = "more"
-
-# [[menu.main]]
-# identifier = "python_job_board"
-# pre = ""
-# post = ""
-# name = "Python Job Board →"
-# url = "/more/"
-# title = ""
-# weight = 12
-# parent = "more"
-
-
-# Elenco colori da usare nel  menu 
-			# "color: #ff7e73;
-			# "color: #abe5b1;
-			# "color: #abe0e5;
-			# "color: #ffc873;
-			# "color: #e5c6ab;
-			# "color: #b8abe5; 
-
-# Footer config
-[footer]
-[[menu.footer]]
-  name = "Privacy Policy"
-  url = "/policy-privacy"
-  weight = 1
-
-[[menu.footer]]
-  name = "Contact"
-  url = "/contact"
-  weight = 2
-
-
-############################# social site ########################
-[[params.social]]
-title = "medium"
-icon = "fab fa-medium-m" # fontawesome icon : https://fontawesome.com/
-link = "https://medium.com/@antedoro"
-
-[[params.social]]
-title = "facebook"
-icon = "fab fa-facebook-f" # fontawesome icon : https://fontawesome.com/
-link = "https://www.facebook.com/antedoroguitars"
-
-[[params.social]]
-title = "twitter"
-icon = "fab fa-twitter" # fontawesome icon : https://fontawesome.com/
-link = "https://twitter.com/AntedoroGuitars"
-
-[[params.social]]
-title = "instagram"
-icon = "fab fa-instagram" # fontawesome icon : https://fontawesome.com/
-link = "https://www.instagram.com/antedoroguitars/"
-
-[[params.social]]
-title = "pinterest"
-icon = "fab fa-pinterest-p" # fontawesome icon : https://fontawesome.com/
-link = "https://www.pinterest.it/antedoroguitars"
-
-[[params.social]]
-title = "telegram"
-icon = "fab fa-telegram-plane" # fontawesome icon : https://fontawesome.com/
-link = "https://telegram.me/antedoroguitars"
-
-

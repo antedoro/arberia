@@ -34,6 +34,10 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 
 ## Installation/updating
 
+**Important Notice for Theme Updates:**
+> If you are upgrading from a previous version (e.g., 1.0.0) of the theme, please note that the configuration file structure has changed. The menu and footer links are now correctly placed inside the config/ directory at the root of your project. Additionally, some parameters have been updated.
+> Refer to the exampleSite folder inside the theme directory for guidance and inspiration.
+
 *Before starting, please be sure that you have
 [installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and
 [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you are ready to install **Arberia**.*
@@ -42,14 +46,14 @@ There are two mode:
 
 a) Simple mode: **Download as Zip** from Github Page **and extract in your themes directory** or
 
-b) Or you can add it as a git submodule via the following command: 
+b) Or you can add it as a git submodule via the following command:
 
     git init
     cd themes
     git submodule add https://github.com/antedoro/arberia.git arberia
     
-Next,copy contents from themes/arberia/exampleSite on site root folder.
-Copy folder from themes/arberia/archetypes on site root folder.
+Next, copy the contents from themes/arberia/exampleSite to the site's root folder.
+Copy the archetypes folder from themes/arberia/ to the site's root folder.
 
 Open `config/_defaults/config.toml` folder and ensure the theme option is set to `arberia`:
 
@@ -58,14 +62,16 @@ theme = "arberia"
 ```
 
 Now you can start hugo server and view the site:
+
 ```shell
 hugo server -D
 ```
 
-open browser and follow this link: [http://localhost:1313](http://localhost:1313) 
+open browser and follow this link: [http://localhost:1313](http://localhost:1313)
 
 **NOTE**
 To update theme installed:
+
 ```
     cd themes/arberia
     git pull

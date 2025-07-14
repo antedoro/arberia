@@ -10,7 +10,7 @@ other = "Vedi Commenti"
 other = "Leggi"
 
 [posts]
-other = "Posts"
+other = "Posts" # Placeholder
 
 # === general ==
 
@@ -33,7 +33,7 @@ other = "Tutti i Post per "
 # === about.html ===
 # === components/author.html ===
 [about]
-other = "About "
+other = "About " # Placeholder
 
 # === grid-view/list.html ===???
 [gotFeedback]
@@ -86,7 +86,7 @@ other = "Lezioni"
 other = "» Di più su di me"
 
 [aboutMe]
-other = "About Me"
+other = "About Me" # Placeholder
 
 # === components/recent-widget.html ===
 [recentPosts]
@@ -126,3 +126,52 @@ other = "Tutti Tag Topics"
 # === toc.html ===
 [tableOfContents]
 other = "Sommario"
+
+# === Nuove chiavi identificate ===
+[pageNotFound]
+other = "Pagina Non Trovata"
+
+[pageNotFoundMessage]
+other = "Spiacenti, la pagina non può essere trovata."
+
+[goToHomepage]
+other = "Vai alla Homepage"
+
+[filePdfLabel]
+other = "File (.pdf)"
+
+[permanentLinkTitle]
+other = "Link permanente"
+
+[newLabel]
+other = "NUOVO"
+
+[searchPlaceholder]
+other = "Cerca..."
+
+[exitFullscreen]
+other = "Esci da Schermo Intero"
+
+[brandLogoAlt]
+other = "Logo del brand"
+
+[freeEmailSeries]
+other = "— Serie Email Gratuita —"
+
+[pythonTricksTitle]
+other = "🐍 Trucchi Python 💌"
+
+[pythonTricksAlt]
+other = "Immagine Trucchi Python"
+
+[searchButton]
+other = "Cerca »"
+
+[textPostAlt]
+other = "Post di testo"
+
+[byAuthor]
+other = "di"
+
+[authorImageAlt]
+other = "Immagine autore"

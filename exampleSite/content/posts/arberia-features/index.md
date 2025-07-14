@@ -128,8 +128,7 @@ lightgallery: false
 license: ""
 slug: search
 ---
-```
----
+
 
 <!-- To hide a particular page from being searched, add it in post's frontmatter
 

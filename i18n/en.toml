@@ -126,3 +126,52 @@ other = "All Tag Topics"
 # === toc.html ===
 [tableOfContents]
 other = "Table of Contents"
+
+# === Nuove chiavi identificate ===
+[pageNotFound]
+other = "Page Not Found"
+
+[pageNotFoundMessage]
+other = "Sorry, that page can't be found."
+
+[goToHomepage]
+other = "Go to Homepage"
+
+[filePdfLabel]
+other = "File (.pdf)"
+
+[permanentLinkTitle]
+other = "Permanent link"
+
+[newLabel]
+other = "NEW"
+
+[searchPlaceholder]
+other = "Search..."
+
+[exitFullscreen]
+other = "Exit Fullscreen"
+
+[brandLogoAlt]
+other = "brand-logo"
+
+[freeEmailSeries]
+other = "— FREE Email Series —"
+
+[pythonTricksTitle]
+other = "🐍 Python Tricks 💌"
+
+[pythonTricksAlt]
+other = "Python Tricks Dictionary Merge"
+
+[searchButton]
+other = "Search »"
+
+[textPostAlt]
+other = "text-post"
+
+[byAuthor]
+other = "by"
+
+[authorImageAlt]
+other = "Author image"

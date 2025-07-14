@@ -17,7 +17,6 @@ github: "https://github.com/antedoro"
 linkedin: "https://www.linkedin.com/in/antedoro/"
 instagram: "https://www.instagram.com/antedoro/"
 
-
 # tags: [tag1, tag2, tag3, tag4]
 # categories: [category]
 
@@ -37,32 +36,32 @@ resources:
 # license: ""
 ---
 
-E allora ecco i libri di cui ho parlato nelle puntate dei podcast, più qualche extra. Ho lasciato fuori certe ovvietà e ho tolto i titoli che a distanza di tempo ricordo con meno entusiasmo; quelli con il trattino rosso, invece, mi sono piaciuti di più. I link portano all'affiliazione di Amazon perché questo mi aiuta a campare.
+And so, here are the books I mentioned in the podcast episodes, plus a few extras. I left out some obvious choices and removed titles that, with time, I remember less fondly; the ones with the red dash are the ones I liked the most. The links are Amazon affiliate links, because they help me make a living.
 
-## STO LEGGENDO
+## CURRENTLY READING
 
-[Delitto e castigo](https://amzn.to/3P7Jyvm), di Fëdor Dostoevskij.
+[Crime and Punishment](https://amzn.to/3P7Jyvm), di Fëdor Dostoevskij.
 
-## APPENA FINITI
+## JUST FINISHED
 
 Altre menti di Peter Godfrey-Smith.
 Dracula di Bram Stoker.
 Il piacere di scoprire di Richard P. Feynman.
 Il Minotauro esce a fumarsi una sigaretta di Steven Sherrill.
 
-## SCIENZE UMANE
+## Humanities
 
 - [Discorso sul metodo](https://amzn.to/3vRgPU3) di Cartesio.
 - [ Elogio della lentezza](https://amzn.to/3sknELQ) di Lamberto Maffei.
 - [TED Talks: The official TED](https://amzn.to/3LQ8A01) di Chris Anderson.
 
-## TECNOLOGIA
+## TECHNOLOGY 
 
 - [Humanless: l'algoritmo egoista](https://amzn.to/3wg3x2b) di Massimo Chiriatti.
 - [How the ThinkPad Changed the world](https://amzn.to/3FpTuMe) di Arimasa Naitoh.
 - [Incoscienza artificiale](https://amzn.to/395VPQB) di Massimo Chiriatti.
 
-## BUSINESS e MARKETING
+## BUSINESS and MARKETING
 
 - [Humanless: l'algoritmo egoista](https://amzn.to/3wg3x2b) di Massimo Chiriatti.
 - [How the ThinkPad Changed the world](https://amzn.to/3FpTuMe) di Arimasa Naitoh.

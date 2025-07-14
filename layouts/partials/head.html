@@ -1,95 +1,125 @@
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Meta base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="generator" content="Hugo {{ .Site.Hugo.Version }} with Arberia theme" />
 
-	<!-- Generator -->
-	<meta name="generator" content="Hugo {{ .Site.Hugo.Version }} with Arberia theme" />
+  <!-- Title + canonical -->
+  <title>{{ .Site.Title }} | {{ .Title | markdownify }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
 
-	<!-- Preloader -->
-	{{/*  <link href="https://cdn.arberiatheme.netlify.app" rel="preconnect"> 
-	<link href="https://files.arberiatheme.netlify.app" rel="preconnect">   */}}
+  <!-- Meta SEO -->
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author | safeHTML }}">
+  <meta name="keywords" content="{{ .Site.Params.keywords | safeHTML }}">
 
-	{{/*  {{"<!-- Preload -->"}}
-	<link rel="preload" as="image" href="{{ "img/theme.png" | relURL }}" /> */}}
+  <!-- Schema (JSON-LD) -->
+  {{ partial "schema.html" . }}
 
-	<title>{{ .Site.Title }} | {{ .Title | markdownify }}</title>
-	<link rel="canonical" href="{{ .Permalink }}" />
-	<meta name="description"
-		content="{{ if .IsHome }}{{ .Site.Params.description }}{{else}}{{ .Description }}{{ end }}">
+  <!-- OpenGraph + Twitter -->
+  {{ with $.Page.Resources.GetMatch "featured-image" }}
+  <meta property="og:image" content="{{ .Permalink }}">
+  {{ end }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 
-	<meta name="author" content="{{ site.Params.author | safeHTML }}" />
-	<meta name="keywords" content="{{ site.Params.keywords | safeHTML }}">
+  <!-- Favicon e WebApp -->
+  <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | relURL }}">
+  <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | relURL }}">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | relURL }}">
+  <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | relURL }}">
 
-	{{ partial "schema.html" . }}
+  <!-- RSS -->
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 
-	{{ "<!-- RSS controllare -->" | safeHTML }}
-	{{ range .AlternativeOutputFormats -}}
-	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-	{{ end -}}
+  <!-- CSS librerie -->
+  <link rel="stylesheet" href="{{ "lib/bootstrap/css/bootstrap.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "lib/lightbox/css/lightbox.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "font-awesome-4.7.0/css/font-awesome.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "gfonts/font.css" | relURL }}">
 
-	{{ "<!-- Favicon -->" | safeHTML }}
-	<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | relURL }}">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | relURL }}">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | relURL }}">
-	<link rel="apple-touch-icon"
-		href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | relURL }}">
-	<link rel="mask-icon"
-		href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | relURL }}">
-	<link rel="manifest" href="/site.webmanifest">
-	<meta name="theme-color" content="{{ .Site.Params.assets.theme_color | relURL }}">
-	<meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | relURL }}">
+  <!-- Main CSS -->
+  {{ $style := resources.Get "css/main.css" }}
+  {{ $components := resources.Match "css/" }}
+  {{ range $components }}
+  {{ $style = slice $style . | resources.Concat .Name }}
+  {{ end }}
+  {{ $style = slice $style | resources.Concat "main.css" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-	{{/*  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18354c">
-	<meta name="msapplication-TileColor" content="#ffc40d">
-	<meta name="theme-color" content="#18354c">  */}}
+  <!-- Custom CSS -->
+  {{ range .Site.Params.plugins.customCSS }}
+  <link rel="stylesheet" href="{{ .link | relURL }}">
+  {{ end }}
 
-	<!-- CSS Library only -->
-	<link rel="stylesheet" type="text/css" href={{"lib/bootstrap/css/bootstrap.min.css" | relURL}}>
-	<link rel="stylesheet" type="text/css" href={{"lib/lightbox/css/lightbox.css" | relURL}}>
-	<link rel="stylesheet" type="text/css" href={{"font-awesome-4.7.0/css/font-awesome.min.css" | relURL}}>
-	<link rel="stylesheet" type="text/css" href={{"gfonts/font.css" | relURL}}>
+  <!-- Analytics + Disqus (solo in produzione) -->
+  {{ if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+    {{ with .Site.Params.google_analytics_config }}
+      {{ if .enable }}
+        {{ if eq .type "gtag" }}
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{ .id }}');
+          </script>
+        {{ else if eq .type "analytics" }}
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '{{ .id }}', 'auto');
+            ga('send', 'pageview');
+          </script>
+        {{ end }}
+      {{ end }}
+    {{ end }}
 
-	{{ "<!-- Main CSS -->" | safeHTML }}
-	{{ $style := resources.Get "css/main.css" }}
-	{{ $components := resources.Match "css/" }}
-	{{ range $components }}
-	{{ $style = slice $style . | resources.Concat .Name }}
-	{{ end }}
-	{{ $style = slice $style | resources.Concat "main.css" | toCSS | minify | fingerprint }}
-	<link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ with .Site.Params.disqus }}
+      {{ if and .enable (ne .shortname "") }}
+        {{/*  {{ template "_internal/disqus.html" . }}   */}}
+      {{ end }}
+    {{ end }} 
+  {{ end }}
 
-	{{ "<!-- Custom CSS -->" | safeHTML }}
-	{{ range site.Params.plugins.customCSS }}
-	<link rel="stylesheet" href="{{ .link | relURL }} ">
-	{{/*  <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}"> */}}
-	{{ end }}
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\(', '\)']],
+        displayMath: [['$$', '$$'], ['\[', '\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-	{{/*  Search function - It's important to insert this script at the end of head.tml */}}
-	{{/*  {{- partial "schema.html" . -}} */}}
-	{{- if (eq .Layout `search`) -}}
-	{{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
-	<script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}"
-		integrity="{{ $flexsearch.Data.Integrity }}"></script>
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
 
-	{{ $mark := resources.Get "js/mark.min.js" }}
-	{{ $basesearch := resources.Get "js/search.js" }}
+  <!-- JS per ricerca se attiva -->
+  {{ if (eq .Layout `search`) }}
+    {{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
+    <script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}" integrity="{{ $flexsearch.Data.Integrity }}"></script>
 
-	{{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
-	{{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
-	<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
-	</script>
-	{{- end -}}
+    {{ $mark := resources.Get "js/mark.min.js" }}
+    {{ $basesearch := resources.Get "js/search.js" }}
+    {{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
+    {{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
+    <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+  {{ end }}
 
-	{{ "<!-- OpenGraph + Twitter + Analytics + Disqus -->" | safeHTML }}
-	{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-	{{ with .Params.Image }}
-	<meta property="og:image" content="{{ . | absURL }}" />
-	{{ end }}
-	{{- end -}}
+  <!-- JS principale -->
+  {{ $js := resources.Get "js/custom-js.js" }}
+  {{ $js = slice $js | resources.Concat "main.js" | minify | fingerprint }}
+  <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </head>
