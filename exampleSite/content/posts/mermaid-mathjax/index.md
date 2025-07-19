@@ -26,7 +26,7 @@ description: "Description"
 
 tags:
   - features
-  - marmaid
+  - mermaid
   - mathjax
 categories:
   - arberia_theme
@@ -54,12 +54,40 @@ Arberia Theme for Hugo supports native Mermaid diagrams and MathJax equations. T
 ## Mermaid
 Mermaid is a simple markdown-inspired tool that lets you create diagrams and flowcharts using plain text. It's ideal for developers and technical writers who want to visualize processes, systems, or data structures directly in their documentation or code. Look at official website to learn how to use it: [https://mermaid.js.org/](https://mermaid.js.org/) 
 
+### Basic flowchart
 
 ```mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
+```
+
+### Pie chart
+
+```mermaid
+pie title Fruits preferred by Italians
+    "Apple" : 120
+    "Pear" : 99
+    "Ficus" : 45
+```
+
+### A commit flow diagram. 
+
+```mermaid
+gitGraph:
+    commit "Ashish"
+    branch newbranch
+    checkout newbranch
+    commit id:"1111"
+    commit tag:"test"
+    checkout main
+    commit type: HIGHLIGHT
+    commit
+    merge newbranch
+    commit
+    branch b2
+    commit
 ```
 
 
