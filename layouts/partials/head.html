@@ -26,11 +26,13 @@
 
   <!-- Favicon e WebApp -->
   <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | relURL }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.Params.assets.android_chrome_192x192 | default "favicon/android-chrome-192x192.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ .Site.Params.assets.android_chrome_512x512 | default "favicon/android-chrome-512x512.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | relURL }}">
   <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | relURL }}">
-  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  <link rel="manifest" href="{{ "favicon/site.webmanifest" | relURL }}">
   <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | relURL }}">
   <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | relURL }}">
 
@@ -112,10 +114,10 @@
   {{ $basesearch := resources.Get "js/search.js" }}
   {{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
   {{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
-  <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+  <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 
   <!-- JS principale -->
   {{ $js := resources.Get "js/custom-js.js" }}
   {{ $js = slice $js | resources.Concat "main.js" | minify | fingerprint }}
-  <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  <script defer src="{{ $js.Permalink }}"></script>
 </head>

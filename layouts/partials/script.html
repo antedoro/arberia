@@ -3,11 +3,9 @@
 <script type="text/javascript" src={{"lib/popper/popper.js" | relURL }}></script>
 <script type="text/javascript" src="{{ "lib/bootstrap/js/bootstrap.min.js" | relURL }}"></script> 
 <script type="text/javascript" src="{{ "lib/lightbox/js/lightbox.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "lib/glightbox/js/glightbox.js" | relURL }}"></script>
 
-<!-- CUSTOM JS -->
-{{ range .Site.Params.customJS -}}
-<script type="text/javascript" src="{{ . | relURL }}"></script>
-{{ end }} 
+
 
 
 {{/*  glightbox script  */}}
