@@ -6,8 +6,7 @@
 
 <!-- CUSTOM JS -->
 {{ range .Site.Params.customJS -}}
-<script type="text/javascript" src="{{ .link | relURL }}"></script>
-<script src="{{ "/js/" | relURL }}{{ . }}"></script> 
+<script type="text/javascript" src="{{ . | relURL }}"></script>
 {{ end }} 
 
 

@@ -60,18 +60,16 @@
 			  </ul>
 			</div>
 
-
-			{{/*  Search form - Questo è quello originale modificato  */}}
-			<div class="d-none d-lg-flex align-items-center mr-2 flex-fill">
-				<form class="form-inline ml-0"  action="/search" method="GET" target="_self">
-					<a class="js-search-form-submit position-absolute" href="/search"
-						title="Search"><i class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>
-					<input id="search-by" class="search-field form-control form-control-md mr-sm-1 mr-lg-2 w-100" 
-					style="padding-left: 2rem;" maxlength="50" data-search-input type="search" 
-					placeholder="{{ i18n "searchPlaceholder" }}" aria-label="Search" name="q">
-					<input type="hidden" name="_from" value="nav">
-				</form>			
-			</div>
+      {{ if ne .Layout "search" }}
+			<div class="search-container dropdown d-none d-lg-flex align-items-center mr-2 flex-fill">
+        <form class="form-inline ml-0" action="/search" method="GET" target="_self">
+          <a class="js-search-form-submit position-absolute" href="/search" title="Search"><i class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>
+          <input id="search-by" class="search-field form-control form-control-md mr-sm-1 mr-lg-2 w-100" style="padding-left: 2rem;" maxlength="50" data-search-input type="search" placeholder="{{ i18n "searchPlaceholder" }}" aria-label="Search" name="q" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <input type="hidden" name="_from" value="nav">
+        </form>
+        <ul id="searchResults" class="dropdown-menu" aria-labelledby="search-by"></ul>
+      </div>
+      {{ end }}
 
 		</div>
 	</div>

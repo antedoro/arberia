@@ -5616,7 +5616,7 @@ input[type=submit].btn-block {
  flex-wrap: wrap;
  align-items: center;
  justify-content: space-between;
- padding: .5625rem 1.125rem
+ padding: .5625rem 1.125rem;
 }
 
 .navbar .container,

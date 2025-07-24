@@ -1,95 +1,51 @@
-{{/*  <div class="d-flex mt-3 mb-4">
- <form class="form-inline col pl-0" action="/search" method="GET" id="home-search-form">
-  <a class="js-search-form-submit position-absolute" href="/search" title="Search"><i
-    class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>
-  <input class="form-control form-control-lg w-100" style="padding-left: 2rem;" maxlength="50" type="search"
-   placeholder="Search…" aria-label="Search" name="q">
-
-  <input class="form-control form-control-lg w-100" style="padding-left: 2rem;" data-search-input id="search-by" type="text" placeholder="Search...">
-
-  <input type="hidden" name="_from" value="home">
- </form>
- <button class="btn btn-primary col-3 px-2" type="submit" form="home-search-form">{{ i18n "searchButton" }}</button>
-</div>  */}}
-
-
-<div class="searchBoxContainer">
- <form action="js/search" method="GET" target="_self" class="form-inline col p-0">
-  {{/*  <a class="js-search-form-submit position-absolute" href="/search" title="Search"><i
-    class="fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i></a>  */}}
-  <i class="position-absolute fa fa-search fa-fw text-muted pl-2" aria-hidden="true"></i>
-  <input id="searchBox" type="text" class="form-control form-control-lg w-100" style="padding-left: 35px; padding-right: 35px;" placeholder="{{ i18n "searchPlaceholder" }}" name="q">
-  <input type="hidden" name="_from" value="searchbox">
-  <i title="Clear search query" class="fa fa-close text-muted pr-4 search-field-clear-icon"></i>
-  <div id="searchResults" class="searchResults" style="margin-top: 80px; margin-bottom: 20px;"></div>
- </form>
+<div class="search-container">
+  <div class="search-box-wrapper">
+    <i class="fa fa-search search-icon"></i>
+    <input id="searchBox" type="text" class="form-control" placeholder="Search...">
+    <i class="fa fa-close close-icon"></i>
+  </div>
+  <div id="searchResultsPage" class="search-results-page"></div>
 </div>
 
-
 <style>
-  .searchBoxContainer {
+  .search-box-wrapper {
     position: relative;
-    display: flex; /* Make it a flex container */
-    align-items: center; /* Vertically center items */
-    width: 100%;
-    max-width: 600px; /* Adjust as needed */
-    margin: 20px auto;
+    display: flex;
+    align-items: center;
   }
 
-  .searchBoxContainer .form-control {
-    padding-right: 2.5rem; /* Space for the close icon */
-    height: 45px; /* Fixed height for the input */
-  }
-
-  .searchBoxContainer .fa-search {
-    left: 10px;
-    z-index: 2;
+  .search-icon, .close-icon {
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    color: #aaa;
   }
 
-  .searchBoxContainer .fa-close {
+  .search-icon {
+    left: 10px;
+  }
+
+  .close-icon {
     right: 10px;
     cursor: pointer;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
-  /* Adjust icon vertical alignment */
-  .searchBoxContainer .fa {
-    position: absolute;
+  #searchBox {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const searchBox = document.getElementById('searchBox');
-    const searchClearIcon = document.querySelector('.search-field-clear-icon');
+    const closeIcon = document.querySelector('.close-icon');
 
-    if (searchBox && searchClearIcon) {
-      // Show/hide clear icon based on input content
-      searchBox.addEventListener('input', function() {
-        if (searchBox.value.length > 0) {
-          searchClearIcon.style.display = 'block';
-        } else {
-          searchClearIcon.style.display = 'none';
-        }
-      });
-
-      // Clear search box on icon click
-      searchClearIcon.addEventListener('click', function() {
-        searchBox.value = '';
-        searchClearIcon.style.display = 'none';
-        searchBox.focus();
-      });
-
-      // Initial check in case there's pre-filled content
-      if (searchBox.value.length > 0) {
-        searchClearIcon.style.display = 'block';
-      } else {
-        searchClearIcon.style.display = 'none';
-      }
-    }
+    closeIcon.addEventListener('click', function() {
+      searchBox.value = '';
+      searchBox.focus();
+      const searchResultsContainer = document.getElementById('searchResultsPage');
+      searchResultsContainer.innerHTML = '';
+    });
   });
 </script>

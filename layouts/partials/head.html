@@ -47,11 +47,8 @@
 
   <!-- Main CSS -->
   {{ $style := resources.Get "css/main.css" }}
-  {{ $components := resources.Match "css/" }}
-  {{ range $components }}
-  {{ $style = slice $style . | resources.Concat .Name }}
-  {{ end }}
-  {{ $style = slice $style | resources.Concat "main.css" | toCSS | minify | fingerprint }}
+  {{ $search_style := resources.Get "css/search.css" }}
+  {{ $style = slice $style $search_style | resources.Concat "style.css" }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <!-- Custom CSS -->
@@ -84,6 +81,7 @@
       {{ end }}
     {{ end }}
 
+    <!-- Disqus -->
     {{ with .Site.Params.disqus }}
       {{ if and .enable (ne .shortname "") }}
         {{/*  {{ template "_internal/disqus.html" . }}   */}}
@@ -106,17 +104,15 @@
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>mermaid.initialize({ startOnLoad: true });</script>
 
-  <!-- JS per ricerca se attiva -->
-  {{ if (eq .Layout `search`) }}
-    {{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
-    <script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}" integrity="{{ $flexsearch.Data.Integrity }}"></script>
+  <!-- JS for active search -->
+  {{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
+  <script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}" integrity="{{ $flexsearch.Data.Integrity }}"></script>
 
-    {{ $mark := resources.Get "js/mark.min.js" }}
-    {{ $basesearch := resources.Get "js/search.js" }}
-    {{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
-    {{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
-    <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
-  {{ end }}
+  {{ $mark := resources.Get "js/mark.min.js" }}
+  {{ $basesearch := resources.Get "js/search.js" }}
+  {{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
+  {{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
+  <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
 
   <!-- JS principale -->
   {{ $js := resources.Get "js/custom-js.js" }}
