@@ -20,7 +20,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare
 
 author: "author"
-avatar: /img/me.jpg  # link to avatar file
+avatar: /img/me.png  # link to avatar file
 authorLink: ""
 description: "Descrizione da rivedere se è un doppione subtitle"
 

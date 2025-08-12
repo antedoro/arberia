@@ -9,7 +9,7 @@ type: cover-view
 
 author: Vincenzo Antedoro
 authorLink: /about
-avatar: /img/me.jpg
+avatar: /img/me.png
 description: Insert description here. This don't affects subtitle but only html internals
 
 tags:
