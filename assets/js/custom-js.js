@@ -1,1 +1,2 @@
-// Insert here your js script
+// Deprecated: logic moved to assets/js/main.js
+

@@ -14135,6 +14135,35 @@ kbd {
  display: inline-block
 }
 
+/* Copy button for code blocks */
+.highlight .copy-code-button {
+  position: absolute;
+  top: .35rem;
+  right: .35rem;
+  padding: .15rem .3rem;
+  border: none;
+  border-radius: 4px;
+  background: rgba(24, 53, 76, 0.9);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity .15s ease-in-out, background-color .15s ease-in-out;
+  z-index: 2; /* above ::before language bar */
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.highlight .copy-code-button i { font-size: 1.25em; line-height: 1; }
+.highlight .copy-code-button:hover {
+  opacity: 1;
+  background: #245073;
+}
+.highlight .copy-code-button.copied {
+  background: #28a745;
+}
+.highlight .copy-code-button.copy-error {
+  background: #dc3545;
+}
+
 .highlight .repl-toggle {
  position: absolute;
  right: 0;

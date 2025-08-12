@@ -117,7 +117,8 @@
   <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 
   <!-- JS principale -->
-  {{ $js := resources.Get "js/custom-js.js" }}
-  {{ $js = slice $js | resources.Concat "main.js" | minify | fingerprint }}
-  <script defer src="{{ $js.Permalink }}"></script>
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $custom := resources.Get "js/custom-js.js" }}
+  {{ $bundle := slice $main $custom | resources.Concat "js/bundle.js" | minify | fingerprint }}
+  <script defer crossorigin="anonymous" src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
 </head>
