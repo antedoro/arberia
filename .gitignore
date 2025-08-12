@@ -51,3 +51,5 @@ hugo.linux
 /.hugo_build.lock
 
 # https://www.toptal.com/developers/gitignore/api/hugo
+
+GEMINI.md
