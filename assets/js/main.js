@@ -60,22 +60,26 @@
           .then(function () {
             btn.classList.add('copied');
             btn.setAttribute('title', 'Copied!');
+            console.log('Tooltip set to Copied!'); // Added for debugging
             btn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
             setTimeout(function () {
               btn.classList.remove('copied');
               btn.setAttribute('title', 'Copy');
+              console.log('Tooltip reverted to Copy'); // Added for debugging
               btn.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
-            }, 1500);
+            }, 3000); // Increased duration to 3 seconds
           })
           .catch(function () {
             btn.classList.add('copy-error');
             btn.setAttribute('title', 'Error!');
+            console.log('Tooltip set to Error!'); // Added for debugging
             btn.innerHTML = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>';
             setTimeout(function () {
               btn.classList.remove('copy-error');
               btn.setAttribute('title', 'Copy');
+              console.log('Tooltip reverted to Copy'); // Added for debugging
               btn.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
-            }, 2000);
+            }, 3000); // Increased duration to 3 seconds
           });
       });
       block.appendChild(btn);
