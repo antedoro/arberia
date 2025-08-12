@@ -11,7 +11,8 @@
     button.className = 'copy-code-button';
     button.type = 'button';
     button.setAttribute('aria-label', 'Copy code');
-    button.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i>';
+    button.setAttribute('title', 'Copy');
+    button.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
     return button;
   }
 
@@ -58,18 +59,22 @@
         copyToClipboard(text)
           .then(function () {
             btn.classList.add('copied');
+            btn.setAttribute('title', 'Copied!');
             btn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
             setTimeout(function () {
               btn.classList.remove('copied');
-              btn.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i>';
+              btn.setAttribute('title', 'Copy');
+              btn.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
             }, 1500);
           })
           .catch(function () {
             btn.classList.add('copy-error');
+            btn.setAttribute('title', 'Error!');
             btn.innerHTML = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>';
             setTimeout(function () {
               btn.classList.remove('copy-error');
-              btn.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i>';
+              btn.setAttribute('title', 'Copy');
+              btn.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
             }, 2000);
           });
       });
