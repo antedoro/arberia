@@ -40,8 +40,8 @@ weight: 1
 # license: ""
 ---
 
-Hi I'm the developer of Arberia Theme for Hugo. If you want to know some about me read this _short bio_.
+Hi I'm the developer of **Arberia Theme for Hugo**. If you want to know some about me read this _short bio_.
 
-My name is **Vincenzo Antedoro**. I'm an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of learning by doing.
+My name is **Vincenzo Antedoro**. I'm an engineer who helps those who want to invest in renewables. For the rest I enjoy teaching with the method of learning by doing.
 
 Visualize my profile at my personal blog: [https://antedoro.it/about/](https://antedoro.it/about/)
