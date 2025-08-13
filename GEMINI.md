@@ -1,1 +1,0 @@
-This project is a Hugo SSG site that use Arberia theme.
