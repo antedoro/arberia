@@ -6,7 +6,7 @@ lastmod: 2022-07-27T10:53:18+02:00
 draft: false
 type: # Use standard-view on nothing for default or courses - video - landingpage null for list view
   null
-weight: 99
+weight: 1000
 
 featured: false
 sidebar: true

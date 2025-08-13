@@ -1,14 +1,15 @@
 ---
 title: Extended Shortcode
 subtitle: Specific theme shortcode
-date: 2022-05-01T18:19:27+02:00
-lastmod: 2022-05-01T20:05:50.953Z
+date: 2022-08-03T10:53:18+02:00
+lastmod: 2022-08-03T10:53:18+02:00
 draft: false
-weight: null
+weight: 940
 
-author: Vincenzo Antedoro
-authorLink: ""
-description: Descrizione da rivedere se è un doppione subtitle
+author: author name
+authorLink: /about
+avatar: /img/me.png
+description: 
 
 tags:
   - shortcode

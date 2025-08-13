@@ -1,16 +1,16 @@
 ---
 title: Post with Cover Image
 subtitle: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-date: 2022-07-06T21:08:01+02:00
-lastmod: 2022-07-06T21:08:01+02:00
+date: 2022-08-05T10:53:18+02:00
+lastmod: 2022-08-05T10:53:18+02:00
 draft: false
-weight: null
+weight: 900
 type: cover-view
 
-author: Vincenzo Antedoro
+author: author name
 authorLink: /about
 avatar: /img/me.png
-description: Insert description here. This don't affects subtitle but only html internals
+description: 
 
 tags:
   - tag1

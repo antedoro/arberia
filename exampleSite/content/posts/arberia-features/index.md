@@ -1,11 +1,11 @@
 ---
 title: "Arberia Features"
 subtitle: "Learn About All Features in Arberia Theme"
-date: 2022-07-27T11:27:38+02:00
-lastmod: 2022-07-27T11:27:38+02:00
+date: 2022-07-28T10:53:18+02:00
+lastmod: 2022-07-28T10:53:18+02:00
 draft: false
 type:  # Use standard-view on nothing for default or courses - video - landingpage null for list view
-weight: null 
+weight: 20 
 
 featured: false
 sidebar: false # Works only with standard-view

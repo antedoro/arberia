@@ -1,13 +1,17 @@
 ---
 title: Code Sample
 subtitle: Insert a subtitle here
-date: 2022-06-24T18:28:32+02:00
-lastmod: 2022-06-24T18:28:32+02:00
+date: 2022-08-02T10:53:18+02:00
+lastmod: 2022-08-02T10:53:18+02:00
 draft: false
-author: author
-authorLink: ""
-description: Descrizione da rivedere se è un doppione subtitle
-weight: null
+weight: 950
+
+
+author: author name
+authorLink: /about
+avatar: /img/me.png
+description: 
+
 
 tags:
   - tag1

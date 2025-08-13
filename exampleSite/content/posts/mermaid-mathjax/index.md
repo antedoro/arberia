@@ -19,10 +19,10 @@ slug:  # slug exemple: solidworks-2020-tutorial
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare
 
-author: "V.Antedoro"
-avatar: /img/me.png  # link to avatar file
-authorLink: ""
-description: "Description"
+author: author name
+authorLink: /about
+avatar: /img/me.png
+description: 
 
 tags:
   - features

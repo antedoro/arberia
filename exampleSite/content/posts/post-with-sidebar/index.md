@@ -1,17 +1,17 @@
 ---
-weight: 1
+weight: 890
 title: Post with sidebar
 subtitle: Take your coding skills to the next level with Real Python’s accelerated study
   plans for beginner, intermediate, and advanced Python developers.
-date: 2020-10-15T20:58:53+02:00
-lastmod: 2020-10-15T20:58:53+02:00
+date: 2022-08-06T10:53:18+02:00
+lastmod: 2022-08-06T10:53:18+02:00
 draft: false
 type: standard-view
 
-author: Vincenzo Antedoro
-authorLink: ""
-description: Abbiamo selezionato alcuni accesori indispensabili se decidi di acquistare un
-  portabici per automobile
+author: author
+avatar: /img/me.png
+authorLink: /about/
+description: 
 
 tags:
   - pippo

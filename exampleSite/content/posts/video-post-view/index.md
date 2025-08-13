@@ -1,16 +1,16 @@
 ---
 title: Video Post View 
 subtitle: Video post view example
-date: 2022-07-09T23:08:01+02:00
-lastmod: 2022-07-09T23:08:01+02:00
+date: 2022-08-08T10:53:18+02:00
+lastmod: 2022-08-08T10:53:18+02:00
 draft: false
 type: video
-weight: 1
+weight: 860
 
-author: Vincenzo Antedoro
+author: author name
+authorLink: /about
 avatar: /img/me.png
-authorLink: /about/
-description: Descrizione da rivedere se è un doppione subtitle
+description: 
 
 tags:
   - tutorial

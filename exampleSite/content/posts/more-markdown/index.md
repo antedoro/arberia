@@ -1,13 +1,15 @@
 ---
 title: More on Markdown
 subtitle: Insert a subtitle here
-date: 2022-04-26T18:26:24+02:00
-lastmod: 2022-04-26T18:26:24+02:00
+date: 2022-08-01T10:53:18+02:00
+lastmod: 2022-08-01T10:53:18+02:00
 draft: false
-author: Vincenzo Antedoro
-authorLink: ""
-description: Descrizione da rivedere se è un doppione subtitle
-weight: null
+weight: 910
+
+author: author name
+authorLink: /about
+avatar: /img/me.png
+description: 
 
 tags:
   - tag1

@@ -1,14 +1,15 @@
 ---
-weight: 1
+weight: 870
 title: Start Here
 subtitle: Arberia Theme is a fully responsive tech-blogger theme for Hugo with 4 single post and 2 list layout!! 
-date: 2020-10-15T20:58:53+02:00
-lastmod: 2020-10-15T20:58:53+02:00
+date: 2022-07-30T10:53:18+02:00
+lastmod: 2022-07-30T10:53:18+02:00
 draft: false
 type: standard-view
 
-author: Vincenzo Antedoro
-authorLink: ""
+author: author name
+authorLink: /about
+avatar: /img/me.png
 description: 
 
 tags:
@@ -38,6 +39,8 @@ slug: start-here
 
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+<!--more-->
 
 ## Features
 
@@ -183,7 +186,7 @@ This theme is released under the [GPLv2 license](https://github.com/antedoro/arb
 
 ## FAQs / How To's Guide
 
-Read Wiki For More Details => **[Arberia-FAQs]()**
+Read Wiki For More Details => 
 
 ## Release Changelog
 

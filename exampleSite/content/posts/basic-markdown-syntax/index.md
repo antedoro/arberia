@@ -1,10 +1,10 @@
 ---
 title: Markdown Syntax
 subtitle: Insert a subtitle here
-date: 2019-12-01T21:57:40+08:00
-lastmod: 2020-01-01T16:45:40+08:00
+date: 2022-07-31T10:53:18+02:00
+lastmod: 2022-07-31T10:53:18+02:00
 draft: false
-weight: 4
+weight: 970
 
 author: author
 authorLink: ""
