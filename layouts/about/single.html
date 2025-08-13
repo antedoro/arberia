@@ -9,22 +9,21 @@
 
           {{ if  .Params.avatar }}
           {{ $img := .Resources.GetMatch "me.webp" }}
-          <div class="embed-responsive embed-responsive-1by1 mb-3">
-            {{/* resize the src image to the given sizes */}}
-            {{ .Scratch.Set "small_img" ($img.Resize "200x") }}
-            {{ .Scratch.Set "medium_img" ($img.Resize "400x") }}
-            {{ .Scratch.Set "large_img" ($img.Resize "800x") }}
-            {{/* add the processed images to the scratch */}}
-            {{ $small_img := .Scratch.Get "small_img" }}
-            {{ $medium_img := .Scratch.Get "medium_img" }}
-            {{ $large_img := .Scratch.Get "large_img" }}
-
-            <img src="{{ $img.RelPermalink}}" srcset="{{ with $small_img.RelPermalink }}{{.}} 200w{{ end }},
-              {{ with $medium_img.RelPermalink }}{{.}} 400w{{ end }},
-              {{ with $large_img.RelPermalink }}{{.}} 800w{{ end }}," sizes="25vw"
-              alt=" {{ .Params.author  | safeHTML}}"
-              class="rounded-circle img-fluid embed-responsive-item">
-          </div>
+          {{ if $img }}
+            <div class="embed-responsive embed-responsive-1by1 mb-3">
+              {{ $small := $img.Resize "200x" }}
+              {{ $medium := $img.Resize "400x" }}
+              {{ $large := $img.Resize "800x" }}
+              <img 
+                src="{{ $large.RelPermalink }}"
+                srcset="{{ $small.RelPermalink }} 200w, {{ $medium.RelPermalink }} 400w, {{ $large.RelPermalink }} 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                alt="{{ .Params.author | safeHTML }}"
+                class="rounded-circle img-fluid embed-responsive-item"
+                width="{{ $large.Width }}"
+                height="{{ $large.Height }}">
+            </div>
+          {{ end }}
           {{end}}
           
 
