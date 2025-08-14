@@ -57,7 +57,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 - **List Cathegory/Tag view**
 - **Icon colored submenu**
 - **Table of Contents**
-- **Search** supported by [Flexbox.js](flexbox.js)
+- **Search** supported by [Flexsearch.js](https://github.com/nextapps-de/flexsearch)
 - **[Google Analytics](https://analytics.google.com/analytics)** supported
 - **[Disqus](https://disqus.com)** comment system
 - Social-Media Share buttons on posts
