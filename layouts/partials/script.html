@@ -84,7 +84,7 @@
 </script>
 <script type="text/javascript" src="{{"plugins/search.js" | relURL}}"></script>  */}}
 
-<script src="{{ "js/mark.min.js" | relURL }}"></script>
-<script src="{{ "js/flexsearch.bundle.js" | relURL }}"></script>
+<script src="{{ "lib/mark.min.js" | relURL }}"></script>
+<script src="{{ "lib/flexsearch.bundle.js" | relURL }}"></script>
 {{ $searchJS := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | js.Build }}
 <script src="{{ $searchJS.RelPermalink }}"></script>
