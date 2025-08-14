@@ -181,7 +181,7 @@ weight = 13
 ############################## Footer ##############################
 [[footer]]
   name = "Contact"
-  url = "/contatti"
+  url = "/contact"
   weight = 1
 
 [[footer]]
