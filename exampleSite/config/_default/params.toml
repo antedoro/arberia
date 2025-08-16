@@ -30,7 +30,7 @@ disableSearch = false
 YTChannelID = "UClA8GwWzurVCprEY6OsCvhw"
 
 # Formspree Contact Form Link
-contact_form_action = "https://formspree.io/f/mvovbvga"
+contact_form_action = "https://formspree.io/f/+codenumber"
 
 # Google Analytics 4 (GA4) Configuration
 [google_analytics_config]
