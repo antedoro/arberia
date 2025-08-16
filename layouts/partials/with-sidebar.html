@@ -15,6 +15,7 @@
 
    <h1>{{ .Title | markdownify }}</h1>
 
+   {{ if (.Params.showMetatag | default true) }}
    <div class="mb-0">
     <span class="text-muted">by <a class="text-muted" href="#author">{{ .Params.author }}</a>
      <span class="ml-2 fa fa-clock-o"></span> 
@@ -33,6 +34,7 @@
      </div>
     </span>
    </div>
+   {{ end }}
 
    <div class="article-body">
     {{/*  Table of Contents  */}}

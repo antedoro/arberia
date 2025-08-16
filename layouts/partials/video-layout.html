@@ -24,6 +24,7 @@
    <div>
   <h1>{{ .Title | markdownify }}</h1>
 
+  {{ if (.Params.showMetatag | default true) }}
   <div class="container">
     <div class="row">
    <div class="col-2 col-md-1 p-0 align-self-center">
@@ -50,6 +51,7 @@
    </div>
     </div>
   </div>
+  {{ end }}
 
 
   <div class="tab-content">

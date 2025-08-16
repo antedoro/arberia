@@ -18,6 +18,7 @@
  <div class="col-md-11 col-lg-8 article">
    <div>
   <h1>{{ .Title | markdownify }}</h1>
+  {{ if (.Params.showMetatag | default true) }}
   <div class="container">
     <div class="row">
    <div class="col-2 col-md-1 p-0 align-self-center">
@@ -41,6 +42,7 @@
 
     </div>
   </div>
+  {{ end }}
 
   <div class="article-body mb-4">
     {{ .Content }}
