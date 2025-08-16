@@ -15,7 +15,7 @@
 
    <h1>{{ .Title | markdownify }}</h1>
 
-   {{ if (.Params.showMetatag | default true) }}
+   {{ if not (.Params.hiddenMetaTag | default false) }}
    <div class="mb-0">
     <span class="text-muted">by <a class="text-muted" href="#author">{{ .Params.author }}</a>
      <span class="ml-2 fa fa-clock-o"></span> 
