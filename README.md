@@ -14,17 +14,17 @@ See [https://arberiatheme.netlify.app/](https://arberiatheme.netlify.app/)
 
 - **Responsive layout**
 - **3 Single post view:**
-  - **Post view with sidebar**
-  - **Post view without sidebar**
-  - **Post view with cover image**
-  - **Video post view**
+  - Post view with sidebar
+  - Post view without sidebar
+  - Post view with cover image
+  - Video post view
 - **2 List post view:**
-  - **List posts**
-  - **Grid posts**
+  - List posts
+  - Grid posts
 - **Landing page**
-- **List Cathegory/Tag view**
 - **Icon colored submenu**
-- **Table of Contents**
+- List Cathegory/Tag view
+- Table of Contents
 - **Search** supported by [Flexsearch.js](https://github.com/nextapps-de/flexsearch)
 - **[Google Analytics](https://analytics.google.com/analytics)** supported
 - **[Disqus](https://disqus.com)** comment system
@@ -70,7 +70,7 @@ hugo server -D
 open browser and follow this link: [http://localhost:1313](http://localhost:1313)
 
 **NOTE**
-To update theme installed:
+**To update theme installed:**
 
 ```
     cd themes/arberia
@@ -128,22 +128,15 @@ slug: slug here if necessary
 ---
 ```
 
-For more information about all available standard front matter variables, please read
-[Hugo Front Matter](https://gohugo.io/content-management/front-matter).
+For more information about all available standard front matter variables, please read [Hugo Front Matter](https://gohugo.io/content-management/front-matter).
 
 ## Contributing
 
-Have you found a bug or got an idea for a new feature? Feel free to use the
-[issue tracker](https://github.com/antedoro/arberia/issues) to let me know. Or make directly a
-[pull request](https://github.com/antedoro/arberia//pulls).
+Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/antedoro/arberia/issues) to let me know. Or make directly a [pull request](https://github.com/antedoro/arberia//pulls).
 
 ## License
 
 This theme is released under the [MIT license](https://github.com/antedoro/arberia/blob/master/LICENSE).
-
-## FAQs / How To's Guide
-
-Read Wiki For More Details => **[Arberia-FAQs](https://arberiatheme.netlify.app/arberia-faqs/)**
 
 ## Release Changelog
 
