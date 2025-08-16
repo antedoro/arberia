@@ -25,16 +25,16 @@
   {{ template "_internal/twitter_cards.html" . }}
 
   <!-- Favicon e WebApp -->
-  <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | relURL }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.Params.assets.android_chrome_192x192 | default "favicon/android-chrome-192x192.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="512x512" href="{{ .Site.Params.assets.android_chrome_512x512 | default "favicon/android-chrome-512x512.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | relURL }}">
-  <link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | relURL }}">
-  <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | relURL }}">
-  <link rel="manifest" href="{{ "favicon/site.webmanifest" | relURL }}">
-  <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | relURL }}">
-  <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | relURL }}">
+  <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | absURL }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.Params.assets.android_chrome_192x192 | default "favicon/android-chrome-192x192.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ .Site.Params.assets.android_chrome_512x512 | default "favicon/android-chrome-512x512.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon/favicon-16x16.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon/favicon-32x32.png" | absURL }}">
+  <link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "favicon/apple-touch-icon.png" | absURL }}">
+  <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "favicon/safari-pinned-tab.svg" | absURL }}">
+  <link rel="manifest" href="{{ "favicon/site.webmanifest" | absURL }}">
+  <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | absURL }}">
+  <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | absURL }}">
 
   <!-- RSS -->
   {{ range .AlternativeOutputFormats -}}
@@ -42,10 +42,10 @@
   {{ end -}}
 
   <!-- CSS librerie -->
-  <link rel="stylesheet" href="{{ "lib/bootstrap/css/bootstrap.min.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "lib/lightbox/css/lightbox.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "font-awesome-4.7.0/css/font-awesome.min.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "gfonts/font.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "lib/bootstrap/css/bootstrap.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "lib/lightbox/css/lightbox.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "font-awesome-4.7.0/css/font-awesome.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "gfonts/font.css" | absURL }}">
 
   <!-- Main CSS -->
   {{ $normalize := resources.Get "css/normalize.css" }}
@@ -56,7 +56,7 @@
 
   <!-- Custom CSS -->
   {{ range .Site.Params.plugins.customCSS }}
-  <link rel="stylesheet" href="{{ .link | relURL }}">
+  <link rel="stylesheet" href="{{ .link | absURL }}">
   {{ end }}
 
   <!-- Analytics + Disqus (solo in produzione) -->
