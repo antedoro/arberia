@@ -91,37 +91,4 @@
       {{ end }}
     {{ end }} 
   {{ end }}
-
-  <!-- MathJax -->
-  <script>
-    {{- `
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\(', '\)']],
-        displayMath: [['$$', '$$'], ['\[', '\]']]
-      }
-    };
-    ` | safeJS -}}
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <!-- Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true });</script>
-
-  <!-- JS for active search -->
-  {{ $flexsearch := resources.Get "js/flexsearch.bundle.js" }}
-  <script defer crossorigin="anonymous" src="{{ $flexsearch.RelPermalink }}" integrity="{{ $flexsearch.Data.Integrity }}"></script>
-
-  {{ $mark := resources.Get "js/mark.min.js" }}
-  {{ $basesearch := resources.Get "js/search.js" }}
-  {{ $searchJSFile := printf "js/%s.search.js" .Language.Lang }}
-  {{ $search := (slice $mark $basesearch) | resources.Concat "js/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Fingerprint }}
-  <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
-
-  <!-- JS principale -->
-  {{ $main := resources.Get "js/main.js" }}
-  {{ $custom := resources.Get "js/custom-js.js" }}
-  {{ $bundle := slice $main $custom | resources.Concat "js/bundle.js" | minify | fingerprint }}
-  <script defer crossorigin="anonymous" src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
 </head>
