@@ -38,6 +38,13 @@ enable = true
 type = "gtag" # or "analytics" for Universal Analytics (not recommended for new setups)
 id = "G-XXXXXXXXXX" # Replace with your GA4 ID
 
+# Mailchimp Configuration
+[mailchimp]
+enable = false
+subdomain = "antedoro"
+user_id = "e2a0eb4b92cf215c9b65b90b7"
+list_id = "14b5b5d5ce"
+
 # Disqus Configuration
 [disqus]
 enable = true
