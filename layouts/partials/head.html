@@ -48,9 +48,10 @@
   <link rel="stylesheet" href="{{ "gfonts/font.css" | relURL }}">
 
   <!-- Main CSS -->
+  {{ $normalize := resources.Get "css/normalize.css" }}
   {{ $style := resources.Get "css/main.css" }}
   {{ $search_style := resources.Get "css/search.css" }}
-  {{ $style = slice $style $search_style | resources.Concat "style.css" }}
+  {{ $style = slice $normalize $style $search_style | resources.Concat "style.css" }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <!-- Custom CSS -->
@@ -93,12 +94,14 @@
 
   <!-- MathJax -->
   <script>
+    {{- `
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\(', '\)']],
         displayMath: [['$$', '$$'], ['\[', '\]']]
       }
     };
+    ` | safeJS -}}
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
