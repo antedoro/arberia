@@ -1,7 +1,14 @@
 <!-- Begin Mailchimp Signup Form -->
+{{ if .Site.Params.mailchimp.enable }}
+
+{{ $subDomain := .Site.Params.mailchimp.subdomain }}
+{{ $userId := .Site.Params.mailchimp.user_id }}
+{{ $listId := .Site.Params.mailchimp.list_id }}
+{{ $mailChimpLink := printf "https://%s.%s.%s/subscribe/post?u=%s&amp;id=%s" $subDomain "us9" "list-manage.com" $userId $listId }}
+
 <div class="card mt-3 mb-3 bg-secondary">
 <div id="mc_embed_signup">
- <form class="card-body" action="https://antedoro.us9.list-manage.com/subscribe/post?u=e2a0eb4b92cf215c9b65b90b7&amp;id=14b5b5d5ce"
+ <form class="card-body" action="{{ $mailChimpLink }}"
   method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
   novalidate>
   <div id="mc_embed_signup_scroll">
@@ -18,8 +25,8 @@
    </div>
 
    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-     name="b_e2a0eb4b92cf215c9b65b90b7_14b5b5d5ce" tabindex="-1" value="">
+   <div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="text" name="b_{{ $userId }}_{{ $listId }}" tabindex="-1" value="">
    </div>
    
    <div class="clear">
@@ -34,6 +41,7 @@
  </form>
 </div> 
 </div>
+{{ end }}
 {{/*  End Mailchimp Signup Form  */}}
 
 
