@@ -2,7 +2,7 @@
 
 **Arberia Theme** is a theme for the Hugo for tech blogger with 4 single post layout and 2 list layout!
 
-![Arberia Theme Screenshot](https://github.com/antedoro/arberia/blob/master/static/img/screenshot.png)
+![Arberia Theme Screenshot](/img/screenshot.png)
 
 The goal of this project is to add more features and customization to the base theme.
 
