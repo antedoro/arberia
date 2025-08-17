@@ -22,10 +22,13 @@ categories:
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
+hiddenMetaTag: false
 
 resources:
   - name: featured-image
-    src: featured-image.webp
+    src: post-with-cover-image.webp
+  - name: "featured-image-preview"
+    src: "post-with-cover-imagepreview.webp"
 
 featured: false
 sidebar: true
