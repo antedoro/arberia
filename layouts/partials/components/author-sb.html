@@ -13,10 +13,7 @@
 
      <img class="float-left rounded m-1"
       title="{{ .Params.author | markdownify }}"
-      src="/img/me.png"
-      srcset="me.png 250w, 
-      /img/me.png 450w, 
-      /img/me.png 900w" sizes="25vw"
+      src="{{ .Params.avatar }}"
       alt="{{- .Params.author  | markdownify -}}" width="72" height="72"> 
       {{- .Site.Params.author_resume| markdownify -}} </p>
    </div>
