@@ -14,11 +14,6 @@ dateformat = "Monday, January 2, 2006"
 # [params]
 #   mainSections = ['posts',]
 
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.148.1"
-
 [taxonomies]
   tag = "tags"
   category = "categories"
