@@ -73,9 +73,9 @@ open browser and follow this link: [http://localhost:1313](http://localhost:1313
 **NOTE**
 **To update theme installed:**
 
+Run the following command from the root of your project:
 ```
-    cd themes/arberia
-    git pull
+    git submodule update --remote --merge
 ```
 
 ## Configuration
