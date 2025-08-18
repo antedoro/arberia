@@ -1,6 +1,6 @@
 name = "Arberia Theme For Hugo"
 license = "MIT"
-licenselink = "https://github.com/antedoro/arberia/blob/master/LICENSE"
+licenselink = "https://github.com/antedoro/arberia/blob/main/LICENSE"
 description = "Arberia Theme is a fully responsive theme for tech blogger with 4 single post layout and 2 list layout!"
 homepage = "https://github.com/antedoro/arberia"
 demosite = "https://arberiatheme.netlify.app/"
@@ -14,4 +14,4 @@ features = ["post-with-sidebar", "video-post", "cover-post", "post-no-sidebar", 
 [module]
   [module.hugoVersion]
  extended = true
- min = "0.101.0"
+ min = "0.148.1"

@@ -14,6 +14,11 @@ dateformat = "Monday, January 2, 2006"
 # [params]
 #   mainSections = ['posts',]
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.148.1"
+
 [taxonomies]
   tag = "tags"
   category = "categories"
@@ -44,8 +49,6 @@ dateformat = "Monday, January 2, 2006"
     noClasses = true            # Usa stili inline invece di classi CSS
     style = "monokai"           # Tema per l'evidenziazione (es. "monokai", "dracula", "github")
     tabWidth = 4                # Larghezza dei tab
-
-    
 
 [permalinks]
   posts = "/:title/"
