@@ -18,8 +18,8 @@ slug:  # slug exemple: solidworks-2020-tutorial
 
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare
-
 hiddenMetaTag: false # Set to false to hide author, publish date, and tags
+
 author: "Insert author"
 avatar: /img/me.png  # link to avatar file
 authorLink: ""

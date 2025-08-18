@@ -7,9 +7,10 @@ draft: false
 weight: 960
 type: null
 
-author: author
+author: "author"
+avatar: /img/me.png  # link to avatar file
 authorLink: ""
-description: Descrizione da rivedere se è un doppione subtitle
+description: "Descrizione da rivedere se è un doppione subtitle"
 
 tags:
   - shortcodes

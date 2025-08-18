@@ -12,7 +12,7 @@ tagline = "Responsive Hugo Theme"
 description = "Arberia Theme for Hugo Static Site Generator. Insert here general site description"
 keywords = "Insert keywords"
 author = "Vincenzo Antedoro"
-author_resume = "<strong>Vincenzo Antedoro</strong> is an engineer who helps those who want to invest in renewables. For the rest he enjoys teaching with the method of <em>learning by doing</em>."
+author_resume = "<strong>Vincenzo Antedoro</strong> is the author of Arberia Theme for Hugo. To learn more, visit the <em>About page</em>."
 
 # Date format. See https://gohugo.io/functions/format/
 dateformat = "Monday, January 2, 2006"
@@ -41,9 +41,9 @@ id = "G-XXXXXXXXXX" # Replace with your GA4 ID
 # Mailchimp Configuration
 [mailchimp]
 enable = false
-subdomain = "antedoro"
-user_id = "e2a0eb4b92cf215c9b65b90b7"
-list_id = "14b5b5d5ce"
+subdomain = "registredname"
+user_id = "code"
+list_id = "code"
 
 # Disqus Configuration
 [disqus]
