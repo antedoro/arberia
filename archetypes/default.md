@@ -4,7 +4,7 @@ subtitle: "Insert a subtitle here"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
-type:  Use standard-view or nothing for default or - cover-view - video - landingpage null for list view
+type:  # Use standard-view or nothing for default or - cover-view - video - landingpage null for list view
 weight: null 
 
 featured: false
