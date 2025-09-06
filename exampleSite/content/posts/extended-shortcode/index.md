@@ -89,6 +89,8 @@ To embed a local video file (e.g., an `.mp4` file), place the video in the same 
 {{</* video src="Test_Jellyfin_1080p_AVC_3M.mp4" */>}}
 ```
 
+{{< video src="Test_Jellyfin_1080p_AVC_3M.mp4" >}}
+
 ## Playlist of videos
 
 {{< playlist >}}
