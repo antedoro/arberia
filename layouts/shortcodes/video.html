@@ -1,5 +1,7 @@
 
 
+{{- $src := .Get "src" -}}
+
 {{- $video := .Page.Resources.GetMatch $src -}}
 {{- if $video -}}
   <video width="100%" controls>
