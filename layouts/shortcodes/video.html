@@ -1,0 +1,16 @@
+
+
+{{- $src := .Get "src" -}}
+<video width="100%" controls>
+  <source src="{{ $src }}" type="video/mp4">
+  Il tuo browser non supporta il tag video.
+</video>
+{{- $video := .Page.Resources.GetMatch $src -}}
+{{- if $video -}}
+  <video width="100%" controls>
+    <source src="{{ $video.RelPermalink }}" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
+{{- else -}}
+  {{- errorf "Shortcode 'video': Risorsa video '%s' non trovata in %s" $src .Page.Path -}}
+{{- end -}}

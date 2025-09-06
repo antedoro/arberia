@@ -73,6 +73,22 @@ Shortcode to inset varius alert on markdown post use this code:
 
 {{< image "artwork.webp" "Caption">}} 
 
+## Video 
+
+To embed a video from YouTube, use the built-in `youtube` shortcode with the video ID.
+
+```markdown
+{{</* youtube taxItkTlY_0 */>}}
+```
+
+{{< youtube taxItkTlY_0 >}}
+
+To embed a local video file (e.g., an `.mp4` file), place the video in the same folder as your `index.md` file (as a Page Bundle) and use the custom `video` shortcode.
+
+```markdown
+{{</* video src="Test_Jellyfin_1080p_AVC_3M.mp4" */>}}
+```
+
 ## Playlist of videos
 
 {{< playlist >}}
