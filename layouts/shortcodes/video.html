@@ -1,13 +1,22 @@
-
+{{- /*
+  This shortcode embeds a video from the page's resources.
+  Usage: {{< video src="path/to/your/video.mp4" caption="An optional caption" >}}
+*/ -}}
 
 {{- $src := .Get "src" -}}
+{{- $caption := .Get "caption" -}}
 
 {{- $video := .Page.Resources.GetMatch $src -}}
 {{- if $video -}}
+<figure>
   <video width="100%" controls>
     <source src="{{ $video.RelPermalink }}" type="video/mp4">
     Il tuo browser non supporta il tag video.
   </video>
+  {{- if $caption -}}
+  <figcaption>{{ $caption }}</figcaption>
+  {{- end -}}
+</figure>
 {{- else -}}
   {{- errorf "Shortcode 'video': Risorsa video '%s' non trovata in %s" $src .Page.Path -}}
 {{- end -}}

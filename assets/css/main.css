@@ -14765,3 +14765,8 @@ body .highlight pre {
  color: #fff;
  text-align: center
 }
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+}
