@@ -1,0 +1,177 @@
+# Translations for German
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === general ==
+
+[viewComments]
+other = "Kommentare anzeigen"
+
+[readMore]
+other = "Weiterlesen"
+
+[posts]
+other = "Posts"
+
+# === general ==
+
+# === defaults/taxonomy.html ===
+[allPostsforTerms]
+other = "Alle Posts für ... "
+
+# === defaults/terms.html ===
+[all]
+other = "Alle "
+
+# === category/taxonomy.html ===
+# [allPostsforCategory]
+# other = "Alle Posts für ... "
+
+# === category/terms.html ===
+[allPostsforCategory]
+other = "Alle Posts für "
+
+# === about.html ===
+# === components/author.html ===
+[about]
+other = "Über "
+
+# === grid-view/list.html ===???
+[gotFeedback]
+other = "Haben Sie Feedback zu einem meiner Projekte?"
+
+# === last-post-widget.html ===
+[lastPosts]
+other = "Letzte Posts"
+
+[viewAll]
+other = "Alle anzeigen »"
+
+# === Pagination ===
+[previousPage]
+other = "Vorherige Seite"
+
+[nextPage]
+other = "Nächste Seite"
+# === Pagination ===
+
+# === video-layout.html ===
+[courseContents]
+other = "Kursinhalte"
+
+# === with-sidebar.html ===
+[comments]
+other = "0 Kommentare"
+
+# === shortcodes/download-files.html ===
+[download]
+other = "Herunterladen"
+
+# === shortcodes/faq.html ===
+[showHide]
+other = "Anzeigen/Verbergen"
+
+# === shortcodes/list-element.html ===
+[topic]
+other = "Thema"
+
+# === shortcodes/playlist.html ===
+[lessons]
+other = "Lektionen"
+
+# === components ===
+
+# === components/author-sb.html ===
+# === components/author.html ===
+[moreAbout]
+other = "» Mehr über"
+
+[aboutMe]
+other = "Über mich"
+
+# === components/recent-widget.html ===
+[recentPosts]
+other = "Neueste Posts"
+
+# === components/completes-mark.html ===
+[markAscompleted]
+other = "Als erledigt markieren"
+
+# === components/contact-form.html ===
+[name]
+other = "Name"
+
+[email]
+other = "E-Mail"
+
+[subject]
+other = "Betreff"
+
+[message]
+other = "Geben Sie hier Ihre Nachricht ein"
+
+[send]
+other = "Absenden"
+
+# === components/mailchimp.html ===
+[subscribe]
+other = "Registrieren"
+
+[nospam]
+other = "🔒 Kein spam. Sie können sich jederzeit abmelden."
+
+# === components/tag-cloud.html ===
+[tagTopics]
+other = "Alle Tag-Themen"
+
+# === toc.html ===
+[tableOfContents]
+other = "Inhaltsverzeichnis"
+
+# === Nuove chiavi identificate ===
+[pageNotFound]
+other = "Seite nicht gefunden"
+
+[pageNotFoundMessage]
+other = "Leider konnte diese Seite nicht gefunden werden."
+
+[goToHomepage]
+other = "Zur Startseite wechseln"
+
+[filePdfLabel]
+other = "Datei (.pdf)"
+
+[permanentLinkTitle]
+other = "Permanente Verknüpfung"
+
+[newLabel]
+other = "NEU"
+
+[searchPlaceholder]
+other = "Suchen..."
+
+[exitFullscreen]
+other = "Vollbildmodus beenden"
+
+[brandLogoAlt]
+other = "logo-marke"
+
+[freeEmailSeries]
+other = "— FREIE E-Mail Serie —"
+
+[pythonTricksTitle]
+other = "🐍 Python Tricks 💌"
+
+[pythonTricksAlt]
+other = "Python Tricks Dictionary Merge"
+
+[searchButton]
+other = "Suchen »"
+
+[textPostAlt]
+other = "text-post"
+
+[byAuthor]
+other = "von"
+
+[authorImageAlt]
+other = "Bilde des Autors"
