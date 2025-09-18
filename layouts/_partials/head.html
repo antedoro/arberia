@@ -21,8 +21,8 @@
   {{ with $.Page.Resources.GetMatch "featured-image" }}
   <meta property="og:image" content="{{ .Permalink }}">
   {{ end }}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ partial "opengraph.html" . }}
+  {{ partial "twitter_cards.html" . }}
 
   <!-- Favicon e WebApp -->
   <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon/favicon.ico" | absURL }}">
@@ -87,7 +87,7 @@
     <!-- Disqus -->
     {{ with .Site.Params.disqus }}
       {{ if and .enable (ne .shortname "") }}
-        {{/*  {{ template "_internal/disqus.html" . }}   */}}
+        {{/*  {{ partial "disqus.html" . }}   */}}
       {{ end }}
     {{ end }} 
   {{ end }}
