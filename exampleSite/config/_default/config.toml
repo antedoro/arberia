@@ -1,6 +1,6 @@
 title = "Arberia Theme"
 baseURL = "https://example.com/"
-relativeURLs = "True"
+relativeURLs = false
 languageCode = "en-us"
 defaultContentLanguage = 'en'
 theme = "arberia"
