@@ -1,0 +1,50 @@
+<article>
+	<div class="container my-3">
+		<div class="row">
+			<div class="col-12 col-sm-4 align-self-top px-0">
+
+				{{- /* Post Cover Image */ -}}
+				{{ $img := (.page.Resources.ByType "image").GetMatch "featured-image" }}
+				{{ with $img }}
+				{{ $imageName := $img.Title }}
+				{{ $imageName = $imageName | strings.TrimSuffix (path.Ext $imageName )}}
+				{{ partial "tools/img" (dict "img" . "alt" $imageName ) }}
+				{{ end }}
+
+			</div>
+
+			<div class="col-12 col-sm-8 px-0 pl-sm-3 pt-2 pt-sm-0">
+				<a href="{{ .page.Permalink }}" class="">
+					<h2 class="my-0 h4">{{ .page.Title }}<span title="In-Progress" class="float-right">
+							<i class="fas fa-circle-notch text-muted mx-1"></i></span></h2>
+				</a>
+				<p class="text-muted my-0">
+					<span class="mr-2"><time>{{ .page.PublishDate | time.Format .page.Site.Params.dateFormat }}</time></span>
+					{{/*  Tag list  */}}
+					{{ if eq .type "tags" }}
+						{{/* Show only the current tag term */}}
+						<span aria-hidden="true" class="fa fa-tags"></span>
+						<a class="badge badge-light text-muted mr-1" href="{{ "/tags/" | relLangURL }}{{ .term | urlize }}">{{ .term }}</a>
+					{{ else if eq .type "categories" }}
+						{{/* Show only the current category term */}}
+						<span aria-hidden="true" class="fa fa-folder-open"></span>
+						<a class="badge badge-light text-muted mr-1" href="{{ "/categories/" | relLangURL }}{{ .term | urlize }}">{{ .term }}</a>
+					{{ else }}
+						{{/* Fallback: show all tags if any other taxonomy type */}}
+						{{ range .page.Params.tags }}
+						<span aria-hidden="true" class="fa fa-tags"></span>
+						<a class="badge badge-light text-muted mr-1" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
+					{{ end }}
+
+					<p class="text-muted my-0 mt-1">
+						{{ .page.Summary | truncate (.page.Site.Params.summaryLength | default 225) | safeHTML }}
+						{{ if .page.Truncated }}
+						<a href="{{ .page.Permalink }}">{{ i18n "readMore" }}</a>
+						{{ end }}
+					</p>
+			</div>
+		</div>
+	</div>
+
+</article>

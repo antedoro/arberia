@@ -22,10 +22,30 @@
   {{ end }}
 
   <div id="listArea" class="col-md-11 col-lg-10 article">
-   {{ $paginator := .Paginate (.Data.Pages ) (.Site.Params.paginate | default 5) }}
+   {{/* Resolve pages for this taxonomy term robustly and restrict to posts section */}}
+   {{ $pages := slice }}
+   {{ $termLower := lower .Title }}
+   {{ if eq .Type "tags" }}
+     {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+       {{ if eq (lower $name) $termLower }}
+         {{ $pages = $taxonomy.Pages }}
+       {{ end }}
+     {{ end }}
+   {{ else if eq .Type "categories" }}
+     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+       {{ if eq (lower $name) $termLower }}
+         {{ $pages = $taxonomy.Pages }}
+       {{ end }}
+     {{ end }}
+   {{ end }}
+   {{ if eq (len $pages) 0 }}
+     {{ $pages = .Pages }}
+   {{ end }}
+   {{ $pages = where $pages "Section" "posts" }}
+   {{ $paginator := .Paginate $pages (.Site.Params.paginate | default 5) }}
    <div class="container my-3">
     {{ range $paginator.Pages.ByDate.Reverse }}
-    {{ .Render "summary" }}
+    {{ partial "summary-taxonomy.html" (dict "page" . "term" $.Title "type" $.Type) }}
     <hr style="border: 0; border-color: #dee2e6">
     {{ end }}
    </div>
