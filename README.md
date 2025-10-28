@@ -141,7 +141,14 @@ This theme is released under the [MIT license](https://github.com/antedoro/arber
 
 ## Release Changelog
 
-Release ChangeLog has info about stuff added: **[Releases](https://github.com/antedoro/arberia/releases)**
+See CHANGELOG.md for detailed changes. Highlights for 1.2.2:
+
+- Taxonomy templates consolidated under layouts/_default/ per Hugo > 0.145 lookup
+- Correct filtering for tag/category term pages (case-insensitive) and pagination only over posts
+- New taxonomy summary partial for cleaner tag/category listings
+- listview now switches to taxonomy-aware rendering when in taxonomy context
+
+For release tags and packaged notes, see **[Releases](https://github.com/antedoro/arberia/releases)**
 
 ## Special Thanks
 

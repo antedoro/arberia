@@ -6,6 +6,20 @@ All notable changes to this theme will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2] - 2025-10-28
+
+### Changed
+- Taxonomy templates consolidated under layouts/_default/ (taxonomy.html, terms.html) to align with Hugo > 0.145 lookup.
+- Tag and category pages now resolve term pages case-insensitively using Site.Taxonomies and filter to Section == "posts" before paginating.
+- In taxonomy listings, use a dedicated partial (summary-taxonomy.html) that shows only the current term badge per item.
+- Updated _partials/listview.html to be taxonomy-aware (uses filtered pages and the taxonomy summary partial when in taxonomy context).
+
+### Removed
+- Duplicate templates under layouts/categories/ (taxonomy.html, terms.html) replaced by generic ones in _default/.
+
+### Fixed
+- Tag pages previously listing all posts now list only items for the selected term.
+
 ## [1.2.1] - 2025-08-12
 
 ### Added
