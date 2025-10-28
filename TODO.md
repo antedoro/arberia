@@ -3,4 +3,3 @@
 - [ ] Implement GDPR cookie consent.
 - [ ] Improve date localization for all languages.
 - [ ] Review and update documentation.
-
