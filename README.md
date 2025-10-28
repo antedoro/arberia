@@ -56,7 +56,7 @@ b) Or you can add it as a git submodule via the following command:
 Next, copy the contents from themes/arberia/exampleSite to the site's root folder.
 Copy the archetypes folder from themes/arberia/ to the site's root folder.
 
-Open `config/_defaults/config.toml` folder and ensure the theme option is set to `arberia`:
+Open `config/_default/hugo.toml` folder and ensure the theme option is set to `arberia`:
 
 ```
 theme = "arberia"
@@ -80,7 +80,7 @@ Run the following command from the root of your project:
 
 ## Configuration
 
-### Config.toml example
+### Hugo.toml example
 
 ```toml
 title = "Arberia Theme"

@@ -14,11 +14,11 @@ other = "Posts"
 
 # === general ==
 
-# === defaults/taxonomy.html ===
+# === _default/taxonomy.html ===
 [allPostsforTerms]
 other = "Alle Posts für ... "
 
-# === defaults/terms.html ===
+# === _default/terms.html ===
 [all]
 other = "Alle "
 

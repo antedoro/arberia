@@ -11,10 +11,10 @@ featured: false
 sidebar: false # Works only with standard-view
 toc: false # Works only with standard-view
 math:
-  enable: false # Actualy not implemented
-lightgallery: false # Actualy not implemented
+  enable: false # Actually not implemented
+lightgallery: false # Actually not implemented
 license: ""
-slug:  # slug exemple: solidworks-2020-tutorial
+slug:  # slug example: solidworks-2020-tutorial
 
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare

@@ -1,5 +1,5 @@
 ---
-title: Bulding a Lorem ipsum 
+title: Building a Lorem ipsum 
 subtitle: Insert a subtitle here
 date: 2022-05-15T16:24:00+02:00
 lastmod: 2022-05-15T16:24:00+02:00
@@ -34,7 +34,7 @@ math:
   enable: false
 lightgallery: false
 license: ""
-slug: bulding-a-Lorem-ipsum 
+slug: building-a-Lorem-ipsum 
 ---
 
 Lorem ipsum dolor sit amet

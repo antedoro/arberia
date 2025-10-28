@@ -11,10 +11,10 @@ featured: false
 sidebar: false # Works only with standard-view
 toc: true # Works only with standard-view
 math:
-  enable: false # Actualy not implemented
-lightgallery: false # Actualy not implemented
+  enable: false # Actually not implemented
+lightgallery: false # Actually not implemented
 license: ""
-slug:  # slug exemple: solidworks-2020-tutorial
+slug:  # slug example: solidworks-2020-tutorial
 
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare
@@ -83,7 +83,7 @@ The following is enabled by default
 
 PaperMod uses [flexsearch.js](https://github.com/nextapps-de/flexsearch) for search functionality
 
-Add the following to site config, `config.toml`
+Add the following to site config, `hugo.toml`
 
 ```toml
 [outputs]

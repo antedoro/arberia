@@ -128,7 +128,7 @@ Direct Links: Not defined
 
 ### Finally ...
 
-Add in `config/config.toml`:
+Add in `config/hugo.toml`:
 
 ```toml
 theme: "arberia"
@@ -137,13 +137,13 @@ theme: "arberia"
 
  - Install [Go programming language](https://go.dev/doc/install) in your operating system.
 
- - Intialize your own hugo mod
+ - Initialize your own hugo mod
  
 ```
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
- - Add Arberia in your `config/config.toml` file
+ - Add Arberia in your `config/hugo.toml` file
 
 ```
 module:
@@ -172,7 +172,7 @@ hugo mod get -u
 
 ---
 
-## Sample `config.toml`
+## Sample `hugo.toml`
 
 > **Example Site Structure is present here**: [exampleSite](https://arberiatheme.netlify.app/)
 

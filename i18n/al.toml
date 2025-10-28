@@ -15,11 +15,11 @@ other = "Postimet"
 
 # === general ==
 
-# === defaults/taxonomy.html ===
+# === _default/taxonomy.html ===
 [allPostsforTerms]
 other = "Të gjitha postimet për ... "
 
-# === defaults/terms.html ===
+# === _default/terms.html ===
 [all]
 other = "Të gjitha "
 

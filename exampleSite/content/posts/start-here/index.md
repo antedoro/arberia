@@ -80,7 +80,7 @@ b) Or you can add it as a git submodule via the following command:
     $ git submodule add https://github.com/antedoro/arberia.git arberia
     
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
+Next, open `hugo.toml` in the base of the Hugo site and ensure the theme option is set to `arberia`:
 
 ```
 theme = "arberia"
@@ -93,7 +93,7 @@ To update theme installed in b mode:
 
 ## Configuration
 
-### Config.toml example
+### Hugo.toml example
 
 ```toml
 title = "Arberia Theme"
@@ -120,10 +120,10 @@ featured: false
 sidebar: false # Works only with standard-view
 toc: true # Works only with standard-view
 math:
-  enable: false # Actualy not implemented
-lightgallery: false # Actualy not implemented
+  enable: false # Actually not implemented
+lightgallery: false # Actually not implemented
 license: ""
-slug:  # slug exemple: solidworks-2020-tutorial
+slug:  # slug example: solidworks-2020-tutorial
 
 hiddenFromHomePage: false
 hiddenFromSearch: false # da implementare

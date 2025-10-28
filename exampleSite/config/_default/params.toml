@@ -41,7 +41,7 @@ id = "G-XXXXXXXXXX" # Replace with your GA4 ID
 # Mailchimp Configuration
 [mailchimp]
 enable = false
-subdomain = "registredname"
+subdomain = "registeredname"
 user_id = "code"
 list_id = "code"
 
