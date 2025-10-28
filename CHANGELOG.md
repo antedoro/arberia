@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.2] - 2025-10-28
 
+### Added
+- German translation (thanks to @deining).
+- CONTRIBUTORS.md file.
+- Completed Albanian translation.
+
 ### Changed
 - Taxonomy templates consolidated under layouts/_default/ (taxonomy.html, terms.html) to align with Hugo > 0.145 lookup.
 - Tag and category pages now resolve term pages case-insensitively using Site.Taxonomies and filter to Section == "posts" before paginating.
