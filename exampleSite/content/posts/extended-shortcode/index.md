@@ -95,15 +95,15 @@ To embed a local video file (e.g., an `.mp4` file), place the video in the same 
 
 {{< playlist >}}
 
-## Collapsable FAQ Menu
+## Collapsible FAQ Menu
 
 {{< faq question="What time is it?" answer="Office Hours is a weekly Zoom-based online hangout with experts from the Real Python Team, where you can get help and discuss your Python questions with us and other community members. If you want to join, you can register at the link above to get a Zoom link." >}}
 
-{{< faq question="Hoew do I join?" answer="Office Hours are available to all Real Python Members. Just click the button above under Upcoming Events where you can sign up for the next event." >}}
+{{< faq question="How do I join?" answer="Office Hours are available to all Real Python Members. Just click the button above under Upcoming Events where you can sign up for the next event." >}}
 
-{{< faq question="How often I can partecipate?" answer="As often as you want! We have several regulars that come every week!" >}}
+{{< faq question="How often I can participate?" answer="As often as you want! We have several regulars that come every week!" >}}
 
-{{< faq question="Do I have to say everithing??" answer="No, you’re more than welcome to join even if you just want to listen and leave your camera and microphone turned off. If you have a question you can ask it via Zoom’s text-based chat or post it in the #office-hours channel in the RP Community Slack." >}}
+{{< faq question="Do I have to say everything??" answer="No, you’re more than welcome to join even if you just want to listen and leave your camera and microphone turned off. If you have a question you can ask it via Zoom’s text-based chat or post it in the #office-hours channel in the RP Community Slack." >}}
 
 ## Downlodable File Link
 
