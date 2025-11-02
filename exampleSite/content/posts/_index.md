@@ -15,7 +15,7 @@ math:
   enable: false
 lightgallery: false
 license: ""
-slug: # slug exemple: solidworks-2020-tutorial
+slug: # slug example: solidworks-2020-tutorial
   posts
 
 resources:
