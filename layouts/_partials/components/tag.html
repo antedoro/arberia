@@ -6,7 +6,7 @@
  {{- $url := urls.Parse (. | urlize) -}}
  {{- $path := $url.Path -}}
  {{- with $.Site.GetPage (printf "/%s/%s" $taxo $path) }}
-  <a class="badge badge-light text-muted" href="{{ .RelPermalink }}"> {{ .Title }}</a>
+  <a class="badge badge-light text-muted" href="{{ (.RelPermalink | relURL | replaceRE "/+$" "") }}/"> {{ .Title }}</a>
  {{- end }}
 {{- end }}
 {{- end }}

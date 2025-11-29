@@ -7,6 +7,6 @@
 {{ range . }}
  {{ $full := .Fit "1980x1080"}}
  {{ $resized := .Fill "225x120 q80" }}
- <a href="{{ $full.Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}"/></a>
+ <a href="{{ $full.Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" alt="{{ .Name }}"/></a>
  {{ end }}
 {{ end }}
