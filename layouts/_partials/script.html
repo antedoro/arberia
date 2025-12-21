@@ -5,6 +5,7 @@
 <script type="text/javascript" src="{{ "lib/lightbox/js/lightbox.js" | absURL }}"></script>
 
 <!-- MathJax -->
+{{ if and .Params.math .Params.math.enable }}
 <script>
   {{- `
   window.MathJax = {
@@ -16,6 +17,7 @@
   ` | safeJS -}}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{{ end }}
 
 <!-- Mermaid -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
