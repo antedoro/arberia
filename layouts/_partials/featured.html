@@ -60,7 +60,10 @@
 
        </small>
       </p>
-      <p class="text-muted my-1">{{ .Summary }}</p>
+      <div class="text-muted my-1">{{ .Summary | safeHTML }}</div>
+      {{ if .Truncated }}
+      <a href="{{ .RelPermalink }}" class="text-primary"><small>{{ i18n "readMore" | default "Leggi tutto..." }}</small></a>
+      {{ end }}
      </div>
     </div>
    </div>

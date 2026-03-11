@@ -32,7 +32,14 @@
     {{ end }}
     {{ $pages = where $pages "Section" "posts" }}
   {{ else }}
-    {{ $pages = where .Site.RegularPages "Section" "posts" }}
+    {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+    {{ $filteredPages := slice }}
+    {{ range $allPosts }}
+      {{ if not .Params.hiddenFromHomePage }}
+        {{ $filteredPages = $filteredPages | append . }}
+      {{ end }}
+    {{ end }}
+    {{ $pages = $filteredPages }}
   {{ end }}
 
   {{ $paginator := .Paginate $pages (.Site.Params.paginate | default 5) }}

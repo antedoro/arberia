@@ -5,6 +5,16 @@ All notable changes to this theme will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.3] - 2026-03-11
+
+### Added
+- Support for `hiddenFromHomePage` front matter parameter in `listview.html` to exclude posts from general lists.
+
+### Changed
+- Updated `featured.html` to render summary using `safeHTML`, correctly supporting the `<!--more-->` indicator and preserving HTML formatting.
+- Added a "Read more" link to the featured article when truncated.
+- Changed summary wrapper from `<p>` to `<div>` in `featured.html` for better block-level element support.
+
 ## [1.2.2] - 2025-10-28
 
 ### Added
